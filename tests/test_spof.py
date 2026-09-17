@@ -3,11 +3,11 @@ from __future__ import annotations
 
 import pytest
 
-from civictwin.analysis.montecarlo import ScenarioSet
-from civictwin.analysis.spof import Spof, design_storm, detect
-from civictwin.config import DEFAULT
-from civictwin.engine.coordinator import Engine
-from civictwin.ontology import AssetKind, Township
+from gotham.analysis.montecarlo import ScenarioSet
+from gotham.analysis.spof import Spof, design_storm, detect
+from gotham.config import DEFAULT
+from gotham.engine.coordinator import Engine
+from gotham.ontology import AssetKind, Township
 
 
 @pytest.fixture(scope="module")

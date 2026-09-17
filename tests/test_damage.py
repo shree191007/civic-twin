@@ -4,13 +4,13 @@ from __future__ import annotations
 import numpy as np
 import pytest
 
-from civictwin.config import DEFAULT
-from civictwin.engine.contract import HazardScenario, Overlay
-from civictwin.engine.coordinator import Engine
-from civictwin.engine.damage import DamageModel, exceedance_probability, road_speed_factor
-from civictwin.engine.hazard import HazardModel, sample_scenarios
-from civictwin.ontology import DamageState, Township, damage_index
-from civictwin.synth.township import generate
+from gotham.config import DEFAULT
+from gotham.engine.contract import HazardScenario, Overlay
+from gotham.engine.coordinator import Engine
+from gotham.engine.damage import DamageModel, exceedance_probability, road_speed_factor
+from gotham.engine.hazard import HazardModel, sample_scenarios
+from gotham.ontology import DamageState, Township, damage_index
+from gotham.synth.township import generate
 
 
 @pytest.fixture(scope="module")

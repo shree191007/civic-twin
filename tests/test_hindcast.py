@@ -11,7 +11,7 @@ import json
 
 import pytest
 
-from civictwin.analysis.hindcast import (
+from gotham.analysis.hindcast import (
     ConfusionScore,
     ObservedEvent,
     compare_sets,
@@ -19,10 +19,10 @@ from civictwin.analysis.hindcast import (
     load_events,
     replay,
 )
-from civictwin.config import DEFAULT
-from civictwin.engine.coordinator import Engine
-from civictwin.hazard.schemas.forecast import HazardForecast, HazardType, SeverityBand
-from civictwin.ontology import Township
+from gotham.config import DEFAULT
+from gotham.engine.coordinator import Engine
+from gotham.hazard.schemas.forecast import HazardForecast, HazardType, SeverityBand
+from gotham.ontology import Township
 
 
 @pytest.fixture(scope="module")

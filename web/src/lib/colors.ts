@@ -3,23 +3,23 @@
 export type RGBA = [number, number, number, number];
 
 export const PORTFOLIO_COLOR: Record<string, RGBA> = {
-  energy: [245, 166, 35, 255],
-  water: [46, 200, 240, 255],
-  comms: [176, 108, 245, 255],
-  transport: [139, 152, 168, 255],
-  services: [255, 95, 109, 255],
+  energy: [217, 119, 6, 255],
+  water: [2, 132, 199, 255],
+  comms: [124, 58, 237, 255],
+  transport: [100, 116, 139, 255],
+  services: [225, 29, 72, 255],
 };
 
 export const PROVENANCE_COLOR: Record<string, RGBA> = {
-  observed: [216, 224, 234, 255],
-  inferred: [125, 139, 158, 255],
-  synthetic: [74, 87, 104, 255],
+  observed: [15, 23, 42, 255],
+  inferred: [100, 116, 139, 255],
+  synthetic: [163, 177, 194, 255],
 };
 
-const F_FULL: RGBA = [47, 217, 138, 255];
-const F_DEGRADED: RGBA = [245, 197, 66, 255];
-const F_CRITICAL: RGBA = [255, 138, 61, 255];
-const F_DOWN: RGBA = [255, 59, 78, 255];
+const F_FULL: RGBA = [22, 163, 74, 255];
+const F_DEGRADED: RGBA = [202, 138, 4, 255];
+const F_CRITICAL: RGBA = [234, 88, 12, 255];
+const F_DOWN: RGBA = [220, 38, 38, 255];
 
 /** Four-stop functionality scale. Steps, never interpolated across a stop. */
 export function functionalityColor(f: number): RGBA {
@@ -42,7 +42,7 @@ export const FUNCTIONALITY_LEGEND = [
 export const OPERATING_COLOR: Record<string, RGBA> = {
   operational: F_FULL,
   degraded: F_DEGRADED,
-  backup: [46, 200, 240, 255],
+  backup: [2, 132, 199, 255],
   critical: F_CRITICAL,
   failed: F_DOWN,
 };
@@ -71,22 +71,22 @@ function ramp(stops: RGBA[], t: number): RGBA {
 }
 
 const FLOOD_STOPS: RGBA[] = [
-  [18, 32, 48, 255],
-  [30, 96, 150, 255],
-  [46, 200, 240, 255],
-  [190, 240, 255, 255],
+  [224, 242, 254, 255],
+  [125, 211, 252, 255],
+  [2, 132, 199, 255],
+  [12, 74, 110, 255],
 ];
 const CRITICALITY_STOPS: RGBA[] = [
-  [40, 36, 26, 255],
-  [140, 96, 20, 255],
-  [245, 166, 35, 255],
-  [255, 224, 150, 255],
+  [254, 243, 199, 255],
+  [251, 191, 36, 255],
+  [217, 119, 6, 255],
+  [146, 64, 14, 255],
 ];
 const RISK_STOPS: RGBA[] = [
-  [38, 24, 28, 255],
-  [140, 40, 52, 255],
-  [255, 59, 78, 255],
-  [255, 170, 180, 255],
+  [254, 226, 226, 255],
+  [248, 113, 113, 255],
+  [220, 38, 38, 255],
+  [127, 29, 29, 255],
 ];
 
 /** Flood depth in metres, 0–3 m. */

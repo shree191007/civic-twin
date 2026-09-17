@@ -3,13 +3,13 @@ from __future__ import annotations
 
 import pytest
 
-from civictwin.config import DEFAULT
-from civictwin.engine.contract import HazardScenario, Overlay
-from civictwin.engine.coordinator import Engine
-from civictwin.engine.dependency import DependencyGate
-from civictwin.engine.states import CRITICAL_RESERVE_H, classify
-from civictwin.ontology import Link, LinkKind, OperatingState, Township
-from civictwin.synth.township import generate
+from gotham.config import DEFAULT
+from gotham.engine.contract import HazardScenario, Overlay
+from gotham.engine.coordinator import Engine
+from gotham.engine.dependency import DependencyGate
+from gotham.engine.states import CRITICAL_RESERVE_H, classify
+from gotham.ontology import Link, LinkKind, OperatingState, Township
+from gotham.synth.township import generate
 
 
 def calm(town: Township) -> HazardScenario:
@@ -148,7 +148,7 @@ def test_brownout_stops_a_pump_that_a_bare_edge_would_keep_running(
     town: Township,
 ) -> None:
     """The threshold is what makes a partial supply insufficient."""
-    from civictwin.engine.layers.energy import EnergyLayer
+    from gotham.engine.layers.energy import EnergyLayer
 
     engine = Engine(town)
     layer = engine._base.energy

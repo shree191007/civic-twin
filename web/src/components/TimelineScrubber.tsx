@@ -50,7 +50,7 @@ export function TimelineScrubber() {
           aria-label="Hours since the storm began"
           style={{ width: "100%" }}
         />
-        <div className="row mono" style={{ justifyContent: "space-between", fontSize: 9, color: "var(--text-dim)" }}>
+        <div className="row mono" style={{ justifyContent: "space-between", fontSize: 11, color: "var(--text-dim)" }}>
           {ticks.map((h) => (
             <span key={h}>{h}</span>
           ))}
@@ -64,7 +64,7 @@ export function TimelineScrubber() {
             aria-pressed={speed === s}
             onClick={() => setSpeed(s)}
             className="mono"
-            style={{ fontSize: 10, padding: "2px 5px" }}
+            style={{ fontSize: 12, padding: "2px 5px" }}
           >
             {s}×
           </button>

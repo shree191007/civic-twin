@@ -9,8 +9,8 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
-from civictwin.io import save_township  # noqa: E402
-from civictwin.synth.township import generate  # noqa: E402
+from gotham.io import save_township  # noqa: E402
+from gotham.synth.township import generate  # noqa: E402
 
 logger = logging.getLogger("build_township")
 

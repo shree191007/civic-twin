@@ -13,7 +13,7 @@ export function ProvenanceBadge({ value }: { value: Provenance }) {
       className="mono"
       title={`This asset is ${LABEL[value]} data`}
       style={{
-        fontSize: 9,
+        fontSize: 11,
         letterSpacing: "0.06em",
         textTransform: "uppercase",
         padding: "1px 5px",

@@ -7,9 +7,9 @@ from typing import Iterator
 import pytest
 from fastapi.testclient import TestClient
 
-from civictwin.api.state import AppState, set_state
-from civictwin.io import save_township
-from civictwin.synth.township import generate
+from gotham.api.state import AppState, set_state
+from gotham.io import save_township
+from gotham.synth.township import generate
 
 
 @pytest.fixture(scope="module")
@@ -22,7 +22,7 @@ def township_path(tmp_path_factory) -> Path:
 @pytest.fixture()
 def planner(township_path: Path, tmp_path) -> Iterator[TestClient]:
     set_state(AppState(township_path=township_path, results_path=tmp_path))
-    from civictwin.api.main import app
+    from gotham.api.main import app
 
     with TestClient(app) as c:
         yield c
@@ -34,7 +34,7 @@ def public(township_path: Path, tmp_path) -> Iterator[TestClient]:
     set_state(
         AppState(township_path=township_path, results_path=tmp_path, role="public")
     )
-    from civictwin.api.main import app
+    from gotham.api.main import app
 
     with TestClient(app) as c:
         yield c
@@ -63,7 +63,7 @@ def test_f17_interventions_do_not_reroll_the_storm(planner: TestClient) -> None:
 def test_f26_seeds_do_not_depend_on_process_hash_randomisation(
     planner: TestClient,
 ) -> None:
-    from civictwin.api.routes.scenarios import _stable_seed
+    from gotham.api.routes.scenarios import _stable_seed
 
     assert _stable_seed("abc") == _stable_seed("abc")
     assert _stable_seed("abc") != _stable_seed("abd")
@@ -121,7 +121,7 @@ def test_planner_still_sees_everything(planner: TestClient) -> None:
 def test_f22_copilot_refuses_structural_tools_to_the_public_role(
     township_path: Path, tmp_path
 ) -> None:
-    from civictwin.api.copilot.tools import RESTRICTED_TOOLS, ToolBox
+    from gotham.api.copilot.tools import RESTRICTED_TOOLS, ToolBox
 
     public_state = AppState(
         township_path=township_path, results_path=tmp_path, role="public"
@@ -144,7 +144,7 @@ def test_f22_copilot_refuses_structural_tools_to_the_public_role(
 
 
 def test_f23_truncation_always_terminates() -> None:
-    from civictwin.api.copilot.tools import MAX_TOOL_BYTES, _truncate
+    from gotham.api.copilot.tools import MAX_TOOL_BYTES, _truncate
 
     # One enormous string in a list: halving can never make it fit.
     payload = {"items": ["x" * (MAX_TOOL_BYTES * 2)], "summary": "big"}

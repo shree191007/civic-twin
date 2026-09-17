@@ -17,7 +17,7 @@ function Answer({ text, onPick }: { text: string; onPick: (id: string) => void }
       <button
         key={`${start}-${match[0]}`}
         className="mono"
-        style={{ fontSize: 11, padding: "0 4px" }}
+        style={{ fontSize: 13, padding: "0 4px" }}
         onClick={() => onPick(match[0])}
       >
         {match[0]}
@@ -26,7 +26,7 @@ function Answer({ text, onPick }: { text: string; onPick: (id: string) => void }
     last = start + match[0].length;
   }
   parts.push(text.slice(last));
-  return <p style={{ fontSize: 12, lineHeight: 1.6, whiteSpace: "pre-wrap" }}>{parts}</p>;
+  return <p style={{ fontSize: 13, lineHeight: 1.6, whiteSpace: "pre-wrap" }}>{parts}</p>;
 }
 
 export function CopilotDrawer() {
@@ -77,7 +77,7 @@ export function CopilotDrawer() {
         <h2>Copilot</h2>
         <button onClick={() => setOpen(false)} aria-label="Close copilot">×</button>
       </div>
-      <p className="dim" style={{ fontSize: 10, lineHeight: 1.5 }}>
+      <p className="dim" style={{ fontSize: 12, lineHeight: 1.5 }}>
         Answers come from tool calls against this model. It cannot invent numbers,
         and it cannot commit spending.
       </p>
@@ -95,11 +95,11 @@ export function CopilotDrawer() {
           {pending ? "Thinking…" : "Ask"}
         </button>
         <span className="spacer" />
-        <span className="dim mono" style={{ fontSize: 9 }}>⌘↵ to send</span>
+        <span className="dim mono" style={{ fontSize: 11 }}>⌘↵ to send</span>
       </div>
 
       {response && !response.available && (
-        <div className="dim" style={{ fontSize: 11, marginTop: 12 }}>
+        <div className="dim" style={{ fontSize: 13, marginTop: 12 }}>
           {response.reason ?? "Copilot not configured."}
         </div>
       )}
@@ -108,14 +108,14 @@ export function CopilotDrawer() {
         <>
           {response.answer && <Answer text={response.answer} onPick={selectAsset} />}
           <details open>
-            <summary className="dim mono" style={{ fontSize: 10, cursor: "pointer" }}>
+            <summary className="dim mono" style={{ fontSize: 12, cursor: "pointer" }}>
               tool trace ({response.tool_calls.length})
             </summary>
             <ol style={{ paddingLeft: 16, margin: "6px 0 0" }}>
               {response.tool_calls.map((call, i) => (
-                <li key={i} style={{ fontSize: 10, marginBottom: 5 }}>
-                  <span className="mono" style={{ color: "var(--water)" }}>{call.tool}</span>
-                  <div className="dim mono" style={{ fontSize: 9 }}>
+                <li key={i} style={{ fontSize: 12, marginBottom: 5 }}>
+                  <span className="mono" style={{ color: "var(--water-text)" }}>{call.tool}</span>
+                  <div className="dim mono" style={{ fontSize: 11 }}>
                     {JSON.stringify(call.args)}
                   </div>
                   <div className="dim">{call.summary}</div>

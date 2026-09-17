@@ -12,13 +12,13 @@ from typing import Any
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
-from civictwin.analysis.spof import detect  # noqa: E402
-from civictwin.api.geo import build_township_payload, projector_for  # noqa: E402
-from civictwin.config import DEFAULT  # noqa: E402
-from civictwin.engine.contract import HazardScenario, Overlay  # noqa: E402
-from civictwin.engine.coordinator import Engine  # noqa: E402
-from civictwin.engine.hazard import _derived_uniform, gumbel_cdf, sample_scenarios  # noqa: E402
-from civictwin.io import data_version_of, load_township, model_version, save_json  # noqa: E402
+from gotham.analysis.spof import detect  # noqa: E402
+from gotham.api.geo import build_township_payload, projector_for  # noqa: E402
+from gotham.config import DEFAULT  # noqa: E402
+from gotham.engine.contract import HazardScenario, Overlay  # noqa: E402
+from gotham.engine.coordinator import Engine  # noqa: E402
+from gotham.engine.hazard import _derived_uniform, gumbel_cdf, sample_scenarios  # noqa: E402
+from gotham.io import data_version_of, load_township, model_version, save_json  # noqa: E402
 
 logger = logging.getLogger("precompute_demo")
 

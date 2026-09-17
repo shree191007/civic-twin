@@ -6,7 +6,7 @@ export function Legend({ spec }: { spec: LegendSpec }) {
   return (
     <div className="panel" style={{ padding: "7px 9px", minWidth: 180 }}>
       <h3 style={{ marginBottom: 4 }}>{spec.title}</h3>
-      <div className="dim" style={{ fontSize: 10, marginBottom: 6 }}>{spec.units}</div>
+      <div className="dim" style={{ fontSize: 12, marginBottom: 6 }}>{spec.units}</div>
       {spec.continuous ? (
         <>
           <div
@@ -16,7 +16,7 @@ export function Legend({ spec }: { spec: LegendSpec }) {
               background: `linear-gradient(90deg, ${spec.entries.map((e) => css(e.color)).join(", ")})`,
             }}
           />
-          <div className="row mono" style={{ justifyContent: "space-between", fontSize: 9, marginTop: 3 }}>
+          <div className="row mono" style={{ justifyContent: "space-between", fontSize: 11, marginTop: 3 }}>
             {spec.entries.map((e, i) => (
               <span key={i}>{e.label}</span>
             ))}
@@ -35,7 +35,7 @@ export function Legend({ spec }: { spec: LegendSpec }) {
                   flex: "0 0 auto",
                 }}
               />
-              <span className="mono" style={{ fontSize: 10 }}>{e.label}</span>
+              <span className="mono" style={{ fontSize: 12 }}>{e.label}</span>
             </div>
           ))}
         </div>

@@ -5,23 +5,23 @@ import json
 
 import pytest
 
-from civictwin.analysis.forecast import impact_of
-from civictwin.config import DEFAULT
-from civictwin.engine.coordinator import Engine
-from civictwin.hazard.ingestion.api import UnsupportedForecast, ingest, ingest_file
-from civictwin.hazard.normalization.normalizer import (
+from gotham.analysis.forecast import impact_of
+from gotham.config import DEFAULT
+from gotham.engine.coordinator import Engine
+from gotham.hazard.ingestion.api import UnsupportedForecast, ingest, ingest_file
+from gotham.hazard.normalization.normalizer import (
     SCENARIO_FAMILIES,
     band_allocation,
     normalize,
     to_scenarios,
 )
-from civictwin.hazard.schemas.forecast import (
+from gotham.hazard.schemas.forecast import (
     HazardForecast,
     HazardType,
     SeverityBand,
     bands_from_quantiles,
 )
-from civictwin.ontology import Township
+from gotham.ontology import Township
 
 
 def forecast(**kw) -> HazardForecast:
@@ -173,7 +173,7 @@ def test_worse_bands_have_worse_impact(engine: Engine) -> None:
 
 
 def test_a_plan_reduces_the_forecast_impact(engine: Engine) -> None:
-    from civictwin.engine.contract import Overlay
+    from gotham.engine.contract import Overlay
 
     base = impact_of(forecast(), engine, DEFAULT, n_scenarios=40, seed=3)
     hardened = impact_of(

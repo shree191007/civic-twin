@@ -1,4 +1,4 @@
-/** App shell: the icon rail, routes, keyboard shortcuts, and the copilot drawer. */
+/** App shell: named tabs, the map toolbar, routes, shortcuts, and the copilot drawer. */
 import { useEffect, useState } from "react";
 import { NavLink, Navigate, Route, Routes } from "react-router-dom";
 import { Explore } from "./views/Explore";
@@ -14,12 +14,30 @@ import { css, PORTFOLIO_COLOR } from "./lib/colors";
 import { useHealth } from "./api/queries";
 
 const ROUTES = [
-  { path: "/explore", label: "Explore", key: "1", glyph: "◫" },
-  { path: "/scenario", label: "Scenario", key: "2", glyph: "◷" },
-  { path: "/risk", label: "Risk", key: "3", glyph: "◭" },
-  { path: "/plan", label: "Plan", key: "4", glyph: "◧" },
-  { path: "/log", label: "Log", key: "5", glyph: "☰" },
+  { path: "/explore", label: "System map", key: "1", hint: "How the town's infrastructure depends on itself" },
+  { path: "/scenario", label: "Storm playback", key: "2", hint: "Watch a flood cascade hour by hour" },
+  { path: "/risk", label: "Risk & weak points", key: "3", hint: "Where the losses come from and the hidden single points of failure" },
+  { path: "/plan", label: "Investment plan", key: "4", hint: "What to fund, and how much risk it removes" },
+  { path: "/log", label: "Decisions & brief", key: "5", hint: "Record a decision and print the council brief" },
 ];
+
+/** Plain-English names for what the map colours mean. */
+const MODE_LABELS: Record<string, string> = {
+  functionality: "Service level",
+  state: "Operating state",
+  flood: "Flood depth",
+  criticality: "Criticality",
+  provenance: "Data source",
+  risk: "Zone risk",
+};
+
+const LAYER_LABELS: Record<string, string> = {
+  transport: "Roads",
+  water: "Water",
+  energy: "Power",
+  comms: "Telecom",
+  services: "Hospitals & services",
+};
 
 export function App() {
   const mode = useStore((s) => s.mode);
@@ -61,114 +79,85 @@ export function App() {
 
 
   return (
-    <div style={{ display: "grid", gridTemplateColumns: "var(--rail) 1fr", height: "100%" }}>
-      <nav
-        className="rail"
-        style={{
-          background: "var(--bg-panel)",
-          borderRight: "1px solid var(--border)",
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          padding: "8px 0",
-          gap: 4,
-        }}
-      >
-        {ROUTES.map((r) => (
-          <NavLink
-            key={r.path}
-            to={r.path}
-            title={`${r.label} (${r.key})`}
-            style={({ isActive }) => ({
-              width: 34,
-              height: 34,
-              display: "grid",
-              placeItems: "center",
-              borderRadius: 3,
-              fontSize: 15,
-              textDecoration: "none",
-              color: isActive ? "var(--text)" : "var(--text-dim)",
-              background: isActive ? "var(--bg-elevated)" : "transparent",
-              border: `1px solid ${isActive ? "var(--border)" : "transparent"}`,
-            })}
-          >
-            {r.glyph}
-          </NavLink>
-        ))}
-        <div className="spacer" />
-        <button
-          onClick={() => setCopilotOpen(!copilotOpen)}
-          title="Copilot (C)"
-          aria-pressed={copilotOpen}
-          style={{ width: 34, height: 34, padding: 0 }}
-        >
-          ✳
-        </button>
-      </nav>
-
-      <div style={{ position: "relative", minWidth: 0 }}>
-        <header
-          className="row"
-          style={{
-            height: 30,
-            padding: "0 10px",
-            borderBottom: "1px solid var(--border)",
-            background: "var(--bg-panel)",
-            gap: 12,
-          }}
-        >
-          <div className="row" style={{ gap: 3 }} role="group" aria-label="Analysis mode">
-            {Object.entries(MODE_KEYS).map(([key, m]) => (
-              <button
-                key={m}
-                aria-pressed={mode === m}
-                onClick={() => setMode(m)}
-                title={`${m} (${key.toUpperCase()})`}
-                style={{ fontSize: 10, padding: "2px 7px", transition: "background 200ms" }}
-              >
-                {m}
-              </button>
-            ))}
-          </div>
-          <span style={{ width: 1, height: 16, background: "var(--border)" }} />
-          <div className="row" style={{ gap: 3 }}>
-            {ALL_PORTFOLIOS.map((p) => (
-              <button
-                key={p}
-                aria-pressed={activeLayers.has(p)}
-                onClick={() => toggleLayer(p)}
-                className="mono"
-                style={{
-                  fontSize: 10,
-                  padding: "2px 7px",
-                  borderLeft: `3px solid ${css(PORTFOLIO_COLOR[p])}`,
-                  opacity: activeLayers.has(p) ? 1 : 0.45,
-                }}
-              >
-                {p}
-              </button>
-            ))}
-          </div>
-          <span className="spacer" />
-          {flat && (
-            <button
-              className="mono"
-              style={{ fontSize: 9, padding: "1px 6px" }}
-              onClick={() => setForceHighDetail(true)}
-              title="This machine is rendering below 15 fps. Click to force the 3D view anyway."
+    <div className="app-root" style={{ display: "flex", flexDirection: "column", height: "100%" }}>
+      <header className="app-header">
+        <div className="brand">
+          <span className="brand-name">gotham</span>
+          <span className="brand-sub">Infrastructure resilience</span>
+        </div>
+        <nav className="tabs" aria-label="Views">
+          {ROUTES.map((r) => (
+            <NavLink
+              key={r.path}
+              to={r.path}
+              title={`${r.hint} (shortcut ${r.key})`}
+              className={({ isActive }) => (isActive ? "tab tab-active" : "tab")}
             >
-              2D fallback — low frame rate · force 3D
-            </button>
-          )}
-          {fixtures && <span className="mono" style={{ fontSize: 9, color: "var(--f-degraded)" }}>fixture data</span>}
-          {health && (
-            <span className="mono dim" style={{ fontSize: 9 }}>
-              {health.role} · {health.status}
-            </span>
-          )}
-        </header>
+              {r.label}
+            </NavLink>
+          ))}
+        </nav>
+        <span className="spacer" />
+        {health && (
+          <span className="status-pill" title="API status and access role">
+            <span className={health.status === "ok" ? "dot dot-ok" : "dot dot-warn"} />
+            {health.status === "ok" ? "Connected" : "Degraded"} · {health.role}
+          </span>
+        )}
+        <button
+          className={copilotOpen ? "copilot-button copilot-open" : "copilot-button"}
+          onClick={() => setCopilotOpen(!copilotOpen)}
+          title="Ask questions about the model (shortcut C)"
+          aria-pressed={copilotOpen}
+        >
+          Ask the copilot
+        </button>
+      </header>
 
-        <main style={{ position: "absolute", top: 30, left: 0, right: 0, bottom: 0 }}>
+      <div className="toolbar">
+        <span className="toolbar-label">Colour map by</span>
+        <div className="segmented" role="group" aria-label="Colour map by">
+          {Object.entries(MODE_KEYS).map(([key, m]) => (
+            <button
+              key={m}
+              aria-pressed={mode === m}
+              onClick={() => setMode(m)}
+              title={`Shortcut ${key.toUpperCase()}`}
+            >
+              {MODE_LABELS[m] ?? m}
+            </button>
+          ))}
+        </div>
+        <span className="toolbar-divider" />
+        <span className="toolbar-label">Show layers</span>
+        <div className="row" style={{ gap: 6 }} role="group" aria-label="Show layers">
+          {ALL_PORTFOLIOS.map((p) => (
+            <label key={p} className="layer-toggle">
+              <input
+                type="checkbox"
+                checked={activeLayers.has(p)}
+                onChange={() => toggleLayer(p)}
+              />
+              <span className="layer-swatch" style={{ background: css(PORTFOLIO_COLOR[p]) }} />
+              {LAYER_LABELS[p] ?? p}
+            </label>
+          ))}
+        </div>
+        <span className="spacer" />
+        {flat && (
+          <button
+            className="notice"
+            onClick={() => setForceHighDetail(true)}
+            title="This computer is drawing the map slowly, so it switched to a flat view."
+          >
+            Flat view (slow graphics) — switch to 3D
+          </button>
+        )}
+        {fixtures && <span className="notice">Offline demo data</span>}
+      </div>
+
+      <div className="app-body" style={{ position: "relative", flex: 1, minHeight: 0 }}>
+        <main style={{ position: "absolute", inset: 0 }}>
           <Routes>
             <Route path="/" element={<Navigate to="/explore" replace />} />
             <Route path="/explore" element={<Explore />} />

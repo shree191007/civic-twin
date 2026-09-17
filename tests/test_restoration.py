@@ -5,12 +5,12 @@ import math
 
 import pytest
 
-from civictwin.analysis import restoration as restoration_mod
-from civictwin.analysis.montecarlo import ScenarioSet
-from civictwin.analysis.restoration import compare_policies, plan_for
-from civictwin.config import DEFAULT
-from civictwin.engine.coordinator import Engine
-from civictwin.ontology import Township
+from gotham.analysis import restoration as restoration_mod
+from gotham.analysis.montecarlo import ScenarioSet
+from gotham.analysis.restoration import compare_policies, plan_for
+from gotham.config import DEFAULT
+from gotham.engine.coordinator import Engine
+from gotham.ontology import Township
 
 
 @pytest.fixture(scope="module")

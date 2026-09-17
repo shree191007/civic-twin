@@ -8,9 +8,9 @@ from collections import Counter
 
 import pytest
 
-from civictwin.config import Config, DEFAULT
-from civictwin.io import load_township, save_township
-from civictwin.ontology import (
+from gotham.config import Config, DEFAULT
+from gotham.io import load_township, save_township
+from gotham.ontology import (
     Asset,
     AssetKind,
     Link,
@@ -18,8 +18,8 @@ from civictwin.ontology import (
     Portfolio,
     Township,
 )
-from civictwin.provenance import Provenance
-from civictwin.synth.township import generate
+from gotham.provenance import Provenance
+from gotham.synth.township import generate
 
 EXPECTED_COUNTS: dict[AssetKind, int] = {
     AssetKind.GRID_SUPPLY: 1,
@@ -161,7 +161,7 @@ def test_no_river_crossing_except_bridges(town: Township) -> None:
 
 
 def _river_y(town: Township, x: float) -> float:
-    from civictwin.synth.geometry import build_terrain
+    from gotham.synth.geometry import build_terrain
     import numpy as np
 
     terrain = build_terrain(np.random.default_rng(town.seed), town.extent_m)

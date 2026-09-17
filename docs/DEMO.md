@@ -15,7 +15,7 @@ The reveal is that *the asset was not the problem — the hidden dependency was.
 | 1:35–2:25 | `/scenario`. Rainfall to the 1-in-50 storm, scrub 0→72 h. Switch to **state** mode (`A`) and narrate the cascade in an operator's words: the tower goes *operational → backup → critical → failed* as its battery runs down; the pump enters backup mode; the generator runs dry because the fuel truck cannot cross. | Map + portfolio state plot | Cross-sector propagation over time |
 | 2:25–3:00 | `/risk`. Effective redundancy: T5 and T6 are two paths on paper and one in practice — *they share S2 for power and FIBRE_4 for backhaul*. Then the SPOF cards, each with a **measured** counterfactual: this is what it costs, not what it looks like. | Redundancy panel + SPOF cards | What asset-by-asset monitoring misses |
 | 3:00–3:50 | `/plan`. Pick a priority — **protect human life** buys different things from **minimise economic loss**; show it. Drag the budget along the frontier, then split screen: same storm, asset-by-asset left, optimised right, counters ticking. | Priority modes + frontier + split | Decision value, and the proof |
-| 3:50–4:25 | Provenance mode (`R`); the **assumption ledger** — "why does Civic-Twin think this?" — with its weakest-link standing; confidence badges on each recommendation. | Map + ledger | Rigour and honesty |
+| 3:50–4:25 | Provenance mode (`R`); the **assumption ledger** — "why does Gotham think this?" — with its weakest-link standing; confidence badges on each recommendation. | Map + ledger | Rigour and honesty |
 | 4:25–5:00 | Hand over the printed brief. Close on one number, stated as a range. | `/log` → print | A tangible output |
 
 ## Rules for the presenter

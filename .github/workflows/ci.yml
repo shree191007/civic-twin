@@ -16,7 +16,7 @@ jobs:
       - run: pip install -e ".[dev]"
       - run: python scripts/build_township.py --seed 42 --out data/township.json
       - run: pytest -q
-      - run: mypy civictwin/engine civictwin/analysis
+      - run: mypy gotham/engine gotham/analysis
         continue-on-error: true
 
   web:

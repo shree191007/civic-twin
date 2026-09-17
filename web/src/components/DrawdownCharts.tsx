@@ -54,7 +54,7 @@ export function DrawdownCharts({ timeline, baseline }: Props) {
   );
 
   if (timeline.length === 0) {
-    return <div className="dim" style={{ fontSize: 11, padding: 10 }}>No timeline loaded.</div>;
+    return <div className="dim" style={{ fontSize: 13, padding: 10 }}>No timeline loaded.</div>;
   }
 
   return (
@@ -63,7 +63,7 @@ export function DrawdownCharts({ timeline, baseline }: Props) {
       <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(150px, 1fr))", gap: 8 }}>
         {charts.map((c) => (
           <div key={c.service}>
-            <div className="row mono" style={{ justifyContent: "space-between", fontSize: 9 }}>
+            <div className="row mono" style={{ justifyContent: "space-between", fontSize: 11 }}>
               <span style={{ color: css(PORTFOLIO_COLOR[c.portfolio]) }}>{c.service}</span>
               <span className="dim">recovery {hours(c.recovered ?? Infinity)}</span>
             </div>
@@ -78,7 +78,7 @@ export function DrawdownCharts({ timeline, baseline }: Props) {
                 y: { domain: [0, 1], label: null, ticks: 3, grid: true },
                 marks: [
                   ...(c.base
-                    ? [Plot.line(c.base, { x: "t", y: "level", stroke: "#7d8b9e", strokeWidth: 1 })]
+                    ? [Plot.line(c.base, { x: "t", y: "level", stroke: "#94a3b8", strokeWidth: 1.2 })]
                     : []),
                   Plot.line(c.current, {
                     x: "t",
@@ -91,7 +91,7 @@ export function DrawdownCharts({ timeline, baseline }: Props) {
                         Plot.dot([{ t: c.recovered, level: RECOVERY }], {
                           x: "t",
                           y: "level",
-                          fill: "#2fd98a",
+                          fill: "#16a34a",
                           r: 2.5,
                         }),
                       ]

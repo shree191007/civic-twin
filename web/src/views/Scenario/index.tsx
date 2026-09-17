@@ -109,7 +109,7 @@ export function Scenario() {
             <Legend spec={legend} />
           </div>
           {(loading || adhocPending) && (
-            <div className="panel mono" style={{ position: "absolute", top: 10, right: 10, padding: "4px 8px", fontSize: 10 }}>
+            <div className="panel mono" style={{ position: "absolute", top: 10, right: 10, padding: "4px 8px", fontSize: 12 }}>
               computing…
             </div>
           )}
@@ -122,7 +122,7 @@ export function Scenario() {
                 top: 10,
                 right: 10,
                 padding: "5px 9px",
-                fontSize: 11,
+                fontSize: 13,
                 gap: 10,
                 borderColor: "var(--f-down)",
               }}
@@ -134,10 +134,10 @@ export function Scenario() {
         </div>
         <div className="col scroll" style={{ minHeight: 0 }}>
           <div className="row" style={{ gap: 4 }}>
-            <button aria-pressed={!forecastMode} onClick={() => setForecastMode(false)} style={{ fontSize: 11 }}>
+            <button aria-pressed={!forecastMode} onClick={() => setForecastMode(false)} style={{ fontSize: 13 }}>
               Timeline
             </button>
-            <button aria-pressed={forecastMode} onClick={() => setForecastMode(true)} style={{ fontSize: 11 }}>
+            <button aria-pressed={forecastMode} onClick={() => setForecastMode(true)} style={{ fontSize: 13 }}>
               Forecast to impact
             </button>
           </div>
@@ -158,7 +158,7 @@ export function Scenario() {
       <div className="panel" style={{ padding: 10 }}>
         <div className="row" style={{ gap: 18, marginBottom: 8 }}>
           <div className="row" style={{ gap: 6, flex: 1 }}>
-            <span className="dim mono" style={{ fontSize: 10, whiteSpace: "nowrap" }}>
+            <span className="dim mono" style={{ fontSize: 12, whiteSpace: "nowrap" }}>
               rainfall {Math.round(effectiveRain)} mm
               {current ? ` · ${returnPeriod(current.return_period_y)}` : " · ad hoc"}
             </span>
@@ -175,17 +175,17 @@ export function Scenario() {
           </div>
           <div className="row" style={{ gap: 4 }}>
             {PLANS.map((p) => (
-              <button key={p} aria-pressed={plan === p} onClick={() => setPlan(p)} style={{ fontSize: 11 }}>
+              <button key={p} aria-pressed={plan === p} onClick={() => setPlan(p)} style={{ fontSize: 13 }}>
                 {p.replace(/_/g, " ")}
               </button>
             ))}
           </div>
           <div className="row" style={{ gap: 4 }}>
-            <button aria-pressed={failMode} onClick={() => setFailMode(!failMode)} style={{ fontSize: 11 }}>
+            <button aria-pressed={failMode} onClick={() => setFailMode(!failMode)} style={{ fontSize: 13 }}>
               Fail an asset
             </button>
             {forced.length > 0 && (
-              <button onClick={clearForced} className="mono" style={{ fontSize: 10 }}>
+              <button onClick={clearForced} className="mono" style={{ fontSize: 12 }}>
                 clear {forced.length}
               </button>
             )}

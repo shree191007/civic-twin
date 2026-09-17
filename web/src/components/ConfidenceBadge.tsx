@@ -2,7 +2,7 @@ import { percent } from "../lib/format";
 
 /** Ensemble selection frequency, drawn as a filled ring plus the number. */
 export function ConfidenceBadge({ value }: { value: number | null | undefined }) {
-  if (value == null) return <span className="dim mono" style={{ fontSize: 10 }}>—</span>;
+  if (value == null) return <span className="dim mono" style={{ fontSize: 12 }}>—</span>;
   const r = 6;
   const circumference = 2 * Math.PI * r;
   return (
@@ -21,7 +21,7 @@ export function ConfidenceBadge({ value }: { value: number | null | undefined })
           strokeLinecap="round"
         />
       </svg>
-      <span className="mono" style={{ fontSize: 10 }}>{percent(value)}</span>
+      <span className="mono" style={{ fontSize: 12 }}>{percent(value)}</span>
     </span>
   );
 }

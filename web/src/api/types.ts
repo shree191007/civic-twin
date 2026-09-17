@@ -1,4 +1,4 @@
-/** Response shapes from the civic-twin API (spec 04). */
+/** Response shapes from the gotham API (spec 04). */
 import type { Frame } from "../lib/frames";
 
 export type Portfolio = "energy" | "water" | "comms" | "transport" | "services";
@@ -382,6 +382,11 @@ export interface PlanStep {
   cumulative_cost_inr: number;
   cvar_after: number;
   marginal_cvar_reduction_per_lakh: number;
+  /** Present on steps served by /frontier. */
+  kind?: string;
+  cost_inr?: number | null;
+  target_asset?: string | null;
+  why?: string;
 }
 
 export interface Plan {
@@ -463,12 +468,24 @@ export interface CompareSide {
   peak_no_health: number;
 }
 
+export type DecisionStatus = "approved" | "approved_with_changes" | "deferred" | "rejected";
+
+export interface PlanSnapshot {
+  budget_inr: number;
+  cost_inr: number;
+  measures: number;
+  cvar_reduction_pct: number;
+  objective: string;
+}
+
 export interface DecisionRecord extends Versioned {
   plan_id: string;
   rationale: string;
   scenarios_considered: string[];
   author: string;
   recorded_at: string;
+  status?: DecisionStatus;
+  plan_summary?: PlanSnapshot;
 }
 
 export interface CopilotResponse {

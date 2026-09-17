@@ -4,29 +4,29 @@ from __future__ import annotations
 import numpy as np
 import pytest
 
-from civictwin.analysis.ledger import for_asset, for_result, provenance_summary
-from civictwin.analysis.objectives import (
+from gotham.analysis.ledger import for_asset, for_result, provenance_summary
+from gotham.analysis.objectives import (
     OBJECTIVES,
     ObjectiveMode,
     objective_values,
     resolve,
 )
-from civictwin.analysis.redundancy import (
+from gotham.analysis.redundancy import (
     common_roots,
     independent_paths,
     redundancy_groups,
     system_score,
 )
-from civictwin.analysis.uncertainty import (
+from gotham.analysis.uncertainty import (
     Confidence,
     from_interval,
     from_samples,
     round_people,
 )
-from civictwin.config import DEFAULT
-from civictwin.hazard.schemas.forecast import UncertaintySource
-from civictwin.ontology import Township
-from civictwin.provenance import Evidence, weakest
+from gotham.config import DEFAULT
+from gotham.hazard.schemas.forecast import UncertaintySource
+from gotham.ontology import Township
+from gotham.provenance import Evidence, weakest
 
 
 # --------------------------------------------------------------- section 6
@@ -176,7 +176,7 @@ def test_systemic_risk_is_not_just_centrality(ranked, town: Township) -> None:
 
 
 def test_concentration_sees_zone_level_alternatives(town: Township) -> None:
-    from civictwin.analysis.criticality import dependency_concentration
+    from gotham.analysis.criticality import dependency_concentration
 
     assert dependency_concentration(town, "T5") == 0.5, "a zone has two towers"
     assert dependency_concentration(town, "TR9") == 1.0, "a zone has one transformer"

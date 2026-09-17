@@ -1,13 +1,13 @@
-/** "Why does Civic-Twin think this?" — the assumption ledger (patch section 7). */
+/** "Why does Gotham think this?" — the assumption ledger (patch section 7). */
 import type { Evidence, Ledger, ProvenanceSummary } from "../api/types";
 
 const EVIDENCE_COLOR: Record<Evidence, string> = {
   observed: "var(--prov-observed)",
-  verified: "var(--f-full)",
-  estimated: "var(--f-degraded)",
-  external_model: "var(--water)",
+  verified: "var(--f-full-text)",
+  estimated: "var(--f-degraded-text)",
+  external_model: "var(--water-text)",
   simulated: "var(--comms)",
-  assumed: "var(--f-critical)",
+  assumed: "var(--f-critical-text)",
 };
 
 const EVIDENCE_LABEL: Record<Evidence, string> = {
@@ -24,7 +24,7 @@ export function EvidenceChip({ value }: { value: Evidence }) {
     <span
       className="mono"
       style={{
-        fontSize: 9,
+        fontSize: 11,
         textTransform: "uppercase",
         letterSpacing: "0.05em",
         padding: "0 4px",
@@ -53,11 +53,11 @@ export function AssumptionLedger({
     <details className="panel" open={open} style={{ padding: 10 }}>
       <summary style={{ cursor: "pointer", listStyle: "none" }}>
         <span className="row" style={{ gap: 8 }}>
-          <h3 style={{ margin: 0 }}>Why does Civic-Twin think this?</h3>
+          <h3 style={{ margin: 0 }}>Why does Gotham think this?</h3>
           <EvidenceChip value={ledger.standing} />
         </span>
       </summary>
-      <div className="dim" style={{ fontSize: 10, margin: "6px 0 8px", lineHeight: 1.5 }}>
+      <div className="dim" style={{ fontSize: 12, margin: "6px 0 8px", lineHeight: 1.5 }}>
         {ledger.claim}. The claim is only as firm as the weakest thing under it,
         which is <strong>{EVIDENCE_LABEL[ledger.standing]}</strong>.
       </div>
@@ -65,20 +65,20 @@ export function AssumptionLedger({
         {ledger.assumptions.map((a, i) => (
           <div key={i} style={{ borderTop: "1px solid var(--border)", paddingTop: 5 }}>
             <div className="row" style={{ justifyContent: "space-between", gap: 8 }}>
-              <span className="mono" style={{ fontSize: 10, color: "var(--text-dim)" }}>
+              <span className="mono" style={{ fontSize: 12, color: "var(--text-dim)" }}>
                 {a.subject}
               </span>
               <EvidenceChip value={a.evidence} />
             </div>
-            <div style={{ fontSize: 11, lineHeight: 1.45 }}>{a.statement}</div>
-            <div className="dim mono" style={{ fontSize: 9 }}>source: {a.source}</div>
+            <div style={{ fontSize: 13, lineHeight: 1.45 }}>{a.statement}</div>
+            <div className="dim mono" style={{ fontSize: 11 }}>source: {a.source}</div>
           </div>
         ))}
       </div>
       {provenance && (
         <div
           className="dim"
-          style={{ fontSize: 10, marginTop: 8, paddingTop: 6, borderTop: "1px solid var(--border)" }}
+          style={{ fontSize: 12, marginTop: 8, paddingTop: 6, borderTop: "1px solid var(--border)" }}
         >
           {provenance.sentence}.
         </div>

@@ -65,7 +65,9 @@ export const useHero = (scenarioId: string, plan: string, enabled = true): UseQu
   useQuery({
     queryKey: ["hero", scenarioId, plan],
     queryFn: () => get<ScenarioResponse>(`/scenarios/${scenarioId}?plan=${plan}`),
-    enabled: enabled && !scenarioId.startsWith("adhoc:"),
+    // An empty id would request /scenarios?plan=..., which is the ad-hoc
+    // POST endpoint and answers 405. Only a real precomputed id is fetched.
+    enabled: enabled && scenarioId !== "" && !scenarioId.startsWith("adhoc:"),
     ...STATIC,
   });
 

@@ -11,11 +11,11 @@ from typing import Any, Iterator
 import pytest
 from fastapi.testclient import TestClient
 
-from civictwin.api.routes import copilot as copilot_route
-from civictwin.api.state import AppState, set_state
-from civictwin.io import save_township
-from civictwin.ontology import Portfolio, Service
-from civictwin.synth.township import generate
+from gotham.api.routes import copilot as copilot_route
+from gotham.api.state import AppState, set_state
+from gotham.io import save_township
+from gotham.ontology import Portfolio, Service
+from gotham.synth.township import generate
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 GET_ENDPOINTS = [
@@ -68,7 +68,7 @@ def analysed(tmp_path_factory) -> tuple[Path, Path]:
 def client(analysed: tuple[Path, Path]) -> Iterator[TestClient]:
     township_path, results = analysed
     set_state(AppState(township_path=township_path, results_path=results))
-    from civictwin.api.main import app
+    from gotham.api.main import app
 
     with TestClient(app) as c:
         yield c
@@ -81,7 +81,7 @@ def public_client(analysed: tuple[Path, Path]) -> Iterator[TestClient]:
     set_state(
         AppState(township_path=township_path, results_path=results, role="public")
     )
-    from civictwin.api.main import app
+    from gotham.api.main import app
 
     with TestClient(app) as c:
         yield c
@@ -154,7 +154,7 @@ def test_trace_up_includes_s2_for_h2(client: TestClient) -> None:
 
 
 def test_run_scenario_deterministic(client: TestClient) -> None:
-    from civictwin.api.state import get_state
+    from gotham.api.state import get_state
 
     payload = {"rain_mm": 210.0, "field_seed": 7, "onset_hour": 14, "record": True}
     a = client.post("/scenarios", json=payload).json()
@@ -389,3 +389,37 @@ def test_versions_in_every_response(client: TestClient) -> None:
         assert payload["model_version"], path
     scenario = client.post("/scenarios", json={"rain_mm": 90.0}).json()
     assert scenario["data_version"] and scenario["model_version"]
+
+
+def test_frontier_steps_can_be_listed_as_a_package(client: TestClient) -> None:
+    """Each frontier step carries enough to show it without the catalogue."""
+    steps = client.get("/frontier").json()["steps"]
+    assert steps
+    for step in steps:
+        assert {"kind", "cost_inr", "target_asset", "why"} <= set(step)
+        assert step["why"], step["intervention_id"]
+    costs = [s["cumulative_cost_inr"] for s in steps]
+    assert costs == sorted(costs)
+
+
+def test_network_wide_measures_are_not_described_as_feeder_ties(client: TestClient) -> None:
+    body = client.get("/plans?budget=30000000").json()
+    for item in body["interventions"]:
+        if item["kind"] == "operational":
+            assert "feeder" not in item["why"].lower(), item
+
+
+def test_decision_status_and_plan_snapshot_round_trip(client: TestClient) -> None:
+    payload = {
+        "plan_id": "budget_30000000",
+        "rationale": "Deferred until the east bridge survey is back",
+        "author": "planner",
+        "status": "deferred",
+        "plan_summary": {"cost_inr": 28_000_000, "measures": 17},
+    }
+    stored = client.post("/decisions", json=payload).json()
+    assert stored["status"] == "deferred"
+    assert stored["plan_summary"]["measures"] == 17
+    assert client.post(
+        "/decisions", json={**payload, "status": "maybe"}
+    ).status_code == 422

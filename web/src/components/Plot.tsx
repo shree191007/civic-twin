@@ -4,9 +4,9 @@ import * as Plot from "@observablehq/plot";
 
 export const PLOT_STYLE: Partial<CSSStyleDeclaration> = {
   background: "transparent",
-  color: "#d8e0ea",
+  color: "#0f172a",
   fontFamily: '"JetBrains Mono", ui-monospace, monospace',
-  fontSize: "10px",
+  fontSize: "12px",
 };
 
 export function PlotFigure({
@@ -31,7 +31,7 @@ export function PlotFigure({
 
   if (!options) {
     return (
-      <div className="dim" style={{ fontSize: 11, padding: 10, height }}>
+      <div className="dim" style={{ fontSize: 13, padding: 10, height }}>
         {empty}
       </div>
     );

@@ -7,12 +7,12 @@ import time
 
 import pytest
 
-from civictwin.config import DEFAULT
-from civictwin.engine.contract import HazardScenario, Overlay
-from civictwin.engine.coordinator import Engine
-from civictwin.engine.hazard import sample_scenarios
-from civictwin.ontology import DamageState, OperatingState, Service, Township
-from civictwin.synth.township import generate
+from gotham.config import DEFAULT
+from gotham.engine.contract import HazardScenario, Overlay
+from gotham.engine.coordinator import Engine
+from gotham.engine.hazard import sample_scenarios
+from gotham.ontology import DamageState, OperatingState, Service, Township
+from gotham.synth.township import generate
 
 
 @pytest.fixture(scope="module")

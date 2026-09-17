@@ -1,22 +1,44 @@
-/* The one-page council brief. Screen chrome disappears entirely. */
+/* Printing the council brief. Everything but the paper disappears, and the
+   app's fixed-height, scrolling layout is unwound so the whole brief prints
+   instead of just the part visible on screen. */
 @media print {
-  @page { size: A4 portrait; margin: 14mm; }
+  @page { size: A4 portrait; margin: 16mm 15mm; }
 
-  body { background: #fff; color: #111; overflow: visible; }
-
-  .no-print, nav, .rail, .copilot-drawer, button { display: none !important; }
-
-  .brief {
-    display: block !important;
-    background: #fff;
-    color: #111;
-    font-size: 10pt;
-    line-height: 1.4;
+  html, body, #root {
+    height: auto !important;
+    overflow: visible !important;
+    background: #fff !important;
   }
-  .brief h1 { font-size: 16pt; margin-bottom: 2mm; }
-  .brief h2 { font-size: 11pt; margin: 4mm 0 1mm; }
+  .app-root, .app-body, main {
+    display: block !important;
+    position: static !important;
+    height: auto !important;
+    overflow: visible !important;
+  }
+
+  .app-header, .toolbar, .no-print, .copilot-drawer, button { display: none !important; }
+
+  .page { height: auto !important; overflow: visible !important; }
+  .page-inner { padding: 0 !important; max-width: none !important; }
+  .log-grid { display: block !important; }
+  .paper-wrap { background: none !important; padding: 0 !important; border-radius: 0 !important; }
+
+  .paper {
+    box-shadow: none !important;
+    padding: 0 !important;
+    max-width: none !important;
+    font-size: 10pt;
+    line-height: 1.45;
+    color: #111 !important;
+  }
+  .brief h1 { font-size: 18pt; }
+  .brief h2 { font-size: 11.5pt; margin-top: 7mm; break-after: avoid; }
+  .brief h2 .n { background: #111 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .brief-kpis { break-inside: avoid; }
+  .brief-kpi { border-color: #ccc !important; }
   .brief table { font-size: 9pt; }
-  .brief th, .brief td { border-bottom: 0.4pt solid #bbb; color: #111; background: #fff; }
-  .brief .dim { color: #555; }
-  .brief a { color: #111; text-decoration: none; }
+  .brief tr, .brief li { break-inside: avoid; }
+  .brief th, .brief td { color: #111 !important; background: #fff !important; }
+  .brief .fineprint, .brief-meta, .brief-kpi .label, .brief-kpi .sub { color: #444 !important; }
+  .brief-eyebrow { color: #111 !important; }
 }

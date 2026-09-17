@@ -4,17 +4,17 @@ from __future__ import annotations
 import numpy as np
 import pytest
 
-from civictwin.analysis.criticality import (
+from gotham.analysis.criticality import (
     AssetCriticality,
     asset_criticality,
     critical_sets,
     explain_chains,
     rank_criticality,
 )
-from civictwin.analysis.montecarlo import LossTable, ScenarioSet
-from civictwin.config import DEFAULT
-from civictwin.engine.coordinator import Engine
-from civictwin.ontology import LinkKind, Township
+from gotham.analysis.montecarlo import LossTable, ScenarioSet
+from gotham.config import DEFAULT
+from gotham.engine.coordinator import Engine
+from gotham.ontology import LinkKind, Township
 
 CHAIN_KINDS = {LinkKind.POWERS, LinkKind.SUPPLIES_WATER, LinkKind.BACKHAULS}
 

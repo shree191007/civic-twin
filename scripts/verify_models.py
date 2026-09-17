@@ -20,19 +20,19 @@ import numpy as np
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
-from civictwin.analysis.hindcast import (  # noqa: E402
+from gotham.analysis.hindcast import (  # noqa: E402
     counterfactual,
     load_events,
     replay,
 )
-from civictwin.analysis.interventions import generate_catalogue  # noqa: E402
-from civictwin.analysis.metrics import cvar  # noqa: E402
-from civictwin.analysis.montecarlo import make_scenario_set, run_set  # noqa: E402
-from civictwin.analysis.optimize import greedy_plan  # noqa: E402
-from civictwin.config import DEFAULT, Config  # noqa: E402
-from civictwin.engine.coordinator import Engine  # noqa: E402
-from civictwin.io import data_version_of, load_township, model_version, save_json  # noqa: E402
-from civictwin.ontology import AssetKind, DamageState, Service, Township  # noqa: E402
+from gotham.analysis.interventions import generate_catalogue  # noqa: E402
+from gotham.analysis.metrics import cvar  # noqa: E402
+from gotham.analysis.montecarlo import make_scenario_set, run_set  # noqa: E402
+from gotham.analysis.optimize import greedy_plan  # noqa: E402
+from gotham.config import DEFAULT, Config  # noqa: E402
+from gotham.engine.coordinator import Engine  # noqa: E402
+from gotham.io import data_version_of, load_township, model_version, save_json  # noqa: E402
+from gotham.ontology import AssetKind, DamageState, Service, Township  # noqa: E402
 
 logger = logging.getLogger("verify_models")
 
@@ -281,7 +281,7 @@ def historical_backtest(
                 "built and tested; it needs an observed flood to run against, "
                 "which the real-data pipeline of spec 07 would supply."
             ),
-            "harness": "civictwin.analysis.hindcast",
+            "harness": "gotham.analysis.hindcast",
             "checks_available": [
                 "hazard footprint (IoU, precision, recall)",
                 "infrastructure exposure",
