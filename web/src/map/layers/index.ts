@@ -105,7 +105,7 @@ export function assetLayers(o: LayerOptions): Layer[] {
         },
         getLineColor: (d) =>
           d.properties.id === o.selectedAsset
-            ? ([255, 255, 255, 255] as RGBA)
+            ? ([15, 23, 42, 255] as RGBA)
             : PROVENANCE_COLOR[d.properties.provenance],
         onClick: (info) => {
           const props = (info.object as AssetFeature | undefined)?.properties;
@@ -136,8 +136,8 @@ export function assetLayers(o: LayerOptions): Layer[] {
           alt(d.properties, o.flat),
         ],
         getText: (d) => d.properties.id,
-        getSize: 10,
-        getColor: [216, 224, 234, 190],
+        getSize: 12,
+        getColor: [15, 23, 42, 220],
         getPixelOffset: [0, -13],
         fontFamily: '"JetBrains Mono", ui-monospace, monospace',
         characterSet: "auto",
@@ -167,7 +167,7 @@ export function roadLayer(o: LayerOptions): Layer[] {
         if (closed.has(props.id)) return [255, 59, 78, 220];
         const depth = o.frame.flood[props.id];
         if (depth && depth > 0.02) return floodColor(depth);
-        return [60, 72, 88, 170];
+        return [148, 163, 184, 200];
       },
       updateTriggers: { getColor: [o.frame.t] },
       pickable: false,
@@ -198,7 +198,7 @@ export function zoneLayer(o: LayerOptions): Layer[] {
         const affected = o.traceIds.size > 0 && isZoneAffected(props, o.traceIds);
         return [color[0], color[1], color[2], Math.round((affected ? pulse : 0.4) * 130)];
       },
-      getLineColor: [125, 139, 158, 110],
+      getLineColor: [100, 116, 139, 140],
       pickable: false,
       updateTriggers: {
         getFillColor: [o.mode, o.frame.t, o.traceIds.size, Math.round(o.dashOffset.current)],
@@ -256,7 +256,7 @@ function arcColor(
   // A pulse travelling from the failing asset toward what it takes down.
   const phase = (o.dashOffset.current % 12) / 12;
   const strength = isSource ? 1 - phase : phase;
-  return dim([255, 255, 255, 255], 0.45 + 0.55 * strength);
+  return dim([29, 78, 216, 255], 0.45 + 0.55 * strength);
 }
 
 const indexCache = new WeakMap<TownshipResponse, Map<string, Portfolio>>();

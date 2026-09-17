@@ -73,7 +73,7 @@ export function ForecastPanel() {
     <div className="col">
       <div className="panel" style={{ padding: 10 }}>
         <h3>Hazard in</h3>
-        <div className="dim" style={{ fontSize: 10, margin: "4px 0 7px", lineHeight: 1.5 }}>
+        <div className="dim" style={{ fontSize: 12, margin: "4px 0 7px", lineHeight: 1.5 }}>
           Civic-twin does not forecast weather. Paste what an external model
           published and it answers what that hazard does to the system.
         </div>
@@ -81,7 +81,7 @@ export function ForecastPanel() {
           {EXAMPLES.map((e) => (
             <button
               key={e.label}
-              style={{ fontSize: 10 }}
+              style={{ fontSize: 12 }}
               title={e.note}
               onClick={() => setText(e.payload)}
             >
@@ -92,7 +92,7 @@ export function ForecastPanel() {
         <textarea
           rows={8}
           className="mono"
-          style={{ fontSize: 10 }}
+          style={{ fontSize: 12 }}
           value={text}
           onChange={(e) => setText(e.target.value)}
           aria-label="Hazard forecast payload"
@@ -102,7 +102,7 @@ export function ForecastPanel() {
             {pending ? "Simulating…" : "Simulate the cascade"}
           </button>
           {error && (
-            <span className="mono" style={{ fontSize: 10, color: "var(--f-down)" }}>
+            <span className="mono" style={{ fontSize: 12, color: "var(--f-down-text)" }}>
               {error}
             </span>
           )}
@@ -114,7 +114,7 @@ export function ForecastPanel() {
           <div className="panel" style={{ padding: 10 }}>
             <div className="row" style={{ justifyContent: "space-between" }}>
               <h3>Impact out</h3>
-              <span className="dim mono" style={{ fontSize: 10 }}>
+              <span className="dim mono" style={{ fontSize: 12 }}>
                 {result.impact.scenarios} scenarios · {result.forecast.source}
               </span>
             </div>
@@ -131,7 +131,7 @@ export function ForecastPanel() {
             </div>
             <UncertaintyDrivers drivers={result.impact.primary_uncertainty} />
             {result.forecast.notes && (
-              <div className="dim" style={{ fontSize: 10, marginTop: 6, lineHeight: 1.5 }}>
+              <div className="dim" style={{ fontSize: 12, marginTop: 6, lineHeight: 1.5 }}>
                 {result.forecast.notes}
               </div>
             )}
@@ -149,7 +149,7 @@ export function ForecastPanel() {
                         Plot.barX(bands, {
                           x: "central",
                           y: "band",
-                          fill: "#2ec8f0",
+                          fill: "#0284c7",
                           fillOpacity: (d: { probability: number }) =>
                             0.35 + 0.65 * d.probability,
                           sort: { y: "x" },
@@ -159,7 +159,7 @@ export function ForecastPanel() {
                   : null
               }
             />
-            <div className="dim mono" style={{ fontSize: 9 }}>
+            <div className="dim mono" style={{ fontSize: 11 }}>
               Bar opacity shows how likely the forecaster thinks each band is.
             </div>
             {result.impact.most_likely_first_failure.length > 0 && (
@@ -170,7 +170,7 @@ export function ForecastPanel() {
                     <button
                       key={id}
                       className="mono"
-                      style={{ fontSize: 10, padding: "1px 5px" }}
+                      style={{ fontSize: 12, padding: "1px 5px" }}
                       onClick={() => selectAsset(id)}
                     >
                       {id}
@@ -180,7 +180,7 @@ export function ForecastPanel() {
               </>
             )}
             {result.impact.worst_zone && (
-              <div className="dim" style={{ fontSize: 10, marginTop: 6 }}>
+              <div className="dim" style={{ fontSize: 12, marginTop: 6 }}>
                 Worst affected zone: {result.impact.worst_zone}. Tail case reaches{" "}
                 {personHours(result.impact.tail_person_hours.central)}, with up to{" "}
                 {people(result.impact.people_affected.high)} people affected.

@@ -11,8 +11,8 @@ import type { Criticality, TownshipResponse, TraceResponse } from "../api/types"
 import type { Frame } from "../lib/frames";
 import type { ModeContext } from "./modes";
 
-/** CARTO dark matter needs no API key. */
-const BASEMAP = "https://basemaps.cartocdn.com/gl/dark-matter-gl-style/style.json";
+/** CARTO Positron: a light basemap that needs no API key. */
+const BASEMAP = "https://basemaps.cartocdn.com/gl/positron-gl-style/style.json";
 
 const LOW_FPS = 15;
 const LOW_FPS_SECONDS = 3;

@@ -17,7 +17,7 @@ function Chips({ ids, onPick }: { ids: string[]; onPick: (id: string) => void })
         <button
           key={id}
           className="mono"
-          style={{ fontSize: 10, padding: "1px 5px" }}
+          style={{ fontSize: 12, padding: "1px 5px" }}
           onClick={() => onPick(id)}
         >
           {id}
@@ -38,7 +38,7 @@ export function AssetInspector({ frame }: { frame: Frame }) {
     return (
       <aside className="panel scroll" style={{ padding: 12 }}>
         <h3>Asset inspector</h3>
-        <p className="dim" style={{ fontSize: 11, lineHeight: 1.5 }}>
+        <p className="dim" style={{ fontSize: 13, lineHeight: 1.5 }}>
           Click any asset on the map to trace what it carries. The arcs will show
           the chain of causation travelling toward everything that depends on it.
         </p>
@@ -60,8 +60,8 @@ export function AssetInspector({ frame }: { frame: Frame }) {
         <h2 className="mono">{a.id}</h2>
         <ProvenanceBadge value={a.provenance} />
       </div>
-      <div style={{ fontSize: 12, marginTop: 2 }}>{a.name}</div>
-      <div className="dim mono" style={{ fontSize: 10 }}>
+      <div style={{ fontSize: 13, marginTop: 2 }}>{a.name}</div>
+      <div className="dim mono" style={{ fontSize: 12 }}>
         {a.kind} · {a.portfolio}
       </div>
 
@@ -70,11 +70,11 @@ export function AssetInspector({ frame }: { frame: Frame }) {
           <span className="mono" style={{ fontSize: 16, color: css(functionalityColor(f)) }}>
             {percent(f)}
           </span>
-          <span className="dim" style={{ fontSize: 9 }}>functionality</span>
+          <span className="dim" style={{ fontSize: 11 }}>functionality</span>
         </div>
         <div className="col" style={{ gap: 0 }}>
           <span className="mono" style={{ fontSize: 16 }}>{people(a.served_population)}</span>
-          <span className="dim" style={{ fontSize: 9 }}>people served</span>
+          <span className="dim" style={{ fontSize: 11 }}>people served</span>
         </div>
       </div>
       <div className="row" style={{ gap: 8, marginTop: 6 }}>
@@ -82,7 +82,7 @@ export function AssetInspector({ frame }: { frame: Frame }) {
           className="mono"
           title="How it is running, as distinct from how damaged it is"
           style={{
-            fontSize: 9,
+            fontSize: 11,
             textTransform: "uppercase",
             letterSpacing: "0.06em",
             padding: "1px 5px",
@@ -94,7 +94,7 @@ export function AssetInspector({ frame }: { frame: Frame }) {
           {state.replace("_", " ")}
         </span>
         {frame.reason[a.id] && (
-          <span className="mono" style={{ fontSize: 10, color: "var(--f-critical)" }}>
+          <span className="mono" style={{ fontSize: 12, color: "var(--f-critical-text)" }}>
             cause: {frame.reason[a.id]}
           </span>
         )}
@@ -103,7 +103,7 @@ export function AssetInspector({ frame }: { frame: Frame }) {
       {crit && (
         <>
           <h3 style={{ marginTop: 14 }}>Criticality</h3>
-          <table className="mono" style={{ fontSize: 11 }}>
+          <table className="mono" style={{ fontSize: 13 }}>
             <tbody>
               <tr>
                 <td className="dim">tail criticality</td>
@@ -118,7 +118,7 @@ export function AssetInspector({ frame }: { frame: Frame }) {
                 <td style={{ textAlign: "right" }}>
                   {crit.systemic_ratio.toFixed(2)}
                   {crit.systemic && (
-                    <span style={{ color: "var(--f-critical)", marginLeft: 5 }}>systemic</span>
+                    <span style={{ color: "var(--f-critical-text)", marginLeft: 5 }}>systemic</span>
                   )}
                 </td>
               </tr>
@@ -146,7 +146,7 @@ export function AssetInspector({ frame }: { frame: Frame }) {
       {detail.explanations && detail.explanations.length > 0 && (
         <>
           <h3 style={{ marginTop: 14 }}>What it carries</h3>
-          <ul className="mono" style={{ fontSize: 10, paddingLeft: 14, margin: 0, lineHeight: 1.6 }}>
+          <ul className="mono" style={{ fontSize: 12, paddingLeft: 14, margin: 0, lineHeight: 1.6 }}>
             {detail.explanations.map((line) => (
               <li key={line}>{line}</li>
             ))}
@@ -158,8 +158,8 @@ export function AssetInspector({ frame }: { frame: Frame }) {
         <>
           <h3 style={{ marginTop: 14 }}>Single points of failure</h3>
           {detail.spofs.map((s, i) => (
-            <div key={i} style={{ fontSize: 11, marginBottom: 6, lineHeight: 1.45 }}>
-              <span className="mono" style={{ color: "var(--f-critical)", fontSize: 9 }}>
+            <div key={i} style={{ fontSize: 13, marginBottom: 6, lineHeight: 1.45 }}>
+              <span className="mono" style={{ color: "var(--f-critical-text)", fontSize: 11 }}>
                 {s.kind.replace("_", " ").toUpperCase()} · {people(s.affected_population)} people
               </span>
               <div className="dim">{s.explanation}</div>

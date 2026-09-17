@@ -34,7 +34,7 @@ export function SplitCompare({ township, criticality, left, right }: Props) {
           />
           <div
             className="panel mono"
-            style={{ position: "absolute", top: 8, left: 8, padding: "6px 9px", fontSize: 11 }}
+            style={{ position: "absolute", top: 8, left: 8, padding: "6px 9px", fontSize: 13 }}
           >
             <div style={{ textTransform: "uppercase", letterSpacing: "0.06em" }}>
               {plan.replace(/_/g, " ")}
@@ -54,10 +54,10 @@ export function SplitCompare({ township, criticality, left, right }: Props) {
 function Counter({ label, value }: { label: string; value: number }) {
   return (
     <div className="col" style={{ gap: 0 }}>
-      <span style={{ fontSize: 13, color: value > 0 ? "var(--f-critical)" : "var(--text-dim)" }}>
+      <span style={{ fontSize: 13, color: value > 0 ? "var(--f-critical-text)" : "var(--text-dim)" }}>
         {people(value)}
       </span>
-      <span className="dim" style={{ fontSize: 9 }}>{label}</span>
+      <span className="dim" style={{ fontSize: 11 }}>{label}</span>
     </div>
   );
 }

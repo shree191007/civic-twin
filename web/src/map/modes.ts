@@ -34,7 +34,7 @@ export interface LegendSpec {
   continuous?: boolean;
 }
 
-const DIM: RGBA = [70, 82, 98, 140];
+const DIM: RGBA = [148, 163, 184, 150];
 
 export function assetColor(
   mode: AnalysisMode,

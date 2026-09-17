@@ -98,6 +98,11 @@ class DecisionRequest(BaseModel):
     rationale: str
     scenarios_considered: list[str] = Field(default_factory=list)
     author: str = "planner"
+    #: What was decided about the plan. Older records have no status.
+    status: Literal["approved", "approved_with_changes", "deferred", "rejected"] | None = None
+    #: The plan's headline numbers as they stood when the decision was made, so
+    #: the record still reads correctly after the analysis is re-run.
+    plan_summary: dict[str, Any] | None = None
 
 
 class DecisionRecord(DecisionRequest):

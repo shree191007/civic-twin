@@ -21,14 +21,34 @@ State = Annotated[AppState, Depends(get_state)]
 DECISIONS_FILE = "decisions.jsonl"
 
 
-def _why(state: AppState, target: str) -> str:
+#: What a measure with no single target asset does, in words.
+KIND_WHY = {
+    "operational": "A change to operating rules; it applies across the whole network.",
+    "tie": "Lets a healthy feeder pick up the load of a failed neighbour.",
+}
+
+
+#: Assets whose value is not a supply chain to a zone, described by role.
+ASSET_WHY = {
+    "stormwater_pump": "{name} keeps rainwater draining from its low-lying basin; if it stops, the flood there gets deeper.",
+    "bridge": "{name} is one of only two river crossings, so repair crews and fuel trucks depend on it.",
+    "depot": "{name} is where repair crews start from.",
+}
+
+
+def why_for(state: AppState, target: str, kind: str = "") -> str:
     """A one-line reason an intervention is worth buying, from the analytics."""
     if target not in state.township.assets:
-        return "Improves redundancy between feeders."
+        return KIND_WHY.get(kind, "Applies across the network rather than to one asset.")
     chains = explain_chains(state.township, target, limit=1)
     if chains:
         return chains[0]
+    asset = state.township.assets[target]
+    if asset.kind.value in ASSET_WHY:
+        return ASSET_WHY[asset.kind.value].format(name=asset.name)
     population = state.township.served_population(target)
+    if population <= 0:
+        return f"{asset.name} does not supply any zone directly."
     return f"{target} serves {population:,} people."
 
 
@@ -66,7 +86,7 @@ def get_plan(
                 "target_asset": iv.target if iv else iid,
                 "selection_frequency": frequency.get(iid),
                 "cvar_reduction_ph": round(previous_cvar - cvar_after, 2),
-                "why": _why(state, iv.primary_target) if iv else "",
+                "why": why_for(state, iv.primary_target, iv.kind) if iv else "",
             }
         )
         previous_cvar = cvar_after
@@ -92,7 +112,7 @@ def get_plan(
 @router.post("/decisions")
 def record_decision(request: DecisionRequest, state: State) -> dict[str, object]:
     record = {
-        **request.model_dump(),
+        **request.model_dump(exclude_none=True),
         "recorded_at": datetime.now(timezone.utc).isoformat(),
         "recorded_at_epoch": time.time(),
         **state.versions(),

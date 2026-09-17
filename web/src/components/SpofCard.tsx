@@ -19,10 +19,10 @@ export function SpofCard({ spof, onShow }: { spof: Spof; onShow: (s: Spof) => vo
 
   return (
     <div className="panel" style={{ padding: 10 }}>
-      <div className="mono" style={{ fontSize: 9, letterSpacing: "0.07em", color: "var(--f-critical)" }}>
+      <div className="mono" style={{ fontSize: 11, letterSpacing: "0.07em", color: "var(--f-critical-text)" }}>
         {TITLE[spof.kind]} · {people(spof.affected_population)} people
       </div>
-      <div style={{ fontSize: 12, marginTop: 5, lineHeight: 1.5 }}>
+      <div style={{ fontSize: 13, marginTop: 5, lineHeight: 1.5 }}>
         {group.length > 1 && (
           <>
             {groupText} both serve {zoneText || "the same zones"} for {spof.service}.<br />
@@ -30,7 +30,7 @@ export function SpofCard({ spof, onShow }: { spof: Spof; onShow: (s: Spof) => vo
         )}
         {spof.explanation}
       </div>
-      <div className="dim mono" style={{ fontSize: 10, marginTop: 6 }}>
+      <div className="dim mono" style={{ fontSize: 12, marginTop: 6 }}>
         {spof.counterfactual_ph > 0 ? (
           <>
             Measured by removing it: {personHours(spof.counterfactual_ph)} lost,
@@ -42,7 +42,7 @@ export function SpofCard({ spof, onShow }: { spof: Spof; onShow: (s: Spof) => vo
         )}
       </div>
       <div className="row" style={{ marginTop: 8, justifyContent: "space-between" }}>
-        <span className="dim mono" style={{ fontSize: 10 }}>
+        <span className="dim mono" style={{ fontSize: 12 }}>
           P(fails at design storm) {percent(spof.design_storm_failure_prob, 0)}
         </span>
         <button onClick={() => onShow(spof)}>Show me</button>

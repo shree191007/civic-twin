@@ -51,7 +51,28 @@ def critical_sets(
 
 @router.get("/frontier")
 def frontier(state: State) -> dict[str, object]:
-    return {**state.require("frontier"), **state.versions()}
+    """The greedy frontier, with each step described well enough to list.
+
+    Every prefix of the steps is a plan, so a client can show the package for
+    any budget without another optimisation run.
+    """
+    from civictwin.api.routes.plans import why_for
+
+    data = dict(state.require("frontier"))
+    steps = []
+    for step in data.get("steps", []):
+        iv = state.catalogue.get(step.get("intervention_id", ""))
+        steps.append(
+            {
+                **step,
+                "kind": iv.kind if iv else "unknown",
+                "cost_inr": iv.cost_inr if iv else None,
+                "target_asset": iv.primary_target if iv else None,
+                "why": why_for(state, iv.primary_target, iv.kind) if iv else "",
+            }
+        )
+    data["steps"] = steps
+    return {**data, **state.versions()}
 
 
 @router.get("/baselines")

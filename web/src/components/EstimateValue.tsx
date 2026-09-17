@@ -16,9 +16,9 @@ const FORMATTERS: Record<string, Formatter> = {
 };
 
 const CONFIDENCE_COLOR: Record<string, string> = {
-  high: "var(--f-full)",
-  medium: "var(--f-degraded)",
-  low: "var(--f-critical)",
+  high: "var(--f-full-text)",
+  medium: "var(--f-degraded-text)",
+  low: "var(--f-critical-text)",
 };
 
 /** People ranges read better rounded outward to something sayable. */
@@ -34,7 +34,7 @@ export function ConfidenceChip({ value }: { value: string }) {
       className="mono"
       title="How firm this figure is, judged from the width of its own range"
       style={{
-        fontSize: 9,
+        fontSize: 11,
         letterSpacing: "0.06em",
         textTransform: "uppercase",
         padding: "0 4px",
@@ -74,7 +74,7 @@ export function EstimateValue({
         {format(high)}
       </span>
       <div className="row" style={{ gap: 6 }}>
-        {label && <span className="dim" style={{ fontSize: 9 }}>{label}</span>}
+        {label && <span className="dim" style={{ fontSize: 11 }}>{label}</span>}
         <ConfidenceChip value={estimate.confidence} />
       </div>
     </div>
@@ -85,7 +85,7 @@ export function EstimateValue({
 export function UncertaintyDrivers({ drivers }: { drivers: string[] }) {
   if (drivers.length === 0) return null;
   return (
-    <div className="dim" style={{ fontSize: 10, lineHeight: 1.5 }}>
+    <div className="dim" style={{ fontSize: 12, lineHeight: 1.5 }}>
       Driven by: {drivers.map((d) => d.replace(/_/g, " ")).join(", ")}
     </div>
   );

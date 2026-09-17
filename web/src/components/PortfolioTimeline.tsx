@@ -7,9 +7,9 @@ import { functionalityColor, PORTFOLIO_COLOR, css } from "../lib/colors";
 import { ALL_PORTFOLIOS, useStore } from "../store";
 import { percent } from "../lib/format";
 
-const ROW_H = 7;
-const LABEL_W = 58;
-const HEADER_H = 14;
+const ROW_H = 12;
+const LABEL_W = 70;
+const HEADER_H = 18;
 
 interface Props {
   township: TownshipResponse;
@@ -60,12 +60,12 @@ export function PortfolioTimeline({ township, timeline, criticality }: Props) {
 
     const cellW = Math.max(1, (width - LABEL_W) / cols);
 
-    g.font = '9px "JetBrains Mono", ui-monospace, monospace';
+    g.font = '11px "JetBrains Mono", ui-monospace, monospace';
     g.textBaseline = "middle";
 
     rows.forEach((row, i) => {
       const y = HEADER_H + i * ROW_H;
-      g.fillStyle = row.first ? css(PORTFOLIO_COLOR[row.portfolio]) : "#7d8b9e";
+      g.fillStyle = row.first ? css(PORTFOLIO_COLOR[row.portfolio]) : "#4b5a6d";
       g.fillText(row.id, 2, y + ROW_H / 2);
       for (let c = 0; c < cols; c++) {
         const frame = timeline[c];
@@ -77,7 +77,7 @@ export function PortfolioTimeline({ township, timeline, criticality }: Props) {
     });
 
     // hour ruler
-    g.fillStyle = "#7d8b9e";
+    g.fillStyle = "#4b5a6d";
     for (let h = 0; h <= cols; h += 6) {
       const x = LABEL_W + h * cellW;
       g.fillText(String(h), x, HEADER_H / 2);
@@ -85,7 +85,7 @@ export function PortfolioTimeline({ township, timeline, criticality }: Props) {
 
     // playhead
     const px = LABEL_W + Math.min(t, cols) * cellW;
-    g.strokeStyle = "#d8e0ea";
+    g.strokeStyle = "#0f172a";
     g.lineWidth = 1;
     g.beginPath();
     g.moveTo(px, 0);
@@ -117,7 +117,7 @@ export function PortfolioTimeline({ township, timeline, criticality }: Props) {
     <div className="panel" style={{ padding: 6, overflow: "auto" }}>
       <div className="row" style={{ justifyContent: "space-between", marginBottom: 4 }}>
         <h3>Portfolio state · hours since landfall</h3>
-        <span className="dim mono" style={{ fontSize: 9 }}>{tip ?? "hover a cell"}</span>
+        <span className="dim mono" style={{ fontSize: 11 }}>{tip ?? "hover a cell"}</span>
       </div>
       <canvas
         ref={canvas}

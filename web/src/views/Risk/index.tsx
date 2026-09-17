@@ -55,7 +55,7 @@ function SystemicRatio({ row }: { row: Criticality }) {
     <>
       {row.systemic_ratio.toFixed(2)}
       {row.systemic && (
-        <span style={{ color: "var(--f-critical)", marginLeft: 5, fontSize: 9 }}>
+        <span style={{ color: "var(--f-critical-text)", marginLeft: 5, fontSize: 11 }}>
           SYSTEMIC
         </span>
       )}
@@ -154,7 +154,7 @@ export function Risk() {
         <div className="panel" style={{ padding: 10 }}>
           <div className="row" style={{ justifyContent: "space-between" }}>
             <h3>Annual loss distribution</h3>
-            <span className="mono dim" style={{ fontSize: 10 }}>
+            <span className="mono dim" style={{ fontSize: 12 }}>
               {risk ? `${risk.n_scenarios} scenario years` : ""}
             </span>
           </div>
@@ -185,21 +185,21 @@ export function Risk() {
                     y: { label: "scenario years" },
                     color: {
                       domain: ["body", "tail"],
-                      range: ["#2a3a4e", "#ff3b4e"],
+                      range: ["#cbd5e1", "#dc2626"],
                       legend: false,
                     },
                     marks: [
                       Plot.rectY(bins, { x1: "x1", x2: "x2", y: "n", fill: "band" }),
-                      Plot.ruleY([0], { stroke: "#1f2a38" }),
-                      Plot.ruleX([varLine], { stroke: "#f5c542", strokeWidth: 1.4 }),
-                      Plot.ruleX([cvarLine], { stroke: "#ff3b4e", strokeWidth: 1.4 }),
+                      Plot.ruleY([0], { stroke: "#94a3b8" }),
+                      Plot.ruleX([varLine], { stroke: "#ca8a04", strokeWidth: 2 }),
+                      Plot.ruleX([cvarLine], { stroke: "#dc2626", strokeWidth: 2 }),
                     ],
                   }
                 : null
             }
           />
           {risk && (
-            <div className="dim mono" style={{ fontSize: 9 }}>
+            <div className="dim mono" style={{ fontSize: 11 }}>
               VaR95 (amber) and CVaR95 (red); the shaded tail is the worst{" "}
               {percent(1 - risk.alpha)} of years, averaging {personHours(risk.cvar95_ph)}.
             </div>
@@ -215,7 +215,7 @@ export function Risk() {
               contributions.length
                 ? {
                     height: 190,
-                    marginLeft: 60,
+                    marginLeft: 80,
                     x: { label: "CVaR contribution (M person-hours)", transform: (v: number) => v / 1e6, grid: true },
                     y: { label: null },
                     marks: [
@@ -232,7 +232,7 @@ export function Risk() {
             }
           />
           {risk && (
-            <div className="dim mono" style={{ fontSize: 9 }}>
+            <div className="dim mono" style={{ fontSize: 11 }}>
               These sum to CVaR95 = {personHours(risk.cvar95_ph)}. Worst zone: {risk.worst_zone}.
             </div>
           )}

@@ -8,10 +8,10 @@ export function TextAlternative({ frame }: { frame: Frame }) {
     .sort((a, b) => a[1] - b[1]);
   return (
     <details className="panel no-print" style={{ padding: 8 }}>
-      <summary className="dim" style={{ fontSize: 10, cursor: "pointer" }}>
+      <summary className="dim" style={{ fontSize: 12, cursor: "pointer" }}>
         Text alternative to the map ({down.length} assets degraded)
       </summary>
-      <div style={{ fontSize: 11, marginTop: 6 }}>
+      <div style={{ fontSize: 13, marginTop: 6 }}>
         <p>
           At hour {Math.round(frame.t)}: {people(frame.totals.people_no_power)} without power,{" "}
           {people(frame.totals.people_no_water)} without water,{" "}
@@ -19,7 +19,7 @@ export function TextAlternative({ frame }: { frame: Frame }) {
           {people(frame.totals.people_no_health)} without hospital access.{" "}
           {frame.closed_roads.length} road segments impassable.
         </p>
-        <ul className="mono" style={{ fontSize: 10, paddingLeft: 16, lineHeight: 1.6 }}>
+        <ul className="mono" style={{ fontSize: 12, paddingLeft: 16, lineHeight: 1.6 }}>
           {down.slice(0, 25).map(([id, f]) => (
             <li key={id}>
               {id} at {percent(f)}

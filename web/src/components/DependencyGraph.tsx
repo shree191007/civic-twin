@@ -31,8 +31,8 @@ export function DependencyGraph({ trace }: { trace: TraceResponse | null | undef
             "background-color": (n: cytoscape.NodeSingular) =>
               css(PORTFOLIO_COLOR[n.data("portfolio") as string] ?? PORTFOLIO_COLOR.transport),
             label: "data(label)",
-            color: "#d8e0ea",
-            "font-size": 9,
+            color: "#0f172a",
+            "font-size": 11,
             "font-family": "JetBrains Mono, ui-monospace, monospace",
             "text-valign": "center",
             "text-halign": "right",
@@ -43,14 +43,14 @@ export function DependencyGraph({ trace }: { trace: TraceResponse | null | undef
         },
         {
           selector: "node[root = 1]",
-          style: { "border-width": 2, "border-color": "#ffffff", width: 15, height: 15 },
+          style: { "border-width": 2, "border-color": "#0f172a", width: 15, height: 15 },
         },
         {
           selector: "edge",
           style: {
             width: 1.2,
-            "line-color": "#3a4a68",
-            "target-arrow-color": "#3a4a68",
+            "line-color": "#94a3b8",
+            "target-arrow-color": "#94a3b8",
             "target-arrow-shape": "triangle",
             "arrow-scale": 0.6,
             "curve-style": "bezier",
@@ -67,7 +67,7 @@ export function DependencyGraph({ trace }: { trace: TraceResponse | null | undef
 
   if (!trace || trace.nodes.length <= 1) {
     return (
-      <div className="dim" style={{ fontSize: 11, padding: 8 }}>
+      <div className="dim" style={{ fontSize: 13, padding: 8 }}>
         No further dependencies in this direction.
       </div>
     );
