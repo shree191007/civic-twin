@@ -17,3 +17,6 @@ web/dist/
 
 # Machine-local editor and agent configuration
 .claude/
+
+# Build specifications are kept locally, not published
+specs/
