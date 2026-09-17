@@ -4,7 +4,7 @@ from __future__ import annotations
 import numpy as np
 import pytest
 
-from civictwin.analysis.metrics import (
+from gotham.analysis.metrics import (
     bootstrap_ci,
     cvar,
     cvar_indices,
@@ -15,10 +15,10 @@ from civictwin.analysis.metrics import (
     var,
     zone_contributions,
 )
-from civictwin.analysis.montecarlo import LossTable
-from civictwin.config import DEFAULT
-from civictwin.engine.loss import service_weight
-from civictwin.ontology import Service
+from gotham.analysis.montecarlo import LossTable
+from gotham.config import DEFAULT
+from gotham.engine.loss import service_weight
+from gotham.ontology import Service
 
 
 def test_cvar_definition() -> None:

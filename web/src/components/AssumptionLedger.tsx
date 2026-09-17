@@ -1,4 +1,4 @@
-/** "Why does Civic-Twin think this?" — the assumption ledger (patch section 7). */
+/** "Why does Gotham think this?" — the assumption ledger (patch section 7). */
 import type { Evidence, Ledger, ProvenanceSummary } from "../api/types";
 
 const EVIDENCE_COLOR: Record<Evidence, string> = {
@@ -53,7 +53,7 @@ export function AssumptionLedger({
     <details className="panel" open={open} style={{ padding: 10 }}>
       <summary style={{ cursor: "pointer", listStyle: "none" }}>
         <span className="row" style={{ gap: 8 }}>
-          <h3 style={{ margin: 0 }}>Why does Civic-Twin think this?</h3>
+          <h3 style={{ margin: 0 }}>Why does Gotham think this?</h3>
           <EvidenceChip value={ledger.standing} />
         </span>
       </summary>

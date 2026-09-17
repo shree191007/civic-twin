@@ -1,4 +1,4 @@
-/** Response shapes from the civic-twin API (spec 04). */
+/** Response shapes from the gotham API (spec 04). */
 import type { Frame } from "../lib/frames";
 
 export type Portfolio = "energy" | "water" | "comms" | "transport" | "services";

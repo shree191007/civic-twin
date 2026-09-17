@@ -4,19 +4,19 @@ from __future__ import annotations
 import numpy as np
 import pytest
 
-from civictwin.analysis import baselines as baselines_mod
-from civictwin.analysis.metrics import cvar, tail_size
-from civictwin.analysis.montecarlo import LossTable, ScenarioSet, run_set
-from civictwin.analysis.optimize import (
+from gotham.analysis import baselines as baselines_mod
+from gotham.analysis.metrics import cvar, tail_size
+from gotham.analysis.montecarlo import LossTable, ScenarioSet, run_set
+from gotham.analysis.optimize import (
     EXTENDED_TAIL_FRACTION,
     Plan,
     greedy_plan,
     plan_from_prefix,
 )
-from civictwin.config import DEFAULT
-from civictwin.engine.contract import Overlay
-from civictwin.engine.coordinator import Engine
-from civictwin.ontology import Township
+from gotham.config import DEFAULT
+from gotham.engine.contract import Overlay
+from gotham.engine.coordinator import Engine
+from gotham.ontology import Township
 
 #: Small enough that the whole suite stays minutes rather than hours.
 TEST_BUDGET_INR = 10_000_000.0

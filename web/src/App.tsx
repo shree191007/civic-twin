@@ -82,7 +82,7 @@ export function App() {
     <div className="app-root" style={{ display: "flex", flexDirection: "column", height: "100%" }}>
       <header className="app-header">
         <div className="brand">
-          <span className="brand-name">civic-twin</span>
+          <span className="brand-name">gotham</span>
           <span className="brand-sub">Infrastructure resilience</span>
         </div>
         <nav className="tabs" aria-label="Views">

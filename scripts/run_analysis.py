@@ -15,13 +15,13 @@ import numpy as np
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
-from civictwin.analysis import baselines as baselines_mod  # noqa: E402
-from civictwin.analysis import ensemble as ensemble_mod  # noqa: E402
-from civictwin.analysis import restoration as restoration_mod  # noqa: E402
-from civictwin.analysis import spof as spof_mod  # noqa: E402
-from civictwin.analysis.criticality import critical_sets, rank_criticality  # noqa: E402
-from civictwin.analysis.interventions import generate_catalogue  # noqa: E402
-from civictwin.analysis.metrics import (  # noqa: E402
+from gotham.analysis import baselines as baselines_mod  # noqa: E402
+from gotham.analysis import ensemble as ensemble_mod  # noqa: E402
+from gotham.analysis import restoration as restoration_mod  # noqa: E402
+from gotham.analysis import spof as spof_mod  # noqa: E402
+from gotham.analysis.criticality import critical_sets, rank_criticality  # noqa: E402
+from gotham.analysis.interventions import generate_catalogue  # noqa: E402
+from gotham.analysis.metrics import (  # noqa: E402
     bootstrap_ci,
     cvar,
     eal,
@@ -29,25 +29,25 @@ from civictwin.analysis.metrics import (  # noqa: E402
     var,
     zone_contributions,
 )
-from civictwin.analysis.ledger import (  # noqa: E402
+from gotham.analysis.ledger import (  # noqa: E402
     for_result as ledger_for_result,
     provenance_summary,
 )
-from civictwin.analysis.montecarlo import make_scenario_set, run_set  # noqa: E402
-from civictwin.analysis.objectives import resolve as resolve_objective  # noqa: E402
-from civictwin.analysis.redundancy import redundancy_groups, system_score  # noqa: E402
-from civictwin.analysis.uncertainty import (  # noqa: E402
+from gotham.analysis.montecarlo import make_scenario_set, run_set  # noqa: E402
+from gotham.analysis.objectives import resolve as resolve_objective  # noqa: E402
+from gotham.analysis.redundancy import redundancy_groups, system_score  # noqa: E402
+from gotham.analysis.uncertainty import (  # noqa: E402
     from_interval,
     from_samples,
     round_people,
 )
-from civictwin.hazard.schemas.forecast import UncertaintySource  # noqa: E402
-from civictwin.analysis.optimize import frontier, greedy_plan, plan_from_prefix  # noqa: E402
-from civictwin.config import DEFAULT, Config  # noqa: E402
-from civictwin.engine.contract import HazardScenario, Overlay  # noqa: E402
-from civictwin.engine.coordinator import Engine  # noqa: E402
-from civictwin.engine.hazard import _derived_uniform  # noqa: E402
-from civictwin.io import data_version_of, load_township, model_version, save_json  # noqa: E402
+from gotham.hazard.schemas.forecast import UncertaintySource  # noqa: E402
+from gotham.analysis.optimize import frontier, greedy_plan, plan_from_prefix  # noqa: E402
+from gotham.config import DEFAULT, Config  # noqa: E402
+from gotham.engine.contract import HazardScenario, Overlay  # noqa: E402
+from gotham.engine.coordinator import Engine  # noqa: E402
+from gotham.engine.hazard import _derived_uniform  # noqa: E402
+from gotham.io import data_version_of, load_township, model_version, save_json  # noqa: E402
 
 logger = logging.getLogger("run_analysis")
 

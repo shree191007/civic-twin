@@ -1,6 +1,6 @@
 /** Forecast to impact (patch sections 3, 4, 5 and 24).
  *
- *  Civic-twin does not forecast weather. This is where somebody else's forecast
+ *  Gotham does not forecast weather. This is where somebody else's forecast
  *  comes in, and what it does to the system comes out — as a range, because a
  *  forecast is a range.
  */
@@ -74,7 +74,7 @@ export function ForecastPanel() {
       <div className="panel" style={{ padding: 10 }}>
         <h3>Hazard in</h3>
         <div className="dim" style={{ fontSize: 12, margin: "4px 0 7px", lineHeight: 1.5 }}>
-          Civic-twin does not forecast weather. Paste what an external model
+          Gotham does not forecast weather. Paste what an external model
           published and it answers what that hazard does to the system.
         </div>
         <div className="row" style={{ gap: 4, marginBottom: 6 }}>

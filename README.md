@@ -1,4 +1,4 @@
-# civic-twin
+# gotham
 
 > **See the cascade before the disaster.**
 
@@ -19,7 +19,7 @@ difference matters to anyone deciding how much weight to put on the output.
 
 **It does not forecast weather.** Meteorology, flood extent, cyclone tracks and
 satellite observation are solved problems with better solvers than this one.
-civic-twin starts one step later, at the question nobody else is answering:
+gotham starts one step later, at the question nobody else is answering:
 
 > *Given that this hazard is predicted or observed, what happens to the
 > infrastructure system?*
@@ -41,14 +41,14 @@ away is under a metre of floodwater.
                   │                                    │
                   ▼                                    │
    ┌──────────────────────────────┐                    │
-   │  civictwin/hazard            │                    │
+   │  gotham/hazard            │                    │
    │  ingestion ─► adapters ─►    │                    │
    │  normalisation ─► schemas    │                    │
    └──────────────┬───────────────┘                    │
                   │ HazardForecast (a distribution,    │
                   │ never a single number)             │
    ┌──────────────▼────────────────────────────────┐   │
-   │  civictwin/engine        INFRASTRUCTURE ONTOLOGY ◄─┘
+   │  gotham/engine        INFRASTRUCTURE ONTOLOGY ◄─┘
    │                                               │
    │  hazard ─► damage ─► transport ─► response ─┐ │
    │                                             │ │
@@ -58,7 +58,7 @@ away is under a metre of floodwater.
    └──────────────────────┬────────────────────────┘
                           │  SimResult + operating states
    ┌──────────────────────▼────────────────────────┐
-   │  civictwin/analysis                           │
+   │  gotham/analysis                           │
    │  montecarlo ─► metrics (EAL, VaR, CVaR)       │
    │  criticality · spof · redundancy (ERS)        │
    │  forecast→impact · uncertainty · ledger       │
@@ -66,7 +66,7 @@ away is under a metre of floodwater.
    │  hindcast (historical replay)                 │
    └──────────────────────┬────────────────────────┘
                           │  results/*.json
-              civictwin/api (FastAPI, role-gated)
+              gotham/api (FastAPI, role-gated)
                           │
                   web/ (React + deck.gl)
 ```
@@ -108,11 +108,11 @@ analysis packages.
 
 | Path | What it is |
 |---|---|
-| `civictwin/ontology.py` | The typed model: assets, links, zones, roads, crews |
-| `civictwin/hazard/` | Hazard ingestion: adapters, normalisation, one internal schema |
-| `civictwin/engine/` | The simulator. Imports only numpy and the standard library |
-| `civictwin/analysis/` | Monte Carlo, risk metrics, criticality, SPOF, ERS, the optimiser, hindcasting |
-| `civictwin/api/` | FastAPI read-through cache over `results/`, plus a live simulator |
+| `gotham/ontology.py` | The typed model: assets, links, zones, roads, crews |
+| `gotham/hazard/` | Hazard ingestion: adapters, normalisation, one internal schema |
+| `gotham/engine/` | The simulator. Imports only numpy and the standard library |
+| `gotham/analysis/` | Monte Carlo, risk metrics, criticality, SPOF, ERS, the optimiser, hindcasting |
+| `gotham/api/` | FastAPI read-through cache over `results/`, plus a live simulator |
 | `web/` | React + deck.gl operations console, five views |
 | `specs/` | The build specifications this repository implements, and the patch that amended them |
 
@@ -120,7 +120,7 @@ analysis packages.
 
 | Capability | Where |
 |---|---|
-| **Hazard ingestion** — any provider's forecast, normalised into one schema, uncertainty intact | `civictwin/hazard/` |
+| **Hazard ingestion** — any provider's forecast, normalised into one schema, uncertainty intact | `gotham/hazard/` |
 | **Forecast to impact** — a hazard distribution in, an impact distribution out | `analysis/forecast.py` |
 | **Operating states** — operational, degraded, on backup, critical, failed; distinct from damage | `engine/states.py` |
 | **Time-based dependencies** — thresholds, delays and per-link reserves, not just edges | `engine/dependency.py` |
@@ -149,13 +149,13 @@ them drive the demo, and each has a named test that must pass:
 ## Design points worth knowing
 
 **Role gating.** A dependency map is a list of weak points. With
-`CIVICTWIN_ROLE=public`, `/criticality`, `/spofs` and `/critical-sets` return
+`GOTHAM_ROLE=public`, `/criticality`, `/spofs` and `/critical-sets` return
 403, `/township` omits fragility parameters and link detail, and `/assets/{id}`
 omits the dependency lists. The default role is `planner`.
 
 **The copilot never generates numbers.** It calls tools and explains their
 output; the response carries the tool trace so a reader can check it. With
-`CIVICTWIN_LLM_KEY` unset it returns `{"available": false}` and the interface
+`GOTHAM_LLM_KEY` unset it returns `{"available": false}` and the interface
 says so plainly.
 
 **Provenance is never hidden.** Every asset is marked `observed`, `inferred` or

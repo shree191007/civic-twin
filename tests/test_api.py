@@ -11,11 +11,11 @@ from typing import Any, Iterator
 import pytest
 from fastapi.testclient import TestClient
 
-from civictwin.api.routes import copilot as copilot_route
-from civictwin.api.state import AppState, set_state
-from civictwin.io import save_township
-from civictwin.ontology import Portfolio, Service
-from civictwin.synth.township import generate
+from gotham.api.routes import copilot as copilot_route
+from gotham.api.state import AppState, set_state
+from gotham.io import save_township
+from gotham.ontology import Portfolio, Service
+from gotham.synth.township import generate
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 GET_ENDPOINTS = [
@@ -68,7 +68,7 @@ def analysed(tmp_path_factory) -> tuple[Path, Path]:
 def client(analysed: tuple[Path, Path]) -> Iterator[TestClient]:
     township_path, results = analysed
     set_state(AppState(township_path=township_path, results_path=results))
-    from civictwin.api.main import app
+    from gotham.api.main import app
 
     with TestClient(app) as c:
         yield c
@@ -81,7 +81,7 @@ def public_client(analysed: tuple[Path, Path]) -> Iterator[TestClient]:
     set_state(
         AppState(township_path=township_path, results_path=results, role="public")
     )
-    from civictwin.api.main import app
+    from gotham.api.main import app
 
     with TestClient(app) as c:
         yield c
@@ -154,7 +154,7 @@ def test_trace_up_includes_s2_for_h2(client: TestClient) -> None:
 
 
 def test_run_scenario_deterministic(client: TestClient) -> None:
-    from civictwin.api.state import get_state
+    from gotham.api.state import get_state
 
     payload = {"rain_mm": 210.0, "field_seed": 7, "onset_hour": 14, "record": True}
     a = client.post("/scenarios", json=payload).json()

@@ -4,12 +4,12 @@ from __future__ import annotations
 import numpy as np
 import pytest
 
-from civictwin.config import DEFAULT
-from civictwin.engine.contract import HazardScenario
-from civictwin.engine.coordinator import Engine
-from civictwin.engine.hazard import HazardModel, sample_scenarios, spatial_field
-from civictwin.ontology import AssetKind, Township
-from civictwin.synth.township import generate
+from gotham.config import DEFAULT
+from gotham.engine.contract import HazardScenario
+from gotham.engine.coordinator import Engine
+from gotham.engine.hazard import HazardModel, sample_scenarios, spatial_field
+from gotham.ontology import AssetKind, Township
+from gotham.synth.township import generate
 
 TIMES = np.arange(0.0, 73.0, 1.0)
 

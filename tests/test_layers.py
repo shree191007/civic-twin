@@ -6,11 +6,11 @@ from dataclasses import replace
 
 import pytest
 
-from civictwin.config import DEFAULT, Config
-from civictwin.engine.contract import HazardScenario, Overlay
-from civictwin.engine.coordinator import Engine
-from civictwin.ontology import Service, Township
-from civictwin.synth.township import generate
+from gotham.config import DEFAULT, Config
+from gotham.engine.contract import HazardScenario, Overlay
+from gotham.engine.coordinator import Engine
+from gotham.ontology import Service, Township
+from gotham.synth.township import generate
 
 DEENERGISE_DEPTH_M = 0.15
 
@@ -203,7 +203,7 @@ def test_mobility_baseline_is_one(engine: Engine, town: Township) -> None:
 
 def test_clinics_count_less_than_hospitals(engine: Engine, town: Township) -> None:
     """A clinic can only ever supply a fraction of hospital-grade health access."""
-    from civictwin.engine.layers.services import CLINIC_WEIGHT
+    from gotham.engine.layers.services import CLINIC_WEIGHT
 
     res = run(engine, town, Overlay(forced_failures=("H1", "H2")))
     frame = res.timeline[1]

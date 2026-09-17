@@ -12,13 +12,13 @@ import threading
 import numpy as np
 import pytest
 
-from civictwin.config import DEFAULT
-from civictwin.engine.contract import HazardScenario, Overlay
-from civictwin.engine.coordinator import Engine
-from civictwin.engine.damage import DamageModel
-from civictwin.engine.dependency import DependencyGate
-from civictwin.engine.hazard import HazardModel
-from civictwin.ontology import (
+from gotham.config import DEFAULT
+from gotham.engine.contract import HazardScenario, Overlay
+from gotham.engine.coordinator import Engine
+from gotham.engine.damage import DamageModel
+from gotham.engine.dependency import DependencyGate
+from gotham.engine.hazard import HazardModel
+from gotham.ontology import (
     AssetKind,
     DamageState,
     Link,
@@ -26,7 +26,7 @@ from civictwin.ontology import (
     Service,
     Township,
 )
-from civictwin.synth.township import generate
+from gotham.synth.township import generate
 
 
 def calm(town: Township) -> HazardScenario:
@@ -155,7 +155,7 @@ def test_f05_does_not_stop_while_a_road_is_still_closed(
 def test_f06_water_chain_follows_the_links_not_the_asset_kind(
     town: Township,
 ) -> None:
-    from civictwin.engine.layers.water import WaterLayer
+    from gotham.engine.layers.water import WaterLayer
 
     layer = WaterLayer()
     layer.reset(town, DEFAULT)
@@ -176,8 +176,8 @@ def test_f06_water_chain_follows_the_links_not_the_asset_kind(
 def test_f07_staff_come_from_the_town_not_from_the_shelters(
     town: Township,
 ) -> None:
-    from civictwin.engine.layers.services import ServicesLayer
-    from civictwin.engine.layers.transport import TransportLayer
+    from gotham.engine.layers.services import ServicesLayer
+    from gotham.engine.layers.transport import TransportLayer
 
     transport = TransportLayer()
     transport.reset(town, DEFAULT)
@@ -191,7 +191,7 @@ def test_f07_staff_come_from_the_town_not_from_the_shelters(
 
 
 def test_f09_ponding_drains_rather_than_vanishing(town: Township) -> None:
-    from civictwin.engine.hazard import PLUVIAL_DRAIN_H, STORM_INTENSITY_DIVISOR
+    from gotham.engine.hazard import PLUVIAL_DRAIN_H, STORM_INTENSITY_DIVISOR
 
     model = HazardModel(town, storm(town, rain_mm=150.0), DEFAULT)
     end = DEFAULT.hazard.rise_hours * STORM_INTENSITY_DIVISOR
@@ -214,7 +214,7 @@ def test_f13_max_depth_includes_ponding(town: Township) -> None:
 
 
 def test_f10_evacuation_scales_with_depth_in_metres() -> None:
-    from civictwin.engine.demand import (
+    from gotham.engine.demand import (
         EVAC_DEPTH_M,
         EVAC_FULL_DEPTH_M,
         EVAC_MAX_FRACTION,
@@ -232,7 +232,7 @@ def test_f10_evacuation_scales_with_depth_in_metres() -> None:
 def test_f10_evacuated_homes_are_not_billed_for_utilities(
     town: Township, engine: Engine
 ) -> None:
-    from civictwin.engine.loss import DOMESTIC_SERVICES, accumulate, make_accumulator
+    from gotham.engine.loss import DOMESTIC_SERVICES, accumulate, make_accumulator
 
     state = engine.new_state()
     zone = town.zones[0]
@@ -258,7 +258,7 @@ def test_f10_evacuated_homes_are_not_billed_for_utilities(
 
 
 def test_isolated_node_is_its_own_component(town: Township) -> None:
-    from civictwin.engine.layers.transport import TransportLayer
+    from gotham.engine.layers.transport import TransportLayer
 
     layer = TransportLayer()
     layer.reset(town, DEFAULT)
@@ -271,7 +271,7 @@ def test_isolated_node_is_its_own_component(town: Township) -> None:
 
 def test_ridge_scales_with_the_township() -> None:
     """A half-size township must still have its ridge inside it."""
-    from civictwin.synth.geometry import build_terrain
+    from gotham.synth.geometry import build_terrain
 
     small = build_terrain(np.random.default_rng(1), 3000.0)
     assert small.ridge_x < 3000.0 and small.ridge_y < 3000.0
@@ -283,7 +283,7 @@ def test_ridge_scales_with_the_township() -> None:
 
 
 def test_f16_unreachable_assets_are_the_hardest_to_recover(town: Township) -> None:
-    from civictwin.analysis.criticality import recovery_difficulty
+    from gotham.analysis.criticality import recovery_difficulty
 
     reachable = recovery_difficulty(town, "S1", DEFAULT)
     far_bank = recovery_difficulty(town, "S2", DEFAULT)
@@ -297,8 +297,8 @@ def test_f16_unreachable_assets_are_the_hardest_to_recover(town: Township) -> No
 def test_f12_common_cause_measures_correlation_not_independence(
     town: Township,
 ) -> None:
-    from civictwin.analysis.spof import empirical_joint_failure
-    from civictwin.engine.hazard import sample_scenarios
+    from gotham.analysis.spof import empirical_joint_failure
+    from gotham.engine.hazard import sample_scenarios
 
     scenarios = sample_scenarios(town, DEFAULT, 150, 1)
     joint = empirical_joint_failure(town, DEFAULT, scenarios)
@@ -313,7 +313,7 @@ def test_f12_common_cause_measures_correlation_not_independence(
 
 
 def test_f19_a_free_intervention_does_not_divide_by_zero() -> None:
-    from civictwin.analysis.optimize import MINIMUM_COST_INR
+    from gotham.analysis.optimize import MINIMUM_COST_INR
 
     assert MINIMUM_COST_INR > 0.0
     gain = 1234.0
@@ -324,7 +324,7 @@ def test_f19_a_free_intervention_does_not_divide_by_zero() -> None:
 
 
 def test_f20_drawdown_uses_the_timeline_spacing() -> None:
-    from civictwin.analysis.metrics import area_under_loss
+    from gotham.analysis.metrics import area_under_loss
 
     class Frame:
         def __init__(self, t: float) -> None:
@@ -343,7 +343,7 @@ def test_f20_drawdown_uses_the_timeline_spacing() -> None:
 
 
 def test_water_uncertainty_perturbs_the_water_network(town: Township) -> None:
-    from civictwin.analysis.ensemble import generate_members
+    from gotham.analysis.ensemble import generate_members
 
     members = generate_members(
         town, DEFAULT, 4, seed=3, groups=("water_topology",)
@@ -361,8 +361,8 @@ def test_water_uncertainty_perturbs_the_water_network(town: Township) -> None:
 
 
 def test_scenario_cache_is_safe_under_concurrent_use(tmp_path) -> None:
-    from civictwin.api.state import AppState
-    from civictwin.io import save_township
+    from gotham.api.state import AppState
+    from gotham.io import save_township
 
     township_path = tmp_path / "t.json"
     save_township(generate(7, scale=0.5), township_path)
@@ -389,10 +389,10 @@ def test_scenario_cache_is_safe_under_concurrent_use(tmp_path) -> None:
 
 
 def test_decision_log_survives_concurrent_writers(tmp_path) -> None:
-    from civictwin.api.routes.plans import record_decision
-    from civictwin.api.schemas import DecisionRequest
-    from civictwin.api.state import AppState
-    from civictwin.io import save_township
+    from gotham.api.routes.plans import record_decision
+    from gotham.api.schemas import DecisionRequest
+    from gotham.api.state import AppState
+    from gotham.io import save_township
 
     township_path = tmp_path / "t.json"
     save_township(generate(7, scale=0.5), township_path)
@@ -428,8 +428,8 @@ def test_f14_assets_that_fail_in_the_storm_report_a_real_counterfactual(
     The counterfactual that has an answer is the other way round: hold the
     asset up and see how much of the storm's damage goes away.
     """
-    from civictwin.analysis.spof import design_storm, detect
-    from civictwin.engine.hazard import sample_scenarios
+    from gotham.analysis.spof import design_storm, detect
+    from gotham.engine.hazard import sample_scenarios
 
     scenarios = sample_scenarios(town, DEFAULT, 150, 1)
     spofs = detect(town, DEFAULT, scenarios, engine._base.transport, engine=engine)
@@ -459,8 +459,8 @@ def test_f14_a_harmless_candidate_still_reports_zero(
     town: Township, engine: Engine
 ) -> None:
     """The measurement has to be able to say 'this one does not matter'."""
-    from civictwin.analysis.spof import detect
-    from civictwin.engine.hazard import sample_scenarios
+    from gotham.analysis.spof import detect
+    from gotham.engine.hazard import sample_scenarios
 
     scenarios = sample_scenarios(town, DEFAULT, 120, 1)
     spofs = detect(town, DEFAULT, scenarios, engine._base.transport, engine=engine)
