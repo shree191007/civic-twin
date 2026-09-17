@@ -1,0 +1,6552 @@
+{
+  "assets": {
+    "B1": {
+      "backup_hours": 0.0,
+      "capacity": 1.0,
+      "fragility_beta": 0.4,
+      "fragility_median_m": 2.8,
+      "fuel_hours": 0.0,
+      "hand_m": 2.0,
+      "id": "B1",
+      "kind": "bridge",
+      "meta": {},
+      "name": "River bridge B1",
+      "node": 68,
+      "portfolio": "transport",
+      "provenance": "observed",
+      "repair_hours_base": 72.0,
+      "scada_controlled": false,
+      "x": 1500.0,
+      "y": 2750.0
+    },
+    "B2": {
+      "backup_hours": 0.0,
+      "capacity": 1.0,
+      "fragility_beta": 0.4,
+      "fragility_median_m": 2.8,
+      "fuel_hours": 0.0,
+      "hand_m": 2.0,
+      "id": "B2",
+      "kind": "bridge",
+      "meta": {},
+      "name": "River bridge B2",
+      "node": 87,
+      "portfolio": "transport",
+      "provenance": "observed",
+      "repair_hours_base": 72.0,
+      "scada_controlled": false,
+      "x": 4500.0,
+      "y": 3250.0
+    },
+    "C1": {
+      "backup_hours": 0.0,
+      "capacity": 40.0,
+      "fragility_beta": 0.4,
+      "fragility_median_m": 1.2,
+      "fuel_hours": 8.0,
+      "hand_m": 3.506,
+      "id": "C1",
+      "kind": "clinic",
+      "meta": {},
+      "name": "Community clinic C1",
+      "node": 111,
+      "portfolio": "services",
+      "provenance": "inferred",
+      "repair_hours_base": 24.0,
+      "scada_controlled": false,
+      "x": 3600.0,
+      "y": 4100.0
+    },
+    "C2": {
+      "backup_hours": 0.0,
+      "capacity": 40.0,
+      "fragility_beta": 0.4,
+      "fragility_median_m": 1.2,
+      "fuel_hours": 8.0,
+      "hand_m": 3.504,
+      "id": "C2",
+      "kind": "clinic",
+      "meta": {},
+      "name": "Community clinic C2",
+      "node": 56,
+      "portfolio": "services",
+      "provenance": "inferred",
+      "repair_hours_base": 24.0,
+      "scada_controlled": false,
+      "x": 2200.0,
+      "y": 2000.0
+    },
+    "C3": {
+      "backup_hours": 0.0,
+      "capacity": 40.0,
+      "fragility_beta": 0.4,
+      "fragility_median_m": 1.2,
+      "fuel_hours": 8.0,
+      "hand_m": 3.492,
+      "id": "C3",
+      "kind": "clinic",
+      "meta": {},
+      "name": "Community clinic C3",
+      "node": 127,
+      "portfolio": "services",
+      "provenance": "inferred",
+      "repair_hours_base": 24.0,
+      "scada_controlled": false,
+      "x": 5000.0,
+      "y": 4300.0
+    },
+    "D1": {
+      "backup_hours": 0.0,
+      "capacity": 1.0,
+      "fragility_beta": 0.4,
+      "fragility_median_m": 1.5,
+      "fuel_hours": 24.0,
+      "hand_m": 3.533,
+      "id": "D1",
+      "kind": "depot",
+      "meta": {},
+      "name": "Power repair depot",
+      "node": 109,
+      "portfolio": "energy",
+      "provenance": "inferred",
+      "repair_hours_base": 12.0,
+      "scada_controlled": false,
+      "x": 2600.0,
+      "y": 3800.0
+    },
+    "D2": {
+      "backup_hours": 0.0,
+      "capacity": 1.0,
+      "fragility_beta": 0.4,
+      "fragility_median_m": 1.5,
+      "fuel_hours": 24.0,
+      "hand_m": 3.495,
+      "id": "D2",
+      "kind": "depot",
+      "meta": {},
+      "name": "Water repair depot",
+      "node": 96,
+      "portfolio": "water",
+      "provenance": "inferred",
+      "repair_hours_base": 12.0,
+      "scada_controlled": false,
+      "x": 2400.0,
+      "y": 3700.0
+    },
+    "D3": {
+      "backup_hours": 0.0,
+      "capacity": 1.0,
+      "fragility_beta": 0.4,
+      "fragility_median_m": 1.5,
+      "fuel_hours": 24.0,
+      "hand_m": 3.529,
+      "id": "D3",
+      "kind": "depot",
+      "meta": {},
+      "name": "Comms repair depot",
+      "node": 93,
+      "portfolio": "comms",
+      "provenance": "inferred",
+      "repair_hours_base": 12.0,
+      "scada_controlled": false,
+      "x": 1000.0,
+      "y": 3300.0
+    },
+    "E1": {
+      "backup_hours": 0.0,
+      "capacity": 1.0,
+      "fragility_beta": 0.4,
+      "fragility_median_m": 1.5,
+      "fuel_hours": 72.0,
+      "hand_m": 5.157,
+      "id": "E1",
+      "kind": "eoc",
+      "meta": {},
+      "name": "Emergency operations centre",
+      "node": 94,
+      "portfolio": "services",
+      "provenance": "inferred",
+      "repair_hours_base": 24.0,
+      "scada_controlled": false,
+      "x": 1360.0,
+      "y": 3660.0
+    },
+    "F1": {
+      "backup_hours": 0.0,
+      "capacity": 12.0,
+      "fragility_beta": 0.4,
+      "fragility_median_m": 1.5,
+      "fuel_hours": 0.0,
+      "hand_m": 8.909,
+      "id": "F1",
+      "kind": "feeder",
+      "meta": {},
+      "name": "Feeder F1",
+      "node": 120,
+      "portfolio": "energy",
+      "provenance": "synthetic",
+      "repair_hours_base": 12.0,
+      "scada_controlled": false,
+      "x": 1700.0,
+      "y": 4700.0
+    },
+    "F2": {
+      "backup_hours": 0.0,
+      "capacity": 12.0,
+      "fragility_beta": 0.4,
+      "fragility_median_m": 1.5,
+      "fuel_hours": 0.0,
+      "hand_m": 6.317,
+      "id": "F2",
+      "kind": "feeder",
+      "meta": {},
+      "name": "Feeder F2",
+      "node": 107,
+      "portfolio": "energy",
+      "provenance": "synthetic",
+      "repair_hours_base": 12.0,
+      "scada_controlled": false,
+      "x": 1325.0,
+      "y": 3884.24
+    },
+    "F3": {
+      "backup_hours": 0.0,
+      "capacity": 12.0,
+      "fragility_beta": 0.4,
+      "fragility_median_m": 1.5,
+      "fuel_hours": 0.0,
+      "hand_m": 5.527,
+      "id": "F3",
+      "kind": "feeder",
+      "meta": {},
+      "name": "Feeder F3",
+      "node": 108,
+      "portfolio": "energy",
+      "provenance": "synthetic",
+      "repair_hours_base": 12.0,
+      "scada_controlled": false,
+      "x": 2075.0,
+      "y": 3976.6
+    },
+    "F4": {
+      "backup_hours": 0.0,
+      "capacity": 12.0,
+      "fragility_beta": 0.4,
+      "fragility_median_m": 1.5,
+      "fuel_hours": 0.0,
+      "hand_m": 0.673,
+      "id": "F4",
+      "kind": "feeder",
+      "meta": {},
+      "name": "Feeder F4",
+      "node": 71,
+      "portfolio": "energy",
+      "provenance": "synthetic",
+      "repair_hours_base": 12.0,
+      "scada_controlled": false,
+      "x": 2900.0,
+      "y": 2720.42
+    },
+    "F5": {
+      "backup_hours": 0.0,
+      "capacity": 12.0,
+      "fragility_beta": 0.4,
+      "fragility_median_m": 1.5,
+      "fuel_hours": 0.0,
+      "hand_m": 1.506,
+      "id": "F5",
+      "kind": "feeder",
+      "meta": {},
+      "name": "Feeder F5",
+      "node": 87,
+      "portfolio": "energy",
+      "provenance": "synthetic",
+      "repair_hours_base": 12.0,
+      "scada_controlled": false,
+      "x": 4400.0,
+      "y": 2931.0
+    },
+    "F6": {
+      "backup_hours": 0.0,
+      "capacity": 12.0,
+      "fragility_beta": 0.4,
+      "fragility_median_m": 1.5,
+      "fuel_hours": 0.0,
+      "hand_m": 4.537,
+      "id": "F6",
+      "kind": "feeder",
+      "meta": {},
+      "name": "Feeder F6",
+      "node": 59,
+      "portfolio": "energy",
+      "provenance": "synthetic",
+      "repair_hours_base": 12.0,
+      "scada_controlled": false,
+      "x": 3650.0,
+      "y": 1900.0
+    },
+    "F7": {
+      "backup_hours": 0.0,
+      "capacity": 12.0,
+      "fragility_beta": 0.4,
+      "fragility_median_m": 1.5,
+      "fuel_hours": 0.0,
+      "hand_m": 5.114,
+      "id": "F7",
+      "kind": "feeder",
+      "meta": {},
+      "name": "Feeder F7",
+      "node": 126,
+      "portfolio": "energy",
+      "provenance": "synthetic",
+      "repair_hours_base": 12.0,
+      "scada_controlled": false,
+      "x": 4300.0,
+      "y": 4750.0
+    },
+    "F8": {
+      "backup_hours": 0.0,
+      "capacity": 12.0,
+      "fragility_beta": 0.4,
+      "fragility_median_m": 1.5,
+      "fuel_hours": 0.0,
+      "hand_m": 3.288,
+      "id": "F8",
+      "kind": "feeder",
+      "meta": {},
+      "name": "Feeder F8",
+      "node": 112,
+      "portfolio": "energy",
+      "provenance": "synthetic",
+      "repair_hours_base": 12.0,
+      "scada_controlled": false,
+      "x": 3925.0,
+      "y": 4137.18
+    },
+    "F9": {
+      "backup_hours": 0.0,
+      "capacity": 12.0,
+      "fragility_beta": 0.4,
+      "fragility_median_m": 1.5,
+      "fuel_hours": 0.0,
+      "hand_m": 3.098,
+      "id": "F9",
+      "kind": "feeder",
+      "meta": {},
+      "name": "Feeder F9",
+      "node": 113,
+      "portfolio": "energy",
+      "provenance": "synthetic",
+      "repair_hours_base": 12.0,
+      "scada_controlled": false,
+      "x": 4675.0,
+      "y": 4244.82
+    },
+    "FIBRE_1": {
+      "backup_hours": 0.0,
+      "capacity": 100.0,
+      "fragility_beta": 0.4,
+      "fragility_median_m": 99.0,
+      "fuel_hours": 0.0,
+      "hand_m": 1.086,
+      "id": "FIBRE_1",
+      "kind": "fibre",
+      "meta": {},
+      "name": "Fibre route 1",
+      "node": 82,
+      "portfolio": "comms",
+      "provenance": "synthetic",
+      "repair_hours_base": 16.0,
+      "scada_controlled": false,
+      "x": 2200.0,
+      "y": 3050.0
+    },
+    "FIBRE_2": {
+      "backup_hours": 0.0,
+      "capacity": 100.0,
+      "fragility_beta": 0.4,
+      "fragility_median_m": 99.0,
+      "fuel_hours": 0.0,
+      "hand_m": 1.307,
+      "id": "FIBRE_2",
+      "kind": "fibre",
+      "meta": {},
+      "name": "Fibre route 2",
+      "node": 82,
+      "portfolio": "comms",
+      "provenance": "synthetic",
+      "repair_hours_base": 16.0,
+      "scada_controlled": false,
+      "x": 2250.0,
+      "y": 3100.0
+    },
+    "FIBRE_3": {
+      "backup_hours": 0.0,
+      "capacity": 100.0,
+      "fragility_beta": 0.4,
+      "fragility_median_m": 99.0,
+      "fuel_hours": 0.0,
+      "hand_m": 7.256,
+      "id": "FIBRE_3",
+      "kind": "fibre",
+      "meta": {},
+      "name": "Fibre route 3",
+      "node": 121,
+      "portfolio": "comms",
+      "provenance": "synthetic",
+      "repair_hours_base": 16.0,
+      "scada_controlled": false,
+      "x": 2000.0,
+      "y": 4400.0
+    },
+    "FIBRE_4": {
+      "backup_hours": 0.0,
+      "capacity": 100.0,
+      "fragility_beta": 0.4,
+      "fragility_median_m": 99.0,
+      "fuel_hours": 0.0,
+      "hand_m": 3.962,
+      "id": "FIBRE_4",
+      "kind": "fibre",
+      "meta": {},
+      "name": "Fibre route 4",
+      "node": 74,
+      "portfolio": "comms",
+      "provenance": "synthetic",
+      "repair_hours_base": 16.0,
+      "scada_controlled": false,
+      "x": 4600.0,
+      "y": 2300.0
+    },
+    "FS1": {
+      "backup_hours": 0.0,
+      "capacity": 1.0,
+      "fragility_beta": 0.4,
+      "fragility_median_m": 1.2,
+      "fuel_hours": 24.0,
+      "hand_m": 5.018,
+      "id": "FS1",
+      "kind": "fire_station",
+      "meta": {},
+      "name": "Central fire station",
+      "node": 94,
+      "portfolio": "services",
+      "provenance": "observed",
+      "repair_hours_base": 24.0,
+      "scada_controlled": false,
+      "x": 1300.0,
+      "y": 3600.0
+    },
+    "G1": {
+      "backup_hours": 0.0,
+      "capacity": 1.0,
+      "fragility_beta": 0.4,
+      "fragility_median_m": 1.0,
+      "fuel_hours": 0.0,
+      "hand_m": 4.008,
+      "id": "G1",
+      "kind": "fuel_station",
+      "meta": {},
+      "name": "Westgate fuel depot",
+      "node": 110,
+      "portfolio": "energy",
+      "provenance": "inferred",
+      "repair_hours_base": 12.0,
+      "scada_controlled": false,
+      "x": 2800.0,
+      "y": 3900.0
+    },
+    "G2": {
+      "backup_hours": 0.0,
+      "capacity": 1.0,
+      "fragility_beta": 0.4,
+      "fragility_median_m": 1.0,
+      "fuel_hours": 0.0,
+      "hand_m": 1.551,
+      "id": "G2",
+      "kind": "fuel_station",
+      "meta": {},
+      "name": "Eastbank fuel station",
+      "node": 73,
+      "portfolio": "energy",
+      "provenance": "inferred",
+      "repair_hours_base": 12.0,
+      "scada_controlled": false,
+      "x": 4000.0,
+      "y": 2700.0
+    },
+    "GS1": {
+      "backup_hours": 0.0,
+      "capacity": 120.0,
+      "fragility_beta": 0.4,
+      "fragility_median_m": 3.0,
+      "fuel_hours": 0.0,
+      "hand_m": 9.027,
+      "id": "GS1",
+      "kind": "grid_supply",
+      "meta": {},
+      "name": "Regional grid supply",
+      "node": 119,
+      "portfolio": "energy",
+      "provenance": "inferred",
+      "repair_hours_base": 48.0,
+      "scada_controlled": false,
+      "x": 800.0,
+      "y": 4700.0
+    },
+    "H1": {
+      "backup_hours": 0.0,
+      "capacity": 240.0,
+      "fragility_beta": 0.4,
+      "fragility_median_m": 1.4,
+      "fuel_hours": 48.0,
+      "hand_m": 6.044,
+      "id": "H1",
+      "kind": "hospital",
+      "meta": {},
+      "name": "St Anne's district hospital",
+      "node": 122,
+      "portfolio": "services",
+      "provenance": "observed",
+      "repair_hours_base": 48.0,
+      "scada_controlled": false,
+      "x": 2500.0,
+      "y": 4400.0
+    },
+    "H2": {
+      "backup_hours": 0.0,
+      "capacity": 180.0,
+      "fragility_beta": 0.4,
+      "fragility_median_m": 1.4,
+      "fuel_hours": 48.0,
+      "hand_m": 5.011,
+      "id": "H2",
+      "kind": "hospital",
+      "meta": {},
+      "name": "Eastbank general hospital",
+      "node": 61,
+      "portfolio": "services",
+      "provenance": "observed",
+      "repair_hours_base": 48.0,
+      "scada_controlled": false,
+      "x": 4700.0,
+      "y": 2000.0
+    },
+    "I1": {
+      "backup_hours": 0.0,
+      "capacity": 900.0,
+      "fragility_beta": 0.4,
+      "fragility_median_m": 2.5,
+      "fuel_hours": 0.0,
+      "hand_m": 0.313,
+      "id": "I1",
+      "kind": "intake",
+      "meta": {},
+      "name": "River intake",
+      "node": 83,
+      "portfolio": "water",
+      "provenance": "observed",
+      "repair_hours_base": 24.0,
+      "scada_controlled": false,
+      "x": 2600.0,
+      "y": 2950.0
+    },
+    "K1": {
+      "backup_hours": 0.0,
+      "capacity": 4000.0,
+      "fragility_beta": 0.4,
+      "fragility_median_m": 3.0,
+      "fuel_hours": 0.0,
+      "hand_m": 5.517,
+      "id": "K1",
+      "kind": "tank",
+      "meta": {},
+      "name": "Service reservoir K1",
+      "node": 107,
+      "portfolio": "water",
+      "provenance": "inferred",
+      "repair_hours_base": 24.0,
+      "scada_controlled": false,
+      "x": 1700.0,
+      "y": 3800.0
+    },
+    "K2": {
+      "backup_hours": 0.0,
+      "capacity": 4000.0,
+      "fragility_beta": 0.4,
+      "fragility_median_m": 3.0,
+      "fuel_hours": 0.0,
+      "hand_m": 5.527,
+      "id": "K2",
+      "kind": "tank",
+      "meta": {},
+      "name": "Service reservoir K2",
+      "node": 139,
+      "portfolio": "water",
+      "provenance": "inferred",
+      "repair_hours_base": 24.0,
+      "scada_controlled": false,
+      "x": 4700.0,
+      "y": 4900.0
+    },
+    "K3": {
+      "backup_hours": 0.0,
+      "capacity": 4000.0,
+      "fragility_beta": 0.4,
+      "fragility_median_m": 3.0,
+      "fuel_hours": 0.0,
+      "hand_m": 5.48,
+      "id": "K3",
+      "kind": "tank",
+      "meta": {},
+      "name": "Service reservoir K3",
+      "node": 62,
+      "portfolio": "water",
+      "provenance": "inferred",
+      "repair_hours_base": 24.0,
+      "scada_controlled": false,
+      "x": 4900.0,
+      "y": 1900.0
+    },
+    "K4": {
+      "backup_hours": 0.0,
+      "capacity": 4000.0,
+      "fragility_beta": 0.4,
+      "fragility_median_m": 3.0,
+      "fuel_hours": 0.0,
+      "hand_m": 5.507,
+      "id": "K4",
+      "kind": "tank",
+      "meta": {},
+      "name": "Service reservoir K4",
+      "node": 43,
+      "portfolio": "water",
+      "provenance": "inferred",
+      "repair_hours_base": 24.0,
+      "scada_controlled": false,
+      "x": 2100.0,
+      "y": 1500.0
+    },
+    "P1": {
+      "backup_hours": 0.0,
+      "capacity": 400.0,
+      "fragility_beta": 0.4,
+      "fragility_median_m": 0.7,
+      "fuel_hours": 0.0,
+      "hand_m": 2.963,
+      "id": "P1",
+      "kind": "pump",
+      "meta": {},
+      "name": "West booster pump",
+      "node": 95,
+      "portfolio": "water",
+      "provenance": "inferred",
+      "repair_hours_base": 18.0,
+      "scada_controlled": false,
+      "x": 2100.0,
+      "y": 3500.0
+    },
+    "P2": {
+      "backup_hours": 0.0,
+      "capacity": 400.0,
+      "fragility_beta": 0.4,
+      "fragility_median_m": 0.7,
+      "fuel_hours": 0.0,
+      "hand_m": 0.932,
+      "id": "P2",
+      "kind": "pump",
+      "meta": {},
+      "name": "East booster pump",
+      "node": 88,
+      "portfolio": "water",
+      "provenance": "inferred",
+      "repair_hours_base": 18.0,
+      "scada_controlled": true,
+      "x": 4800.0,
+      "y": 3100.0
+    },
+    "P3": {
+      "backup_hours": 0.0,
+      "capacity": 400.0,
+      "fragility_beta": 0.4,
+      "fragility_median_m": 0.7,
+      "fuel_hours": 0.0,
+      "hand_m": 2.518,
+      "id": "P3",
+      "kind": "pump",
+      "meta": {},
+      "name": "North booster pump",
+      "node": 113,
+      "portfolio": "water",
+      "provenance": "inferred",
+      "repair_hours_base": 18.0,
+      "scada_controlled": true,
+      "x": 4500.0,
+      "y": 4100.0
+    },
+    "S1": {
+      "backup_hours": 0.0,
+      "capacity": 40.0,
+      "fragility_beta": 0.4,
+      "fragility_median_m": 0.9,
+      "fuel_hours": 0.0,
+      "hand_m": 7.027,
+      "id": "S1",
+      "kind": "substation",
+      "meta": {},
+      "name": "Westgate substation",
+      "node": 121,
+      "portfolio": "energy",
+      "provenance": "observed",
+      "repair_hours_base": 36.0,
+      "scada_controlled": false,
+      "x": 1900.0,
+      "y": 4300.0
+    },
+    "S2": {
+      "backup_hours": 0.0,
+      "capacity": 40.0,
+      "fragility_beta": 0.4,
+      "fragility_median_m": 0.9,
+      "fuel_hours": 0.0,
+      "hand_m": 1.234,
+      "id": "S2",
+      "kind": "substation",
+      "meta": {},
+      "name": "Riverside East substation",
+      "node": 87,
+      "portfolio": "energy",
+      "provenance": "observed",
+      "repair_hours_base": 36.0,
+      "scada_controlled": false,
+      "x": 4300.0,
+      "y": 3000.0
+    },
+    "S3": {
+      "backup_hours": 0.0,
+      "capacity": 40.0,
+      "fragility_beta": 0.4,
+      "fragility_median_m": 0.9,
+      "fuel_hours": 0.0,
+      "hand_m": 3.993,
+      "id": "S3",
+      "kind": "substation",
+      "meta": {},
+      "name": "Northfield substation",
+      "node": 125,
+      "portfolio": "energy",
+      "provenance": "observed",
+      "repair_hours_base": 36.0,
+      "scada_controlled": false,
+      "x": 4100.0,
+      "y": 4400.0
+    },
+    "SH1": {
+      "backup_hours": 0.0,
+      "capacity": 2500.0,
+      "fragility_beta": 0.4,
+      "fragility_median_m": 2.0,
+      "fuel_hours": 0.0,
+      "hand_m": 6.028,
+      "id": "SH1",
+      "kind": "shelter",
+      "meta": {},
+      "name": "Evacuation shelter SH1",
+      "node": 106,
+      "portfolio": "services",
+      "provenance": "inferred",
+      "repair_hours_base": 12.0,
+      "scada_controlled": false,
+      "x": 900.0,
+      "y": 3800.0
+    },
+    "SH2": {
+      "backup_hours": 0.0,
+      "capacity": 2500.0,
+      "fragility_beta": 0.4,
+      "fragility_median_m": 2.0,
+      "fuel_hours": 0.0,
+      "hand_m": 6.065,
+      "id": "SH2",
+      "kind": "shelter",
+      "meta": {},
+      "name": "Evacuation shelter SH2",
+      "node": 142,
+      "portfolio": "services",
+      "provenance": "inferred",
+      "repair_hours_base": 12.0,
+      "scada_controlled": false,
+      "x": 5900.0,
+      "y": 5000.0
+    },
+    "SH3": {
+      "backup_hours": 0.0,
+      "capacity": 2500.0,
+      "fragility_beta": 0.4,
+      "fragility_median_m": 2.0,
+      "fuel_hours": 0.0,
+      "hand_m": 6.01,
+      "id": "SH3",
+      "kind": "shelter",
+      "meta": {},
+      "name": "Evacuation shelter SH3",
+      "node": 28,
+      "portfolio": "services",
+      "provenance": "inferred",
+      "repair_hours_base": 12.0,
+      "scada_controlled": false,
+      "x": 1000.0,
+      "y": 1100.0
+    },
+    "SH4": {
+      "backup_hours": 0.0,
+      "capacity": 2500.0,
+      "fragility_beta": 0.4,
+      "fragility_median_m": 2.0,
+      "fuel_hours": 0.0,
+      "hand_m": 6.005,
+      "id": "SH4",
+      "kind": "shelter",
+      "meta": {},
+      "name": "Evacuation shelter SH4",
+      "node": 50,
+      "portfolio": "services",
+      "provenance": "inferred",
+      "repair_hours_base": 12.0,
+      "scada_controlled": false,
+      "x": 5300.0,
+      "y": 1700.0
+    },
+    "SW1": {
+      "backup_hours": 0.0,
+      "capacity": 1.0,
+      "fragility_beta": 0.4,
+      "fragility_median_m": 0.8,
+      "fuel_hours": 0.0,
+      "hand_m": 0.365,
+      "id": "SW1",
+      "kind": "stormwater_pump",
+      "meta": {},
+      "name": "East basin stormwater pump",
+      "node": 85,
+      "portfolio": "water",
+      "provenance": "synthetic",
+      "repair_hours_base": 12.0,
+      "scada_controlled": false,
+      "x": 3500.0,
+      "y": 2950.0
+    },
+    "SW2": {
+      "backup_hours": 0.0,
+      "capacity": 1.0,
+      "fragility_beta": 0.4,
+      "fragility_median_m": 0.8,
+      "fuel_hours": 0.0,
+      "hand_m": 0.387,
+      "id": "SW2",
+      "kind": "stormwater_pump",
+      "meta": {},
+      "name": "Lower east stormwater pump",
+      "node": 89,
+      "portfolio": "water",
+      "provenance": "synthetic",
+      "repair_hours_base": 12.0,
+      "scada_controlled": false,
+      "x": 5300.0,
+      "y": 3250.0
+    },
+    "T1": {
+      "backup_hours": 4.0,
+      "capacity": 60.0,
+      "fragility_beta": 0.4,
+      "fragility_median_m": 1.3,
+      "fuel_hours": 0.0,
+      "hand_m": 9.756,
+      "id": "T1",
+      "kind": "tower",
+      "meta": {},
+      "name": "Cell tower T1",
+      "node": 132,
+      "portfolio": "comms",
+      "provenance": "inferred",
+      "repair_hours_base": 12.0,
+      "scada_controlled": false,
+      "x": 1200.0,
+      "y": 5000.0
+    },
+    "T2": {
+      "backup_hours": 4.0,
+      "capacity": 60.0,
+      "fragility_beta": 0.4,
+      "fragility_median_m": 1.3,
+      "fuel_hours": 0.0,
+      "hand_m": 5.985,
+      "id": "T2",
+      "kind": "tower",
+      "meta": {},
+      "name": "Cell tower T2",
+      "node": 140,
+      "portfolio": "comms",
+      "provenance": "inferred",
+      "repair_hours_base": 12.0,
+      "scada_controlled": false,
+      "x": 4900.0,
+      "y": 5000.0
+    },
+    "T3": {
+      "backup_hours": 4.0,
+      "capacity": 60.0,
+      "fragility_beta": 0.4,
+      "fragility_median_m": 1.3,
+      "fuel_hours": 0.0,
+      "hand_m": 6.316,
+      "id": "T3",
+      "kind": "tower",
+      "meta": {},
+      "name": "Cell tower T3",
+      "node": 107,
+      "portfolio": "comms",
+      "provenance": "inferred",
+      "repair_hours_base": 12.0,
+      "scada_controlled": false,
+      "x": 1500.0,
+      "y": 3900.0
+    },
+    "T4": {
+      "backup_hours": 4.0,
+      "capacity": 60.0,
+      "fragility_beta": 0.4,
+      "fragility_median_m": 1.3,
+      "fuel_hours": 0.0,
+      "hand_m": 2.703,
+      "id": "T4",
+      "kind": "tower",
+      "meta": {},
+      "name": "Cell tower T4",
+      "node": 114,
+      "portfolio": "comms",
+      "provenance": "inferred",
+      "repair_hours_base": 12.0,
+      "scada_controlled": false,
+      "x": 4800.0,
+      "y": 4100.0
+    },
+    "T5": {
+      "backup_hours": 4.0,
+      "capacity": 60.0,
+      "fragility_beta": 0.4,
+      "fragility_median_m": 1.3,
+      "fuel_hours": 0.0,
+      "hand_m": 1.797,
+      "id": "T5",
+      "kind": "tower",
+      "meta": {},
+      "name": "Cell tower T5",
+      "node": 69,
+      "portfolio": "comms",
+      "provenance": "inferred",
+      "repair_hours_base": 12.0,
+      "scada_controlled": false,
+      "x": 2100.0,
+      "y": 2500.0
+    },
+    "T6": {
+      "backup_hours": 4.0,
+      "capacity": 60.0,
+      "fragility_beta": 0.4,
+      "fragility_median_m": 1.3,
+      "fuel_hours": 0.0,
+      "hand_m": 1.865,
+      "id": "T6",
+      "kind": "tower",
+      "meta": {},
+      "name": "Cell tower T6",
+      "node": 88,
+      "portfolio": "comms",
+      "provenance": "inferred",
+      "repair_hours_base": 12.0,
+      "scada_controlled": false,
+      "x": 5000.0,
+      "y": 2800.0
+    },
+    "T7": {
+      "backup_hours": 4.0,
+      "capacity": 60.0,
+      "fragility_beta": 0.4,
+      "fragility_median_m": 1.3,
+      "fuel_hours": 0.0,
+      "hand_m": 7.171,
+      "id": "T7",
+      "kind": "tower",
+      "meta": {},
+      "name": "Cell tower T7",
+      "node": 29,
+      "portfolio": "comms",
+      "provenance": "inferred",
+      "repair_hours_base": 12.0,
+      "scada_controlled": false,
+      "x": 1500.0,
+      "y": 1000.0
+    },
+    "T8": {
+      "backup_hours": 4.0,
+      "capacity": 60.0,
+      "fragility_beta": 0.4,
+      "fragility_median_m": 1.3,
+      "fuel_hours": 0.0,
+      "hand_m": 8.849,
+      "id": "T8",
+      "kind": "tower",
+      "meta": {},
+      "name": "Cell tower T8",
+      "node": 35,
+      "portfolio": "comms",
+      "provenance": "inferred",
+      "repair_hours_base": 12.0,
+      "scada_controlled": false,
+      "x": 4700.0,
+      "y": 1000.0
+    },
+    "TR1": {
+      "backup_hours": 0.0,
+      "capacity": 2.0,
+      "fragility_beta": 0.4,
+      "fragility_median_m": 1.2,
+      "fuel_hours": 0.0,
+      "hand_m": 10.089,
+      "id": "TR1",
+      "kind": "transformer",
+      "meta": {},
+      "name": "Transformer 1",
+      "node": 131,
+      "portfolio": "energy",
+      "provenance": "synthetic",
+      "repair_hours_base": 8.0,
+      "scada_controlled": false,
+      "x": 750.0,
+      "y": 5100.0
+    },
+    "TR10": {
+      "backup_hours": 0.0,
+      "capacity": 2.0,
+      "fragility_beta": 0.4,
+      "fragility_median_m": 1.2,
+      "fuel_hours": 0.0,
+      "hand_m": 1.282,
+      "id": "TR10",
+      "kind": "transformer",
+      "meta": {},
+      "name": "Transformer 10",
+      "node": 69,
+      "portfolio": "energy",
+      "provenance": "synthetic",
+      "repair_hours_base": 8.0,
+      "scada_controlled": false,
+      "x": 2250.0,
+      "y": 2533.21
+    },
+    "TR11": {
+      "backup_hours": 0.0,
+      "capacity": 2.0,
+      "fragility_beta": 0.4,
+      "fragility_median_m": 1.2,
+      "fuel_hours": 0.0,
+      "hand_m": 1.62,
+      "id": "TR11",
+      "kind": "transformer",
+      "meta": {},
+      "name": "Transformer 11",
+      "node": 85,
+      "portfolio": "energy",
+      "provenance": "synthetic",
+      "repair_hours_base": 8.0,
+      "scada_controlled": false,
+      "x": 3750.0,
+      "y": 2754.37
+    },
+    "TR12": {
+      "backup_hours": 0.0,
+      "capacity": 2.0,
+      "fragility_beta": 0.4,
+      "fragility_median_m": 1.2,
+      "fuel_hours": 0.0,
+      "hand_m": 1.761,
+      "id": "TR12",
+      "kind": "transformer",
+      "meta": {},
+      "name": "Transformer 12",
+      "node": 88,
+      "portfolio": "energy",
+      "provenance": "synthetic",
+      "repair_hours_base": 8.0,
+      "scada_controlled": false,
+      "x": 5250.0,
+      "y": 2969.65
+    },
+    "TR13": {
+      "backup_hours": 0.0,
+      "capacity": 2.0,
+      "fragility_beta": 0.4,
+      "fragility_median_m": 1.2,
+      "fuel_hours": 0.0,
+      "hand_m": 7.149,
+      "id": "TR13",
+      "kind": "transformer",
+      "meta": {},
+      "name": "Transformer 13",
+      "node": 27,
+      "portfolio": "energy",
+      "provenance": "synthetic",
+      "repair_hours_base": 8.0,
+      "scada_controlled": false,
+      "x": 750.0,
+      "y": 800.0
+    },
+    "TR14": {
+      "backup_hours": 0.0,
+      "capacity": 2.0,
+      "fragility_beta": 0.4,
+      "fragility_median_m": 1.2,
+      "fuel_hours": 0.0,
+      "hand_m": 8.073,
+      "id": "TR14",
+      "kind": "transformer",
+      "meta": {},
+      "name": "Transformer 14",
+      "node": 30,
+      "portfolio": "energy",
+      "provenance": "synthetic",
+      "repair_hours_base": 8.0,
+      "scada_controlled": false,
+      "x": 2250.0,
+      "y": 800.0
+    },
+    "TR15": {
+      "backup_hours": 0.0,
+      "capacity": 2.0,
+      "fragility_beta": 0.4,
+      "fragility_median_m": 1.2,
+      "fuel_hours": 0.0,
+      "hand_m": 8.903,
+      "id": "TR15",
+      "kind": "transformer",
+      "meta": {},
+      "name": "Transformer 15",
+      "node": 33,
+      "portfolio": "energy",
+      "provenance": "synthetic",
+      "repair_hours_base": 8.0,
+      "scada_controlled": false,
+      "x": 3750.0,
+      "y": 800.0
+    },
+    "TR16": {
+      "backup_hours": 0.0,
+      "capacity": 2.0,
+      "fragility_beta": 0.4,
+      "fragility_median_m": 1.2,
+      "fuel_hours": 0.0,
+      "hand_m": 9.842,
+      "id": "TR16",
+      "kind": "transformer",
+      "meta": {},
+      "name": "Transformer 16",
+      "node": 36,
+      "portfolio": "energy",
+      "provenance": "synthetic",
+      "repair_hours_base": 8.0,
+      "scada_controlled": false,
+      "x": 5250.0,
+      "y": 800.0
+    },
+    "TR2": {
+      "backup_hours": 0.0,
+      "capacity": 2.0,
+      "fragility_beta": 0.4,
+      "fragility_median_m": 1.2,
+      "fuel_hours": 0.0,
+      "hand_m": 8.861,
+      "id": "TR2",
+      "kind": "transformer",
+      "meta": {},
+      "name": "Transformer 2",
+      "node": 134,
+      "portfolio": "energy",
+      "provenance": "synthetic",
+      "repair_hours_base": 8.0,
+      "scada_controlled": false,
+      "x": 2250.0,
+      "y": 5100.0
+    },
+    "TR3": {
+      "backup_hours": 0.0,
+      "capacity": 2.0,
+      "fragility_beta": 0.4,
+      "fragility_median_m": 1.2,
+      "fuel_hours": 0.0,
+      "hand_m": 6.908,
+      "id": "TR3",
+      "kind": "transformer",
+      "meta": {},
+      "name": "Transformer 3",
+      "node": 137,
+      "portfolio": "energy",
+      "provenance": "synthetic",
+      "repair_hours_base": 8.0,
+      "scada_controlled": false,
+      "x": 3750.0,
+      "y": 5100.0
+    },
+    "TR4": {
+      "backup_hours": 0.0,
+      "capacity": 2.0,
+      "fragility_beta": 0.4,
+      "fragility_median_m": 1.2,
+      "fuel_hours": 0.0,
+      "hand_m": 6.448,
+      "id": "TR4",
+      "kind": "transformer",
+      "meta": {},
+      "name": "Transformer 4",
+      "node": 140,
+      "portfolio": "energy",
+      "provenance": "synthetic",
+      "repair_hours_base": 8.0,
+      "scada_controlled": false,
+      "x": 5250.0,
+      "y": 5100.0
+    },
+    "TR5": {
+      "backup_hours": 0.0,
+      "capacity": 2.0,
+      "fragility_beta": 0.4,
+      "fragility_median_m": 1.2,
+      "fuel_hours": 0.0,
+      "hand_m": 4.281,
+      "id": "TR5",
+      "kind": "transformer",
+      "meta": {},
+      "name": "Transformer 5",
+      "node": 92,
+      "portfolio": "energy",
+      "provenance": "synthetic",
+      "repair_hours_base": 8.0,
+      "scada_controlled": false,
+      "x": 750.0,
+      "y": 3468.49
+    },
+    "TR6": {
+      "backup_hours": 0.0,
+      "capacity": 2.0,
+      "fragility_beta": 0.4,
+      "fragility_median_m": 1.2,
+      "fuel_hours": 0.0,
+      "hand_m": 3.656,
+      "id": "TR6",
+      "kind": "transformer",
+      "meta": {},
+      "name": "Transformer 6",
+      "node": 95,
+      "portfolio": "energy",
+      "provenance": "synthetic",
+      "repair_hours_base": 8.0,
+      "scada_controlled": false,
+      "x": 2250.0,
+      "y": 3653.21
+    },
+    "TR7": {
+      "backup_hours": 0.0,
+      "capacity": 2.0,
+      "fragility_beta": 0.4,
+      "fragility_median_m": 1.2,
+      "fuel_hours": 0.0,
+      "hand_m": 2.298,
+      "id": "TR7",
+      "kind": "transformer",
+      "meta": {},
+      "name": "Transformer 7",
+      "node": 111,
+      "portfolio": "energy",
+      "provenance": "synthetic",
+      "repair_hours_base": 8.0,
+      "scada_controlled": false,
+      "x": 3750.0,
+      "y": 3874.37
+    },
+    "TR8": {
+      "backup_hours": 0.0,
+      "capacity": 2.0,
+      "fragility_beta": 0.4,
+      "fragility_median_m": 1.2,
+      "fuel_hours": 0.0,
+      "hand_m": 2.263,
+      "id": "TR8",
+      "kind": "transformer",
+      "meta": {},
+      "name": "Transformer 8",
+      "node": 114,
+      "portfolio": "energy",
+      "provenance": "synthetic",
+      "repair_hours_base": 8.0,
+      "scada_controlled": false,
+      "x": 5250.0,
+      "y": 4089.65
+    },
+    "TR9": {
+      "backup_hours": 0.0,
+      "capacity": 2.0,
+      "fragility_beta": 0.4,
+      "fragility_median_m": 1.2,
+      "fuel_hours": 0.0,
+      "hand_m": 1.539,
+      "id": "TR9",
+      "kind": "transformer",
+      "meta": {},
+      "name": "Transformer 9",
+      "node": 66,
+      "portfolio": "energy",
+      "provenance": "synthetic",
+      "repair_hours_base": 8.0,
+      "scada_controlled": false,
+      "x": 750.0,
+      "y": 2348.49
+    },
+    "U1": {
+      "backup_hours": 0.0,
+      "capacity": 1.0,
+      "fragility_beta": 0.4,
+      "fragility_median_m": 99.0,
+      "fuel_hours": 0.0,
+      "hand_m": 0.2,
+      "id": "U1",
+      "kind": "underpass",
+      "meta": {},
+      "name": "Underpass U1",
+      "node": 14,
+      "portfolio": "transport",
+      "provenance": "observed",
+      "repair_hours_base": 4.0,
+      "scada_controlled": false,
+      "x": 500.0,
+      "y": 750.0
+    },
+    "U2": {
+      "backup_hours": 0.0,
+      "capacity": 1.0,
+      "fragility_beta": 0.4,
+      "fragility_median_m": 99.0,
+      "fuel_hours": 0.0,
+      "hand_m": 0.2,
+      "id": "U2",
+      "kind": "underpass",
+      "meta": {},
+      "name": "Underpass U2",
+      "node": 62,
+      "portfolio": "transport",
+      "provenance": "observed",
+      "repair_hours_base": 4.0,
+      "scada_controlled": false,
+      "x": 5250.0,
+      "y": 2000.0
+    },
+    "U3": {
+      "backup_hours": 0.0,
+      "capacity": 1.0,
+      "fragility_beta": 0.4,
+      "fragility_median_m": 99.0,
+      "fuel_hours": 0.0,
+      "hand_m": 0.2,
+      "id": "U3",
+      "kind": "underpass",
+      "meta": {},
+      "name": "Underpass U3",
+      "node": 151,
+      "portfolio": "transport",
+      "provenance": "observed",
+      "repair_hours_base": 4.0,
+      "scada_controlled": false,
+      "x": 4250.0,
+      "y": 5500.0
+    },
+    "W1": {
+      "backup_hours": 0.0,
+      "capacity": 850.0,
+      "fragility_beta": 0.4,
+      "fragility_median_m": 1.1,
+      "fuel_hours": 24.0,
+      "hand_m": 0.964,
+      "id": "W1",
+      "kind": "treatment",
+      "meta": {},
+      "name": "Central treatment works",
+      "node": 83,
+      "portfolio": "water",
+      "provenance": "observed",
+      "repair_hours_base": 36.0,
+      "scada_controlled": false,
+      "x": 2600.0,
+      "y": 3200.0
+    },
+    "X1": {
+      "backup_hours": 8.0,
+      "capacity": 100.0,
+      "fragility_beta": 0.4,
+      "fragility_median_m": 1.0,
+      "fuel_hours": 24.0,
+      "hand_m": 5.937,
+      "id": "X1",
+      "kind": "exchange",
+      "meta": {},
+      "name": "West exchange",
+      "node": 108,
+      "portfolio": "comms",
+      "provenance": "observed",
+      "repair_hours_base": 24.0,
+      "scada_controlled": false,
+      "x": 1800.0,
+      "y": 4000.0
+    },
+    "X2": {
+      "backup_hours": 8.0,
+      "capacity": 100.0,
+      "fragility_beta": 0.4,
+      "fragility_median_m": 1.0,
+      "fuel_hours": 24.0,
+      "hand_m": 1.555,
+      "id": "X2",
+      "kind": "exchange",
+      "meta": {},
+      "name": "East exchange",
+      "node": 88,
+      "portfolio": "comms",
+      "provenance": "observed",
+      "repair_hours_base": 24.0,
+      "scada_controlled": false,
+      "x": 4900.0,
+      "y": 2900.0
+    }
+  },
+  "crews": [
+    {
+      "depot": "D1",
+      "id": "CP1",
+      "portfolio": "energy",
+      "speed_kph": 25.0
+    },
+    {
+      "depot": "D1",
+      "id": "CP2",
+      "portfolio": "energy",
+      "speed_kph": 25.0
+    },
+    {
+      "depot": "D2",
+      "id": "CW1",
+      "portfolio": "water",
+      "speed_kph": 25.0
+    },
+    {
+      "depot": "D2",
+      "id": "CW2",
+      "portfolio": "water",
+      "speed_kph": 25.0
+    },
+    {
+      "depot": "D3",
+      "id": "CC1",
+      "portfolio": "comms",
+      "speed_kph": 25.0
+    },
+    {
+      "depot": "D3",
+      "id": "CC2",
+      "portfolio": "comms",
+      "speed_kph": 25.0
+    }
+  ],
+  "crs_epsg": 32644,
+  "extent_m": 6000.0,
+  "links": [
+    {
+      "capacity": 12.0,
+      "kind": "powers",
+      "provenance": "synthetic",
+      "source": "S1",
+      "target": "F1"
+    },
+    {
+      "capacity": 12.0,
+      "kind": "powers",
+      "provenance": "synthetic",
+      "source": "S1",
+      "target": "F2"
+    },
+    {
+      "capacity": 12.0,
+      "kind": "powers",
+      "provenance": "synthetic",
+      "source": "S1",
+      "target": "F3"
+    },
+    {
+      "capacity": 12.0,
+      "kind": "powers",
+      "provenance": "synthetic",
+      "source": "S2",
+      "target": "F4"
+    },
+    {
+      "capacity": 12.0,
+      "kind": "powers",
+      "provenance": "synthetic",
+      "source": "S2",
+      "target": "F5"
+    },
+    {
+      "capacity": 12.0,
+      "kind": "powers",
+      "provenance": "synthetic",
+      "source": "S2",
+      "target": "F6"
+    },
+    {
+      "capacity": 12.0,
+      "kind": "powers",
+      "provenance": "synthetic",
+      "source": "S3",
+      "target": "F7"
+    },
+    {
+      "capacity": 12.0,
+      "kind": "powers",
+      "provenance": "synthetic",
+      "source": "S3",
+      "target": "F8"
+    },
+    {
+      "capacity": 12.0,
+      "kind": "powers",
+      "provenance": "synthetic",
+      "source": "S3",
+      "target": "F9"
+    },
+    {
+      "capacity": 40.0,
+      "kind": "powers",
+      "provenance": "synthetic",
+      "source": "GS1",
+      "target": "S1"
+    },
+    {
+      "capacity": 40.0,
+      "kind": "powers",
+      "provenance": "synthetic",
+      "source": "GS1",
+      "target": "S2"
+    },
+    {
+      "capacity": 40.0,
+      "kind": "powers",
+      "provenance": "synthetic",
+      "source": "GS1",
+      "target": "S3"
+    },
+    {
+      "capacity": 2.0,
+      "kind": "powers",
+      "provenance": "synthetic",
+      "source": "F1",
+      "target": "TR1"
+    },
+    {
+      "capacity": 2.0,
+      "kind": "powers",
+      "provenance": "synthetic",
+      "source": "F1",
+      "target": "TR2"
+    },
+    {
+      "capacity": 2.0,
+      "kind": "powers",
+      "provenance": "synthetic",
+      "source": "F7",
+      "target": "TR3"
+    },
+    {
+      "capacity": 2.0,
+      "kind": "powers",
+      "provenance": "synthetic",
+      "source": "F7",
+      "target": "TR4"
+    },
+    {
+      "capacity": 2.0,
+      "kind": "powers",
+      "provenance": "synthetic",
+      "source": "F2",
+      "target": "TR5"
+    },
+    {
+      "capacity": 2.0,
+      "kind": "powers",
+      "provenance": "synthetic",
+      "source": "F3",
+      "target": "TR6"
+    },
+    {
+      "capacity": 2.0,
+      "kind": "powers",
+      "provenance": "synthetic",
+      "source": "F8",
+      "target": "TR7"
+    },
+    {
+      "capacity": 2.0,
+      "kind": "powers",
+      "provenance": "synthetic",
+      "source": "F9",
+      "target": "TR8"
+    },
+    {
+      "capacity": 2.0,
+      "kind": "powers",
+      "provenance": "synthetic",
+      "source": "F4",
+      "target": "TR9"
+    },
+    {
+      "capacity": 2.0,
+      "kind": "powers",
+      "provenance": "synthetic",
+      "source": "F4",
+      "target": "TR10"
+    },
+    {
+      "capacity": 2.0,
+      "kind": "powers",
+      "provenance": "synthetic",
+      "source": "F5",
+      "target": "TR11"
+    },
+    {
+      "capacity": 2.0,
+      "kind": "powers",
+      "provenance": "synthetic",
+      "source": "F5",
+      "target": "TR12"
+    },
+    {
+      "capacity": 2.0,
+      "kind": "powers",
+      "provenance": "synthetic",
+      "source": "F6",
+      "target": "TR13"
+    },
+    {
+      "capacity": 2.0,
+      "kind": "powers",
+      "provenance": "synthetic",
+      "source": "F6",
+      "target": "TR14"
+    },
+    {
+      "capacity": 2.0,
+      "kind": "powers",
+      "provenance": "synthetic",
+      "source": "F6",
+      "target": "TR15"
+    },
+    {
+      "capacity": 2.0,
+      "kind": "powers",
+      "provenance": "synthetic",
+      "source": "F6",
+      "target": "TR16"
+    },
+    {
+      "capacity": 850.0,
+      "kind": "supplies_water",
+      "provenance": "synthetic",
+      "source": "I1",
+      "target": "W1"
+    },
+    {
+      "capacity": 400.0,
+      "kind": "supplies_water",
+      "provenance": "synthetic",
+      "source": "W1",
+      "target": "P1"
+    },
+    {
+      "capacity": 400.0,
+      "kind": "supplies_water",
+      "provenance": "synthetic",
+      "source": "W1",
+      "target": "P2"
+    },
+    {
+      "capacity": 400.0,
+      "kind": "supplies_water",
+      "provenance": "synthetic",
+      "source": "W1",
+      "target": "P3"
+    },
+    {
+      "capacity": 400.0,
+      "kind": "supplies_water",
+      "provenance": "synthetic",
+      "source": "P1",
+      "target": "K1"
+    },
+    {
+      "capacity": 400.0,
+      "kind": "supplies_water",
+      "provenance": "synthetic",
+      "source": "P1",
+      "target": "K4"
+    },
+    {
+      "capacity": 400.0,
+      "kind": "supplies_water",
+      "provenance": "synthetic",
+      "source": "P3",
+      "target": "K2"
+    },
+    {
+      "capacity": 400.0,
+      "kind": "supplies_water",
+      "provenance": "synthetic",
+      "source": "P2",
+      "target": "K3"
+    },
+    {
+      "capacity": 2.0,
+      "kind": "powers",
+      "provenance": "synthetic",
+      "source": "S1",
+      "target": "I1"
+    },
+    {
+      "capacity": 6.0,
+      "kind": "powers",
+      "provenance": "synthetic",
+      "source": "S1",
+      "target": "W1"
+    },
+    {
+      "capacity": 3.0,
+      "kind": "powers",
+      "provenance": "synthetic",
+      "source": "S1",
+      "target": "P1"
+    },
+    {
+      "capacity": 3.0,
+      "kind": "powers",
+      "provenance": "synthetic",
+      "source": "S2",
+      "target": "P2"
+    },
+    {
+      "capacity": 3.0,
+      "kind": "powers",
+      "provenance": "synthetic",
+      "source": "S3",
+      "target": "P3"
+    },
+    {
+      "capacity": 2.0,
+      "kind": "powers",
+      "provenance": "synthetic",
+      "source": "S2",
+      "target": "SW1"
+    },
+    {
+      "capacity": 2.0,
+      "kind": "powers",
+      "provenance": "synthetic",
+      "source": "S2",
+      "target": "SW2"
+    },
+    {
+      "capacity": 0.5,
+      "kind": "powers",
+      "provenance": "synthetic",
+      "source": "S1",
+      "target": "T1"
+    },
+    {
+      "capacity": 0.5,
+      "kind": "powers",
+      "provenance": "synthetic",
+      "source": "S3",
+      "target": "T2"
+    },
+    {
+      "capacity": 0.5,
+      "kind": "powers",
+      "provenance": "synthetic",
+      "source": "S1",
+      "target": "T3"
+    },
+    {
+      "capacity": 0.5,
+      "kind": "powers",
+      "provenance": "synthetic",
+      "source": "S3",
+      "target": "T4"
+    },
+    {
+      "capacity": 0.5,
+      "kind": "powers",
+      "provenance": "synthetic",
+      "source": "S2",
+      "target": "T5"
+    },
+    {
+      "capacity": 0.5,
+      "kind": "powers",
+      "provenance": "synthetic",
+      "source": "S2",
+      "target": "T6"
+    },
+    {
+      "capacity": 0.5,
+      "kind": "powers",
+      "provenance": "synthetic",
+      "source": "S2",
+      "target": "T7"
+    },
+    {
+      "capacity": 0.5,
+      "kind": "powers",
+      "provenance": "synthetic",
+      "source": "S2",
+      "target": "T8"
+    },
+    {
+      "capacity": 100.0,
+      "kind": "backhauls",
+      "provenance": "synthetic",
+      "source": "X1",
+      "target": "FIBRE_1"
+    },
+    {
+      "capacity": 100.0,
+      "kind": "backhauls",
+      "provenance": "synthetic",
+      "source": "X1",
+      "target": "FIBRE_2"
+    },
+    {
+      "capacity": 100.0,
+      "kind": "backhauls",
+      "provenance": "synthetic",
+      "source": "FIBRE_1",
+      "target": "X2"
+    },
+    {
+      "capacity": 100.0,
+      "kind": "backhauls",
+      "provenance": "synthetic",
+      "source": "FIBRE_2",
+      "target": "X2"
+    },
+    {
+      "capacity": 100.0,
+      "kind": "backhauls",
+      "provenance": "synthetic",
+      "source": "X1",
+      "target": "FIBRE_3"
+    },
+    {
+      "capacity": 100.0,
+      "kind": "backhauls",
+      "provenance": "synthetic",
+      "source": "X2",
+      "target": "FIBRE_4"
+    },
+    {
+      "capacity": 25.0,
+      "kind": "backhauls",
+      "provenance": "synthetic",
+      "source": "FIBRE_3",
+      "target": "T1"
+    },
+    {
+      "capacity": 25.0,
+      "kind": "backhauls",
+      "provenance": "synthetic",
+      "source": "FIBRE_3",
+      "target": "T2"
+    },
+    {
+      "capacity": 25.0,
+      "kind": "backhauls",
+      "provenance": "synthetic",
+      "source": "FIBRE_3",
+      "target": "T3"
+    },
+    {
+      "capacity": 25.0,
+      "kind": "backhauls",
+      "provenance": "synthetic",
+      "source": "FIBRE_3",
+      "target": "T4"
+    },
+    {
+      "capacity": 25.0,
+      "kind": "backhauls",
+      "provenance": "synthetic",
+      "source": "FIBRE_4",
+      "target": "T5"
+    },
+    {
+      "capacity": 25.0,
+      "kind": "backhauls",
+      "provenance": "synthetic",
+      "source": "FIBRE_4",
+      "target": "T6"
+    },
+    {
+      "capacity": 25.0,
+      "kind": "backhauls",
+      "provenance": "synthetic",
+      "source": "FIBRE_4",
+      "target": "T7"
+    },
+    {
+      "capacity": 25.0,
+      "kind": "backhauls",
+      "provenance": "synthetic",
+      "source": "FIBRE_4",
+      "target": "T8"
+    },
+    {
+      "capacity": 2.0,
+      "kind": "powers",
+      "provenance": "synthetic",
+      "source": "S1",
+      "target": "X1"
+    },
+    {
+      "capacity": 2.0,
+      "kind": "powers",
+      "provenance": "synthetic",
+      "source": "S2",
+      "target": "X2"
+    },
+    {
+      "capacity": 1.0,
+      "kind": "controls",
+      "provenance": "synthetic",
+      "source": "X2",
+      "target": "P2"
+    },
+    {
+      "capacity": 1.0,
+      "kind": "controls",
+      "provenance": "synthetic",
+      "source": "X2",
+      "target": "P3"
+    },
+    {
+      "capacity": 1.0,
+      "kind": "hosted_on",
+      "provenance": "synthetic",
+      "source": "B1",
+      "target": "FIBRE_1"
+    },
+    {
+      "capacity": 1.0,
+      "kind": "hosted_on",
+      "provenance": "synthetic",
+      "source": "B1",
+      "target": "FIBRE_2"
+    },
+    {
+      "capacity": 4.0,
+      "kind": "powers",
+      "provenance": "synthetic",
+      "source": "S1",
+      "target": "H1"
+    },
+    {
+      "capacity": 4.0,
+      "kind": "powers",
+      "provenance": "synthetic",
+      "source": "S3",
+      "target": "H2"
+    },
+    {
+      "capacity": 30.0,
+      "kind": "supplies_water",
+      "provenance": "synthetic",
+      "source": "K1",
+      "target": "H1"
+    },
+    {
+      "capacity": 30.0,
+      "kind": "supplies_water",
+      "provenance": "synthetic",
+      "source": "K3",
+      "target": "H2"
+    },
+    {
+      "capacity": 1.0,
+      "kind": "powers",
+      "provenance": "synthetic",
+      "source": "S3",
+      "target": "C1"
+    },
+    {
+      "capacity": 1.0,
+      "kind": "powers",
+      "provenance": "synthetic",
+      "source": "S2",
+      "target": "C2"
+    },
+    {
+      "capacity": 1.0,
+      "kind": "powers",
+      "provenance": "synthetic",
+      "source": "S3",
+      "target": "C3"
+    },
+    {
+      "capacity": 5.0,
+      "kind": "supplies_water",
+      "provenance": "synthetic",
+      "source": "K1",
+      "target": "C1"
+    },
+    {
+      "capacity": 5.0,
+      "kind": "supplies_water",
+      "provenance": "synthetic",
+      "source": "K4",
+      "target": "C2"
+    },
+    {
+      "capacity": 5.0,
+      "kind": "supplies_water",
+      "provenance": "synthetic",
+      "source": "K2",
+      "target": "C3"
+    },
+    {
+      "capacity": 1.0,
+      "kind": "powers",
+      "provenance": "synthetic",
+      "source": "S1",
+      "target": "FS1"
+    },
+    {
+      "capacity": 1.0,
+      "kind": "powers",
+      "provenance": "synthetic",
+      "source": "S1",
+      "target": "E1"
+    },
+    {
+      "capacity": 1.0,
+      "kind": "powers",
+      "provenance": "synthetic",
+      "source": "S1",
+      "target": "SH1"
+    },
+    {
+      "capacity": 1.0,
+      "kind": "powers",
+      "provenance": "synthetic",
+      "source": "S3",
+      "target": "SH2"
+    },
+    {
+      "capacity": 1.0,
+      "kind": "powers",
+      "provenance": "synthetic",
+      "source": "S2",
+      "target": "SH3"
+    },
+    {
+      "capacity": 1.0,
+      "kind": "powers",
+      "provenance": "synthetic",
+      "source": "S2",
+      "target": "SH4"
+    },
+    {
+      "capacity": 1.0,
+      "kind": "powers",
+      "provenance": "synthetic",
+      "source": "S1",
+      "target": "D1"
+    },
+    {
+      "capacity": 1.0,
+      "kind": "powers",
+      "provenance": "synthetic",
+      "source": "S1",
+      "target": "D2"
+    },
+    {
+      "capacity": 1.0,
+      "kind": "powers",
+      "provenance": "synthetic",
+      "source": "S1",
+      "target": "D3"
+    },
+    {
+      "capacity": 1.0,
+      "kind": "powers",
+      "provenance": "synthetic",
+      "source": "S1",
+      "target": "G1"
+    },
+    {
+      "capacity": 1.0,
+      "kind": "powers",
+      "provenance": "synthetic",
+      "source": "S2",
+      "target": "G2"
+    },
+    {
+      "capacity": 1.0,
+      "kind": "fuels",
+      "provenance": "synthetic",
+      "source": "G1",
+      "target": "H1"
+    },
+    {
+      "capacity": 1.0,
+      "kind": "fuels",
+      "provenance": "synthetic",
+      "source": "G1",
+      "target": "W1"
+    },
+    {
+      "capacity": 1.0,
+      "kind": "fuels",
+      "provenance": "synthetic",
+      "source": "G1",
+      "target": "X1"
+    },
+    {
+      "capacity": 1.0,
+      "kind": "fuels",
+      "provenance": "synthetic",
+      "source": "G1",
+      "target": "FS1"
+    },
+    {
+      "capacity": 1.0,
+      "kind": "fuels",
+      "provenance": "synthetic",
+      "source": "G1",
+      "target": "E1"
+    },
+    {
+      "capacity": 1.0,
+      "kind": "fuels",
+      "provenance": "synthetic",
+      "source": "G1",
+      "target": "D1"
+    },
+    {
+      "capacity": 1.0,
+      "kind": "fuels",
+      "provenance": "synthetic",
+      "source": "G1",
+      "target": "D2"
+    },
+    {
+      "capacity": 1.0,
+      "kind": "fuels",
+      "provenance": "synthetic",
+      "source": "G1",
+      "target": "D3"
+    },
+    {
+      "capacity": 1.0,
+      "kind": "fuels",
+      "provenance": "synthetic",
+      "source": "G2",
+      "target": "H2"
+    },
+    {
+      "capacity": 1.0,
+      "kind": "fuels",
+      "provenance": "synthetic",
+      "source": "G2",
+      "target": "X2"
+    },
+    {
+      "capacity": 1.0,
+      "kind": "fuels",
+      "provenance": "synthetic",
+      "source": "G2",
+      "target": "C2"
+    }
+  ],
+  "name": "Ellorai Township",
+  "nodes": {
+    "0": [
+      0.0,
+      0.0
+    ],
+    "1": [
+      500.0,
+      0.0
+    ],
+    "10": [
+      5000.0,
+      0.0
+    ],
+    "100": [
+      4500.0,
+      3500.0
+    ],
+    "101": [
+      5000.0,
+      3500.0
+    ],
+    "102": [
+      5500.0,
+      3500.0
+    ],
+    "103": [
+      6000.0,
+      3500.0
+    ],
+    "104": [
+      0.0,
+      4000.0
+    ],
+    "105": [
+      500.0,
+      4000.0
+    ],
+    "106": [
+      1000.0,
+      4000.0
+    ],
+    "107": [
+      1500.0,
+      4000.0
+    ],
+    "108": [
+      2000.0,
+      4000.0
+    ],
+    "109": [
+      2500.0,
+      4000.0
+    ],
+    "11": [
+      5500.0,
+      0.0
+    ],
+    "110": [
+      3000.0,
+      4000.0
+    ],
+    "111": [
+      3500.0,
+      4000.0
+    ],
+    "112": [
+      4000.0,
+      4000.0
+    ],
+    "113": [
+      4500.0,
+      4000.0
+    ],
+    "114": [
+      5000.0,
+      4000.0
+    ],
+    "115": [
+      5500.0,
+      4000.0
+    ],
+    "116": [
+      6000.0,
+      4000.0
+    ],
+    "117": [
+      0.0,
+      4500.0
+    ],
+    "118": [
+      500.0,
+      4500.0
+    ],
+    "119": [
+      1000.0,
+      4500.0
+    ],
+    "12": [
+      6000.0,
+      0.0
+    ],
+    "120": [
+      1500.0,
+      4500.0
+    ],
+    "121": [
+      2000.0,
+      4500.0
+    ],
+    "122": [
+      2500.0,
+      4500.0
+    ],
+    "123": [
+      3000.0,
+      4500.0
+    ],
+    "124": [
+      3500.0,
+      4500.0
+    ],
+    "125": [
+      4000.0,
+      4500.0
+    ],
+    "126": [
+      4500.0,
+      4500.0
+    ],
+    "127": [
+      5000.0,
+      4500.0
+    ],
+    "128": [
+      5500.0,
+      4500.0
+    ],
+    "129": [
+      6000.0,
+      4500.0
+    ],
+    "13": [
+      0.0,
+      500.0
+    ],
+    "130": [
+      0.0,
+      5000.0
+    ],
+    "131": [
+      500.0,
+      5000.0
+    ],
+    "132": [
+      1000.0,
+      5000.0
+    ],
+    "133": [
+      1500.0,
+      5000.0
+    ],
+    "134": [
+      2000.0,
+      5000.0
+    ],
+    "135": [
+      2500.0,
+      5000.0
+    ],
+    "136": [
+      3000.0,
+      5000.0
+    ],
+    "137": [
+      3500.0,
+      5000.0
+    ],
+    "138": [
+      4000.0,
+      5000.0
+    ],
+    "139": [
+      4500.0,
+      5000.0
+    ],
+    "14": [
+      500.0,
+      500.0
+    ],
+    "140": [
+      5000.0,
+      5000.0
+    ],
+    "141": [
+      5500.0,
+      5000.0
+    ],
+    "142": [
+      6000.0,
+      5000.0
+    ],
+    "143": [
+      0.0,
+      5500.0
+    ],
+    "144": [
+      500.0,
+      5500.0
+    ],
+    "145": [
+      1000.0,
+      5500.0
+    ],
+    "146": [
+      1500.0,
+      5500.0
+    ],
+    "147": [
+      2000.0,
+      5500.0
+    ],
+    "148": [
+      2500.0,
+      5500.0
+    ],
+    "149": [
+      3000.0,
+      5500.0
+    ],
+    "15": [
+      1000.0,
+      500.0
+    ],
+    "150": [
+      3500.0,
+      5500.0
+    ],
+    "151": [
+      4000.0,
+      5500.0
+    ],
+    "152": [
+      4500.0,
+      5500.0
+    ],
+    "153": [
+      5000.0,
+      5500.0
+    ],
+    "154": [
+      5500.0,
+      5500.0
+    ],
+    "155": [
+      6000.0,
+      5500.0
+    ],
+    "156": [
+      0.0,
+      6000.0
+    ],
+    "157": [
+      500.0,
+      6000.0
+    ],
+    "158": [
+      1000.0,
+      6000.0
+    ],
+    "159": [
+      1500.0,
+      6000.0
+    ],
+    "16": [
+      1500.0,
+      500.0
+    ],
+    "160": [
+      2000.0,
+      6000.0
+    ],
+    "161": [
+      2500.0,
+      6000.0
+    ],
+    "162": [
+      3000.0,
+      6000.0
+    ],
+    "163": [
+      3500.0,
+      6000.0
+    ],
+    "164": [
+      4000.0,
+      6000.0
+    ],
+    "165": [
+      4500.0,
+      6000.0
+    ],
+    "166": [
+      5000.0,
+      6000.0
+    ],
+    "167": [
+      5500.0,
+      6000.0
+    ],
+    "168": [
+      6000.0,
+      6000.0
+    ],
+    "17": [
+      2000.0,
+      500.0
+    ],
+    "18": [
+      2500.0,
+      500.0
+    ],
+    "19": [
+      3000.0,
+      500.0
+    ],
+    "2": [
+      1000.0,
+      0.0
+    ],
+    "20": [
+      3500.0,
+      500.0
+    ],
+    "21": [
+      4000.0,
+      500.0
+    ],
+    "22": [
+      4500.0,
+      500.0
+    ],
+    "23": [
+      5000.0,
+      500.0
+    ],
+    "24": [
+      5500.0,
+      500.0
+    ],
+    "25": [
+      6000.0,
+      500.0
+    ],
+    "26": [
+      0.0,
+      1000.0
+    ],
+    "27": [
+      500.0,
+      1000.0
+    ],
+    "28": [
+      1000.0,
+      1000.0
+    ],
+    "29": [
+      1500.0,
+      1000.0
+    ],
+    "3": [
+      1500.0,
+      0.0
+    ],
+    "30": [
+      2000.0,
+      1000.0
+    ],
+    "31": [
+      2500.0,
+      1000.0
+    ],
+    "32": [
+      3000.0,
+      1000.0
+    ],
+    "33": [
+      3500.0,
+      1000.0
+    ],
+    "34": [
+      4000.0,
+      1000.0
+    ],
+    "35": [
+      4500.0,
+      1000.0
+    ],
+    "36": [
+      5000.0,
+      1000.0
+    ],
+    "37": [
+      5500.0,
+      1000.0
+    ],
+    "38": [
+      6000.0,
+      1000.0
+    ],
+    "39": [
+      0.0,
+      1500.0
+    ],
+    "4": [
+      2000.0,
+      0.0
+    ],
+    "40": [
+      500.0,
+      1500.0
+    ],
+    "41": [
+      1000.0,
+      1500.0
+    ],
+    "42": [
+      1500.0,
+      1500.0
+    ],
+    "43": [
+      2000.0,
+      1500.0
+    ],
+    "44": [
+      2500.0,
+      1500.0
+    ],
+    "45": [
+      3000.0,
+      1500.0
+    ],
+    "46": [
+      3500.0,
+      1500.0
+    ],
+    "47": [
+      4000.0,
+      1500.0
+    ],
+    "48": [
+      4500.0,
+      1500.0
+    ],
+    "49": [
+      5000.0,
+      1500.0
+    ],
+    "5": [
+      2500.0,
+      0.0
+    ],
+    "50": [
+      5500.0,
+      1500.0
+    ],
+    "51": [
+      6000.0,
+      1500.0
+    ],
+    "52": [
+      0.0,
+      2000.0
+    ],
+    "53": [
+      500.0,
+      2000.0
+    ],
+    "54": [
+      1000.0,
+      2000.0
+    ],
+    "55": [
+      1500.0,
+      2000.0
+    ],
+    "56": [
+      2000.0,
+      2000.0
+    ],
+    "57": [
+      2500.0,
+      2000.0
+    ],
+    "58": [
+      3000.0,
+      2000.0
+    ],
+    "59": [
+      3500.0,
+      2000.0
+    ],
+    "6": [
+      3000.0,
+      0.0
+    ],
+    "60": [
+      4000.0,
+      2000.0
+    ],
+    "61": [
+      4500.0,
+      2000.0
+    ],
+    "62": [
+      5000.0,
+      2000.0
+    ],
+    "63": [
+      5500.0,
+      2000.0
+    ],
+    "64": [
+      6000.0,
+      2000.0
+    ],
+    "65": [
+      0.0,
+      2500.0
+    ],
+    "66": [
+      500.0,
+      2500.0
+    ],
+    "67": [
+      1000.0,
+      2500.0
+    ],
+    "68": [
+      1500.0,
+      2500.0
+    ],
+    "69": [
+      2000.0,
+      2500.0
+    ],
+    "7": [
+      3500.0,
+      0.0
+    ],
+    "70": [
+      2500.0,
+      2500.0
+    ],
+    "71": [
+      3000.0,
+      2500.0
+    ],
+    "72": [
+      3500.0,
+      2500.0
+    ],
+    "73": [
+      4000.0,
+      2500.0
+    ],
+    "74": [
+      4500.0,
+      2500.0
+    ],
+    "75": [
+      5000.0,
+      2500.0
+    ],
+    "76": [
+      5500.0,
+      2500.0
+    ],
+    "77": [
+      6000.0,
+      2500.0
+    ],
+    "78": [
+      0.0,
+      3000.0
+    ],
+    "79": [
+      500.0,
+      3000.0
+    ],
+    "8": [
+      4000.0,
+      0.0
+    ],
+    "80": [
+      1000.0,
+      3000.0
+    ],
+    "81": [
+      1500.0,
+      3000.0
+    ],
+    "82": [
+      2000.0,
+      3000.0
+    ],
+    "83": [
+      2500.0,
+      3000.0
+    ],
+    "84": [
+      3000.0,
+      3000.0
+    ],
+    "85": [
+      3500.0,
+      3000.0
+    ],
+    "86": [
+      4000.0,
+      3000.0
+    ],
+    "87": [
+      4500.0,
+      3000.0
+    ],
+    "88": [
+      5000.0,
+      3000.0
+    ],
+    "89": [
+      5500.0,
+      3000.0
+    ],
+    "9": [
+      4500.0,
+      0.0
+    ],
+    "90": [
+      6000.0,
+      3000.0
+    ],
+    "91": [
+      0.0,
+      3500.0
+    ],
+    "92": [
+      500.0,
+      3500.0
+    ],
+    "93": [
+      1000.0,
+      3500.0
+    ],
+    "94": [
+      1500.0,
+      3500.0
+    ],
+    "95": [
+      2000.0,
+      3500.0
+    ],
+    "96": [
+      2500.0,
+      3500.0
+    ],
+    "97": [
+      3000.0,
+      3500.0
+    ],
+    "98": [
+      3500.0,
+      3500.0
+    ],
+    "99": [
+      4000.0,
+      3500.0
+    ]
+  },
+  "origin_lonlat": [
+    80.2,
+    13.05
+  ],
+  "roads": {
+    "e0": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 9.539,
+      "host_asset": null,
+      "id": "e0",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 0,
+      "v": 1
+    },
+    "e1": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 8.227,
+      "host_asset": null,
+      "id": "e1",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 0,
+      "v": 13
+    },
+    "e10": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 10.944,
+      "host_asset": null,
+      "id": "e10",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 5,
+      "v": 6
+    },
+    "e100": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 1.516,
+      "host_asset": null,
+      "id": "e100",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 55,
+      "v": 68
+    },
+    "e101": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 3.485,
+      "host_asset": null,
+      "id": "e101",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 56,
+      "v": 57
+    },
+    "e102": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 2.074,
+      "host_asset": null,
+      "id": "e102",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 56,
+      "v": 69
+    },
+    "e103": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 3.15,
+      "host_asset": null,
+      "id": "e103",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 57,
+      "v": 58
+    },
+    "e104": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 1.425,
+      "host_asset": null,
+      "id": "e104",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 57,
+      "v": 70
+    },
+    "e105": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 3.307,
+      "host_asset": null,
+      "id": "e105",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 58,
+      "v": 59
+    },
+    "e106": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 1.537,
+      "host_asset": null,
+      "id": "e106",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 58,
+      "v": 71
+    },
+    "e107": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 3.574,
+      "host_asset": null,
+      "id": "e107",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 59,
+      "v": 60
+    },
+    "e108": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 1.707,
+      "host_asset": null,
+      "id": "e108",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 59,
+      "v": 72
+    },
+    "e109": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 4.334,
+      "host_asset": null,
+      "id": "e109",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 60,
+      "v": 61
+    },
+    "e11": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 9.42,
+      "host_asset": null,
+      "id": "e11",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 5,
+      "v": 18
+    },
+    "e110": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 2.846,
+      "host_asset": null,
+      "id": "e110",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 60,
+      "v": 73
+    },
+    "e111": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 4.603,
+      "host_asset": null,
+      "id": "e111",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 61,
+      "v": 62
+    },
+    "e112": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 2.873,
+      "host_asset": null,
+      "id": "e112",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 61,
+      "v": 74
+    },
+    "e113": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 0.2,
+      "host_asset": "U2",
+      "id": "e113",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 62,
+      "v": 63
+    },
+    "e114": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 3.002,
+      "host_asset": null,
+      "id": "e114",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 62,
+      "v": 75
+    },
+    "e115": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 4.882,
+      "host_asset": null,
+      "id": "e115",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 63,
+      "v": 64
+    },
+    "e116": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 3.314,
+      "host_asset": null,
+      "id": "e116",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 63,
+      "v": 76
+    },
+    "e117": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 3.617,
+      "host_asset": null,
+      "id": "e117",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 64,
+      "v": 77
+    },
+    "e118": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 0.425,
+      "host_asset": null,
+      "id": "e118",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 65,
+      "v": 66
+    },
+    "e119": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 0.95,
+      "host_asset": null,
+      "id": "e119",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 66,
+      "v": 67
+    },
+    "e12": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 11.199,
+      "host_asset": null,
+      "id": "e12",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 6,
+      "v": 7
+    },
+    "e120": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 1.516,
+      "host_asset": null,
+      "id": "e120",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 67,
+      "v": 68
+    },
+    "e121": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 1.516,
+      "host_asset": null,
+      "id": "e121",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 68,
+      "v": 69
+    },
+    "e122": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 2.0,
+      "host_asset": "B1",
+      "id": "e122",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 68,
+      "v": 81
+    },
+    "e123": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 1.381,
+      "host_asset": null,
+      "id": "e123",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 69,
+      "v": 70
+    },
+    "e124": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 1.47,
+      "host_asset": null,
+      "id": "e124",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 71,
+      "v": 72
+    },
+    "e125": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 1.707,
+      "host_asset": null,
+      "id": "e125",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 72,
+      "v": 73
+    },
+    "e126": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 0.145,
+      "host_asset": null,
+      "id": "e126",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 72,
+      "v": 85
+    },
+    "e127": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 2.846,
+      "host_asset": null,
+      "id": "e127",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 73,
+      "v": 74
+    },
+    "e128": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 0.472,
+      "host_asset": null,
+      "id": "e128",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 73,
+      "v": 86
+    },
+    "e129": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 2.873,
+      "host_asset": null,
+      "id": "e129",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 74,
+      "v": 75
+    },
+    "e13": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 9.235,
+      "host_asset": null,
+      "id": "e13",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 6,
+      "v": 19
+    },
+    "e130": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 1.338,
+      "host_asset": null,
+      "id": "e130",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 74,
+      "v": 87
+    },
+    "e131": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 2.923,
+      "host_asset": null,
+      "id": "e131",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 75,
+      "v": 76
+    },
+    "e132": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 0.993,
+      "host_asset": null,
+      "id": "e132",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 75,
+      "v": 88
+    },
+    "e133": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 2.97,
+      "host_asset": null,
+      "id": "e133",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 76,
+      "v": 77
+    },
+    "e134": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 1.417,
+      "host_asset": null,
+      "id": "e134",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 76,
+      "v": 89
+    },
+    "e135": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 1.495,
+      "host_asset": null,
+      "id": "e135",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 77,
+      "v": 90
+    },
+    "e136": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 1.559,
+      "host_asset": null,
+      "id": "e136",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 78,
+      "v": 79
+    },
+    "e137": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 1.559,
+      "host_asset": null,
+      "id": "e137",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 78,
+      "v": 91
+    },
+    "e138": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 1.448,
+      "host_asset": null,
+      "id": "e138",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 79,
+      "v": 80
+    },
+    "e139": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 1.803,
+      "host_asset": null,
+      "id": "e139",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 79,
+      "v": 92
+    },
+    "e14": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 11.409,
+      "host_asset": null,
+      "id": "e14",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 7,
+      "v": 8
+    },
+    "e140": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 1.075,
+      "host_asset": null,
+      "id": "e140",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 80,
+      "v": 81
+    },
+    "e141": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 1.916,
+      "host_asset": null,
+      "id": "e141",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 80,
+      "v": 93
+    },
+    "e142": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 1.022,
+      "host_asset": null,
+      "id": "e142",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 81,
+      "v": 82
+    },
+    "e143": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 1.075,
+      "host_asset": null,
+      "id": "e143",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 81,
+      "v": 94
+    },
+    "e144": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 0.167,
+      "host_asset": null,
+      "id": "e144",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 82,
+      "v": 83
+    },
+    "e145": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 1.022,
+      "host_asset": null,
+      "id": "e145",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 82,
+      "v": 95
+    },
+    "e146": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 0.029,
+      "host_asset": null,
+      "id": "e146",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 83,
+      "v": 84
+    },
+    "e147": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 0.167,
+      "host_asset": null,
+      "id": "e147",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 83,
+      "v": 96
+    },
+    "e148": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 0.145,
+      "host_asset": null,
+      "id": "e148",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 85,
+      "v": 86
+    },
+    "e149": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 0.472,
+      "host_asset": null,
+      "id": "e149",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 86,
+      "v": 87
+    },
+    "e15": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 9.478,
+      "host_asset": null,
+      "id": "e15",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 7,
+      "v": 20
+    },
+    "e150": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 0.993,
+      "host_asset": null,
+      "id": "e150",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 87,
+      "v": 88
+    },
+    "e151": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 2.0,
+      "host_asset": "B2",
+      "id": "e151",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 87,
+      "v": 100
+    },
+    "e152": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 0.993,
+      "host_asset": null,
+      "id": "e152",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 88,
+      "v": 89
+    },
+    "e153": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 1.417,
+      "host_asset": null,
+      "id": "e153",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 89,
+      "v": 90
+    },
+    "e154": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 3.709,
+      "host_asset": null,
+      "id": "e154",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 91,
+      "v": 92
+    },
+    "e155": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 4.207,
+      "host_asset": null,
+      "id": "e155",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 92,
+      "v": 93
+    },
+    "e156": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 4.207,
+      "host_asset": null,
+      "id": "e156",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 92,
+      "v": 105
+    },
+    "e157": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 4.642,
+      "host_asset": null,
+      "id": "e157",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 93,
+      "v": 106
+    },
+    "e158": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 3.085,
+      "host_asset": null,
+      "id": "e158",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 94,
+      "v": 95
+    },
+    "e159": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 4.278,
+      "host_asset": null,
+      "id": "e159",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 94,
+      "v": 107
+    },
+    "e16": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 10.248,
+      "host_asset": null,
+      "id": "e16",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 8,
+      "v": 21
+    },
+    "e160": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 2.355,
+      "host_asset": null,
+      "id": "e160",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 95,
+      "v": 96
+    },
+    "e161": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 3.085,
+      "host_asset": null,
+      "id": "e161",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 95,
+      "v": 108
+    },
+    "e162": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 2.186,
+      "host_asset": null,
+      "id": "e162",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 96,
+      "v": 97
+    },
+    "e163": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 2.355,
+      "host_asset": null,
+      "id": "e163",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 96,
+      "v": 109
+    },
+    "e164": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 1.452,
+      "host_asset": null,
+      "id": "e164",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 97,
+      "v": 98
+    },
+    "e165": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 2.186,
+      "host_asset": null,
+      "id": "e165",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 97,
+      "v": 110
+    },
+    "e166": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 0.963,
+      "host_asset": null,
+      "id": "e166",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 98,
+      "v": 99
+    },
+    "e167": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 1.452,
+      "host_asset": null,
+      "id": "e167",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 98,
+      "v": 111
+    },
+    "e168": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 0.589,
+      "host_asset": null,
+      "id": "e168",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 99,
+      "v": 100
+    },
+    "e169": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 0.963,
+      "host_asset": null,
+      "id": "e169",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 99,
+      "v": 112
+    },
+    "e17": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 12.045,
+      "host_asset": null,
+      "id": "e17",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 9,
+      "v": 10
+    },
+    "e170": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 0.343,
+      "host_asset": null,
+      "id": "e170",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 100,
+      "v": 101
+    },
+    "e171": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 0.589,
+      "host_asset": null,
+      "id": "e171",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 100,
+      "v": 113
+    },
+    "e172": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 0.0,
+      "host_asset": null,
+      "id": "e172",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 101,
+      "v": 102
+    },
+    "e173": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 0.401,
+      "host_asset": null,
+      "id": "e173",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 101,
+      "v": 114
+    },
+    "e174": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 0.0,
+      "host_asset": null,
+      "id": "e174",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 102,
+      "v": 103
+    },
+    "e175": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 0.0,
+      "host_asset": null,
+      "id": "e175",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 102,
+      "v": 115
+    },
+    "e176": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 0.031,
+      "host_asset": null,
+      "id": "e176",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 103,
+      "v": 116
+    },
+    "e177": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 6.331,
+      "host_asset": null,
+      "id": "e177",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 104,
+      "v": 105
+    },
+    "e178": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 6.331,
+      "host_asset": null,
+      "id": "e178",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 104,
+      "v": 117
+    },
+    "e179": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 6.714,
+      "host_asset": null,
+      "id": "e179",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 105,
+      "v": 106
+    },
+    "e18": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 10.199,
+      "host_asset": null,
+      "id": "e18",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 9,
+      "v": 22
+    },
+    "e180": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 6.714,
+      "host_asset": null,
+      "id": "e180",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 105,
+      "v": 118
+    },
+    "e181": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 6.87,
+      "host_asset": null,
+      "id": "e181",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 106,
+      "v": 107
+    },
+    "e182": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 7.137,
+      "host_asset": null,
+      "id": "e182",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 106,
+      "v": 119
+    },
+    "e183": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 5.705,
+      "host_asset": null,
+      "id": "e183",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 107,
+      "v": 108
+    },
+    "e184": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 6.988,
+      "host_asset": null,
+      "id": "e184",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 107,
+      "v": 120
+    },
+    "e185": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 4.422,
+      "host_asset": null,
+      "id": "e185",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 108,
+      "v": 109
+    },
+    "e186": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 5.705,
+      "host_asset": null,
+      "id": "e186",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 108,
+      "v": 121
+    },
+    "e187": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 4.348,
+      "host_asset": null,
+      "id": "e187",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 109,
+      "v": 110
+    },
+    "e188": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 4.422,
+      "host_asset": null,
+      "id": "e188",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 109,
+      "v": 122
+    },
+    "e189": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 3.516,
+      "host_asset": null,
+      "id": "e189",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 110,
+      "v": 111
+    },
+    "e19": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 11.109,
+      "host_asset": null,
+      "id": "e19",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 10,
+      "v": 23
+    },
+    "e190": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 4.348,
+      "host_asset": null,
+      "id": "e190",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 110,
+      "v": 123
+    },
+    "e191": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 2.495,
+      "host_asset": null,
+      "id": "e191",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 111,
+      "v": 112
+    },
+    "e192": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 3.516,
+      "host_asset": null,
+      "id": "e192",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 111,
+      "v": 124
+    },
+    "e193": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 2.122,
+      "host_asset": null,
+      "id": "e193",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 112,
+      "v": 113
+    },
+    "e194": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 2.931,
+      "host_asset": null,
+      "id": "e194",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 112,
+      "v": 125
+    },
+    "e195": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 2.167,
+      "host_asset": null,
+      "id": "e195",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 113,
+      "v": 114
+    },
+    "e196": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 2.167,
+      "host_asset": null,
+      "id": "e196",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 113,
+      "v": 126
+    },
+    "e197": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 1.83,
+      "host_asset": null,
+      "id": "e197",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 114,
+      "v": 115
+    },
+    "e198": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 2.392,
+      "host_asset": null,
+      "id": "e198",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 114,
+      "v": 127
+    },
+    "e199": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 1.696,
+      "host_asset": null,
+      "id": "e199",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 115,
+      "v": 116
+    },
+    "e2": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 10.084,
+      "host_asset": null,
+      "id": "e2",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 1,
+      "v": 2
+    },
+    "e20": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 13.022,
+      "host_asset": null,
+      "id": "e20",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 11,
+      "v": 12
+    },
+    "e200": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 2.135,
+      "host_asset": null,
+      "id": "e200",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 115,
+      "v": 128
+    },
+    "e201": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 1.71,
+      "host_asset": null,
+      "id": "e201",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 116,
+      "v": 129
+    },
+    "e202": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 7.95,
+      "host_asset": null,
+      "id": "e202",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 117,
+      "v": 118
+    },
+    "e203": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 7.95,
+      "host_asset": null,
+      "id": "e203",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 117,
+      "v": 130
+    },
+    "e204": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 8.502,
+      "host_asset": null,
+      "id": "e204",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 118,
+      "v": 119
+    },
+    "e205": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 8.502,
+      "host_asset": null,
+      "id": "e205",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 118,
+      "v": 131
+    },
+    "e206": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 8.476,
+      "host_asset": null,
+      "id": "e206",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 119,
+      "v": 120
+    },
+    "e207": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 8.945,
+      "host_asset": null,
+      "id": "e207",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 119,
+      "v": 132
+    },
+    "e208": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 7.64,
+      "host_asset": null,
+      "id": "e208",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 120,
+      "v": 121
+    },
+    "e209": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 6.436,
+      "host_asset": null,
+      "id": "e209",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 121,
+      "v": 122
+    },
+    "e21": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 10.682,
+      "host_asset": null,
+      "id": "e21",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 11,
+      "v": 24
+    },
+    "e210": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 7.64,
+      "host_asset": null,
+      "id": "e210",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 121,
+      "v": 134
+    },
+    "e211": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 5.817,
+      "host_asset": null,
+      "id": "e211",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 122,
+      "v": 123
+    },
+    "e212": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 6.436,
+      "host_asset": null,
+      "id": "e212",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 122,
+      "v": 135
+    },
+    "e213": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 5.817,
+      "host_asset": null,
+      "id": "e213",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 123,
+      "v": 136
+    },
+    "e214": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 4.085,
+      "host_asset": null,
+      "id": "e214",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 124,
+      "v": 125
+    },
+    "e215": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 4.866,
+      "host_asset": null,
+      "id": "e215",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 124,
+      "v": 137
+    },
+    "e216": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 4.062,
+      "host_asset": null,
+      "id": "e216",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 125,
+      "v": 126
+    },
+    "e217": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 4.085,
+      "host_asset": null,
+      "id": "e217",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 125,
+      "v": 138
+    },
+    "e218": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 3.951,
+      "host_asset": null,
+      "id": "e218",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 126,
+      "v": 127
+    },
+    "e219": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 4.062,
+      "host_asset": null,
+      "id": "e219",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 126,
+      "v": 139
+    },
+    "e22": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 11.147,
+      "host_asset": null,
+      "id": "e22",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 12,
+      "v": 25
+    },
+    "e220": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 3.951,
+      "host_asset": null,
+      "id": "e220",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 127,
+      "v": 128
+    },
+    "e221": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 3.951,
+      "host_asset": null,
+      "id": "e221",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 127,
+      "v": 140
+    },
+    "e222": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 3.992,
+      "host_asset": null,
+      "id": "e222",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 128,
+      "v": 129
+    },
+    "e223": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 3.992,
+      "host_asset": null,
+      "id": "e223",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 129,
+      "v": 142
+    },
+    "e224": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 9.635,
+      "host_asset": null,
+      "id": "e224",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 130,
+      "v": 131
+    },
+    "e225": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 9.921,
+      "host_asset": null,
+      "id": "e225",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 130,
+      "v": 143
+    },
+    "e226": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 9.621,
+      "host_asset": null,
+      "id": "e226",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 131,
+      "v": 132
+    },
+    "e227": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 9.635,
+      "host_asset": null,
+      "id": "e227",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 131,
+      "v": 144
+    },
+    "e228": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 9.731,
+      "host_asset": null,
+      "id": "e228",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 132,
+      "v": 133
+    },
+    "e229": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 9.837,
+      "host_asset": null,
+      "id": "e229",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 132,
+      "v": 145
+    },
+    "e23": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 8.099,
+      "host_asset": null,
+      "id": "e23",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 13,
+      "v": 14
+    },
+    "e230": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 9.115,
+      "host_asset": null,
+      "id": "e230",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 133,
+      "v": 134
+    },
+    "e231": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 9.832,
+      "host_asset": null,
+      "id": "e231",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 133,
+      "v": 146
+    },
+    "e232": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 8.404,
+      "host_asset": null,
+      "id": "e232",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 134,
+      "v": 135
+    },
+    "e233": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 9.386,
+      "host_asset": null,
+      "id": "e233",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 134,
+      "v": 147
+    },
+    "e234": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 7.605,
+      "host_asset": null,
+      "id": "e234",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 135,
+      "v": 136
+    },
+    "e235": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 8.404,
+      "host_asset": null,
+      "id": "e235",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 135,
+      "v": 148
+    },
+    "e236": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 6.725,
+      "host_asset": null,
+      "id": "e236",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 136,
+      "v": 137
+    },
+    "e237": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 7.605,
+      "host_asset": null,
+      "id": "e237",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 136,
+      "v": 149
+    },
+    "e238": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 5.946,
+      "host_asset": null,
+      "id": "e238",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 137,
+      "v": 138
+    },
+    "e239": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 6.725,
+      "host_asset": null,
+      "id": "e239",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 137,
+      "v": 150
+    },
+    "e24": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 6.154,
+      "host_asset": null,
+      "id": "e24",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 13,
+      "v": 26
+    },
+    "e240": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 5.701,
+      "host_asset": null,
+      "id": "e240",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 138,
+      "v": 139
+    },
+    "e241": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 5.946,
+      "host_asset": null,
+      "id": "e241",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 138,
+      "v": 151
+    },
+    "e242": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 5.712,
+      "host_asset": null,
+      "id": "e242",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 139,
+      "v": 140
+    },
+    "e243": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 5.712,
+      "host_asset": null,
+      "id": "e243",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 139,
+      "v": 152
+    },
+    "e244": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 6.057,
+      "host_asset": null,
+      "id": "e244",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 140,
+      "v": 141
+    },
+    "e245": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 6.057,
+      "host_asset": null,
+      "id": "e245",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 140,
+      "v": 153
+    },
+    "e246": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 5.895,
+      "host_asset": null,
+      "id": "e246",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 141,
+      "v": 142
+    },
+    "e247": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 6.164,
+      "host_asset": null,
+      "id": "e247",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 141,
+      "v": 154
+    },
+    "e248": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 5.895,
+      "host_asset": null,
+      "id": "e248",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 142,
+      "v": 155
+    },
+    "e249": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 10.807,
+      "host_asset": null,
+      "id": "e249",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 143,
+      "v": 144
+    },
+    "e25": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 8.296,
+      "host_asset": null,
+      "id": "e25",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 14,
+      "v": 15
+    },
+    "e250": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 10.842,
+      "host_asset": null,
+      "id": "e250",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 143,
+      "v": 156
+    },
+    "e251": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 10.837,
+      "host_asset": null,
+      "id": "e251",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 144,
+      "v": 145
+    },
+    "e252": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 10.26,
+      "host_asset": null,
+      "id": "e252",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 145,
+      "v": 146
+    },
+    "e253": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 10.839,
+      "host_asset": null,
+      "id": "e253",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 145,
+      "v": 158
+    },
+    "e254": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 10.26,
+      "host_asset": null,
+      "id": "e254",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 146,
+      "v": 147
+    },
+    "e255": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 10.26,
+      "host_asset": null,
+      "id": "e255",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 146,
+      "v": 159
+    },
+    "e256": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 9.829,
+      "host_asset": null,
+      "id": "e256",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 147,
+      "v": 148
+    },
+    "e257": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 10.621,
+      "host_asset": null,
+      "id": "e257",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 147,
+      "v": 160
+    },
+    "e258": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 9.423,
+      "host_asset": null,
+      "id": "e258",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 148,
+      "v": 149
+    },
+    "e259": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 9.829,
+      "host_asset": null,
+      "id": "e259",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 148,
+      "v": 161
+    },
+    "e26": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 0.2,
+      "host_asset": "U1",
+      "id": "e26",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 14,
+      "v": 27
+    },
+    "e260": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 8.41,
+      "host_asset": null,
+      "id": "e260",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 149,
+      "v": 150
+    },
+    "e261": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 9.423,
+      "host_asset": null,
+      "id": "e261",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 149,
+      "v": 162
+    },
+    "e262": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 8.258,
+      "host_asset": null,
+      "id": "e262",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 150,
+      "v": 151
+    },
+    "e263": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 8.41,
+      "host_asset": null,
+      "id": "e263",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 150,
+      "v": 163
+    },
+    "e264": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 0.2,
+      "host_asset": "U3",
+      "id": "e264",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 151,
+      "v": 152
+    },
+    "e265": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 8.399,
+      "host_asset": null,
+      "id": "e265",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 151,
+      "v": 164
+    },
+    "e266": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 7.77,
+      "host_asset": null,
+      "id": "e266",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 152,
+      "v": 153
+    },
+    "e267": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 7.77,
+      "host_asset": null,
+      "id": "e267",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 152,
+      "v": 165
+    },
+    "e268": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 7.791,
+      "host_asset": null,
+      "id": "e268",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 153,
+      "v": 154
+    },
+    "e269": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 7.791,
+      "host_asset": null,
+      "id": "e269",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 153,
+      "v": 166
+    },
+    "e27": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 8.441,
+      "host_asset": null,
+      "id": "e27",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 15,
+      "v": 16
+    },
+    "e270": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 7.775,
+      "host_asset": null,
+      "id": "e270",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 154,
+      "v": 155
+    },
+    "e271": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 7.876,
+      "host_asset": null,
+      "id": "e271",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 154,
+      "v": 167
+    },
+    "e272": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 7.775,
+      "host_asset": null,
+      "id": "e272",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 155,
+      "v": 168
+    },
+    "e273": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 12.33,
+      "host_asset": null,
+      "id": "e273",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 156,
+      "v": 157
+    },
+    "e274": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 11.707,
+      "host_asset": null,
+      "id": "e274",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 158,
+      "v": 159
+    },
+    "e275": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 11.611,
+      "host_asset": null,
+      "id": "e275",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 160,
+      "v": 161
+    },
+    "e276": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 10.472,
+      "host_asset": null,
+      "id": "e276",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 162,
+      "v": 163
+    },
+    "e277": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 10.313,
+      "host_asset": null,
+      "id": "e277",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 163,
+      "v": 164
+    },
+    "e278": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 9.937,
+      "host_asset": null,
+      "id": "e278",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 164,
+      "v": 165
+    },
+    "e279": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 9.937,
+      "host_asset": null,
+      "id": "e279",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 165,
+      "v": 166
+    },
+    "e28": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 6.44,
+      "host_asset": null,
+      "id": "e28",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 15,
+      "v": 28
+    },
+    "e280": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 9.553,
+      "host_asset": null,
+      "id": "e280",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 166,
+      "v": 167
+    },
+    "e281": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 9.438,
+      "host_asset": null,
+      "id": "e281",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 167,
+      "v": 168
+    },
+    "e29": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 8.966,
+      "host_asset": null,
+      "id": "e29",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 16,
+      "v": 17
+    },
+    "e3": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 8.296,
+      "host_asset": null,
+      "id": "e3",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 1,
+      "v": 14
+    },
+    "e30": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 7.171,
+      "host_asset": null,
+      "id": "e30",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 16,
+      "v": 29
+    },
+    "e31": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 7.405,
+      "host_asset": null,
+      "id": "e31",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 17,
+      "v": 30
+    },
+    "e32": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 8.879,
+      "host_asset": null,
+      "id": "e32",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 18,
+      "v": 19
+    },
+    "e33": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 6.987,
+      "host_asset": null,
+      "id": "e33",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 18,
+      "v": 31
+    },
+    "e34": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 9.235,
+      "host_asset": null,
+      "id": "e34",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 19,
+      "v": 20
+    },
+    "e35": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 7.455,
+      "host_asset": null,
+      "id": "e35",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 19,
+      "v": 32
+    },
+    "e36": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 9.478,
+      "host_asset": null,
+      "id": "e36",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 20,
+      "v": 21
+    },
+    "e37": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 7.824,
+      "host_asset": null,
+      "id": "e37",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 20,
+      "v": 33
+    },
+    "e38": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 10.199,
+      "host_asset": null,
+      "id": "e38",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 21,
+      "v": 22
+    },
+    "e39": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 8.359,
+      "host_asset": null,
+      "id": "e39",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 21,
+      "v": 34
+    },
+    "e4": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 10.263,
+      "host_asset": null,
+      "id": "e4",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 2,
+      "v": 3
+    },
+    "e40": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 10.199,
+      "host_asset": null,
+      "id": "e40",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 22,
+      "v": 23
+    },
+    "e41": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 8.564,
+      "host_asset": null,
+      "id": "e41",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 22,
+      "v": 35
+    },
+    "e42": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 10.682,
+      "host_asset": null,
+      "id": "e42",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 23,
+      "v": 24
+    },
+    "e43": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 9.216,
+      "host_asset": null,
+      "id": "e43",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 23,
+      "v": 36
+    },
+    "e44": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 10.682,
+      "host_asset": null,
+      "id": "e44",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 24,
+      "v": 25
+    },
+    "e45": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 8.965,
+      "host_asset": null,
+      "id": "e45",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 24,
+      "v": 37
+    },
+    "e46": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 8.69,
+      "host_asset": null,
+      "id": "e46",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 25,
+      "v": 38
+    },
+    "e47": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 5.861,
+      "host_asset": null,
+      "id": "e47",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 26,
+      "v": 27
+    },
+    "e48": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 3.974,
+      "host_asset": null,
+      "id": "e48",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 26,
+      "v": 39
+    },
+    "e49": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 6.254,
+      "host_asset": null,
+      "id": "e49",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 27,
+      "v": 28
+    },
+    "e5": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 8.667,
+      "host_asset": null,
+      "id": "e5",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 2,
+      "v": 15
+    },
+    "e50": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 4.035,
+      "host_asset": null,
+      "id": "e50",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 27,
+      "v": 40
+    },
+    "e51": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 6.44,
+      "host_asset": null,
+      "id": "e51",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 28,
+      "v": 29
+    },
+    "e52": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 5.095,
+      "host_asset": null,
+      "id": "e52",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 28,
+      "v": 41
+    },
+    "e53": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 7.171,
+      "host_asset": null,
+      "id": "e53",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 29,
+      "v": 30
+    },
+    "e54": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 5.408,
+      "host_asset": null,
+      "id": "e54",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 29,
+      "v": 42
+    },
+    "e55": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 6.987,
+      "host_asset": null,
+      "id": "e55",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 30,
+      "v": 31
+    },
+    "e56": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 5.364,
+      "host_asset": null,
+      "id": "e56",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 30,
+      "v": 43
+    },
+    "e57": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 5.465,
+      "host_asset": null,
+      "id": "e57",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 31,
+      "v": 44
+    },
+    "e58": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 7.455,
+      "host_asset": null,
+      "id": "e58",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 32,
+      "v": 33
+    },
+    "e59": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 5.136,
+      "host_asset": null,
+      "id": "e59",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 32,
+      "v": 45
+    },
+    "e6": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 10.819,
+      "host_asset": null,
+      "id": "e6",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 3,
+      "v": 4
+    },
+    "e60": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 7.824,
+      "host_asset": null,
+      "id": "e60",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 33,
+      "v": 34
+    },
+    "e61": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 5.809,
+      "host_asset": null,
+      "id": "e61",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 33,
+      "v": 46
+    },
+    "e62": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 8.359,
+      "host_asset": null,
+      "id": "e62",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 34,
+      "v": 35
+    },
+    "e63": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 6.634,
+      "host_asset": null,
+      "id": "e63",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 34,
+      "v": 47
+    },
+    "e64": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 8.564,
+      "host_asset": null,
+      "id": "e64",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 35,
+      "v": 36
+    },
+    "e65": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 6.851,
+      "host_asset": null,
+      "id": "e65",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 35,
+      "v": 48
+    },
+    "e66": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 8.87,
+      "host_asset": null,
+      "id": "e66",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 36,
+      "v": 37
+    },
+    "e67": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 6.716,
+      "host_asset": null,
+      "id": "e67",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 36,
+      "v": 49
+    },
+    "e68": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 8.67,
+      "host_asset": null,
+      "id": "e68",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 37,
+      "v": 38
+    },
+    "e69": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 7.044,
+      "host_asset": null,
+      "id": "e69",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 37,
+      "v": 50
+    },
+    "e7": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 9.053,
+      "host_asset": null,
+      "id": "e7",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 3,
+      "v": 16
+    },
+    "e70": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 7.029,
+      "host_asset": null,
+      "id": "e70",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 38,
+      "v": 51
+    },
+    "e71": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 3.974,
+      "host_asset": null,
+      "id": "e71",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 39,
+      "v": 40
+    },
+    "e72": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 2.481,
+      "host_asset": null,
+      "id": "e72",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 39,
+      "v": 52
+    },
+    "e73": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 4.035,
+      "host_asset": null,
+      "id": "e73",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 40,
+      "v": 41
+    },
+    "e74": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 2.531,
+      "host_asset": null,
+      "id": "e74",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 40,
+      "v": 53
+    },
+    "e75": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 5.057,
+      "host_asset": null,
+      "id": "e75",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 41,
+      "v": 42
+    },
+    "e76": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 2.773,
+      "host_asset": null,
+      "id": "e76",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 41,
+      "v": 54
+    },
+    "e77": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 5.364,
+      "host_asset": null,
+      "id": "e77",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 42,
+      "v": 43
+    },
+    "e78": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 3.761,
+      "host_asset": null,
+      "id": "e78",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 42,
+      "v": 55
+    },
+    "e79": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 5.364,
+      "host_asset": null,
+      "id": "e79",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 43,
+      "v": 44
+    },
+    "e8": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 10.819,
+      "host_asset": null,
+      "id": "e8",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 4,
+      "v": 5
+    },
+    "e80": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 3.581,
+      "host_asset": null,
+      "id": "e80",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 43,
+      "v": 56
+    },
+    "e81": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 5.136,
+      "host_asset": null,
+      "id": "e81",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 44,
+      "v": 45
+    },
+    "e82": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 5.136,
+      "host_asset": null,
+      "id": "e82",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 45,
+      "v": 46
+    },
+    "e83": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 3.451,
+      "host_asset": null,
+      "id": "e83",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 45,
+      "v": 58
+    },
+    "e84": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 5.809,
+      "host_asset": null,
+      "id": "e84",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 46,
+      "v": 47
+    },
+    "e85": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 3.574,
+      "host_asset": null,
+      "id": "e85",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 46,
+      "v": 59
+    },
+    "e86": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 6.12,
+      "host_asset": null,
+      "id": "e86",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 47,
+      "v": 48
+    },
+    "e87": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 4.501,
+      "host_asset": null,
+      "id": "e87",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 47,
+      "v": 60
+    },
+    "e88": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 6.624,
+      "host_asset": null,
+      "id": "e88",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 48,
+      "v": 49
+    },
+    "e89": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 4.603,
+      "host_asset": null,
+      "id": "e89",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 48,
+      "v": 61
+    },
+    "e9": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 8.966,
+      "host_asset": null,
+      "id": "e9",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 4,
+      "v": 17
+    },
+    "e90": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 6.645,
+      "host_asset": null,
+      "id": "e90",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 49,
+      "v": 50
+    },
+    "e91": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 5.374,
+      "host_asset": null,
+      "id": "e91",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 49,
+      "v": 62
+    },
+    "e92": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 7.029,
+      "host_asset": null,
+      "id": "e92",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 50,
+      "v": 51
+    },
+    "e93": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 4.922,
+      "host_asset": null,
+      "id": "e93",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 50,
+      "v": 63
+    },
+    "e94": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 5.276,
+      "host_asset": null,
+      "id": "e94",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 51,
+      "v": 64
+    },
+    "e95": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 2.022,
+      "host_asset": null,
+      "id": "e95",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 52,
+      "v": 53
+    },
+    "e96": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 0.619,
+      "host_asset": null,
+      "id": "e96",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 52,
+      "v": 65
+    },
+    "e97": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 2.531,
+      "host_asset": null,
+      "id": "e97",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 53,
+      "v": 54
+    },
+    "e98": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 1.543,
+      "host_asset": null,
+      "id": "e98",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 54,
+      "v": 67
+    },
+    "e99": {
+      "capacity_vph": 1800.0,
+      "free_flow_kph": 40.0,
+      "hand_m": 3.417,
+      "host_asset": null,
+      "id": "e99",
+      "lanes": 2,
+      "length_m": 500.0,
+      "provenance": "observed",
+      "u": 55,
+      "v": 56
+    }
+  },
+  "seed": 42,
+  "zones": [
+    {
+      "feeder": "F1",
+      "hand_m": 10.089,
+      "id": "Z1",
+      "node": 131,
+      "population": 3899,
+      "provenance": "inferred",
+      "substation": "S1",
+      "tank": "K1",
+      "towers": [
+        "T1",
+        "T2"
+      ],
+      "vulnerable_fraction": 0.1853,
+      "water_storage_hours": 6.0,
+      "x": 750.0,
+      "y": 5100.0
+    },
+    {
+      "feeder": "F1",
+      "hand_m": 8.861,
+      "id": "Z2",
+      "node": 134,
+      "population": 5682,
+      "provenance": "inferred",
+      "substation": "S1",
+      "tank": "K1",
+      "towers": [
+        "T1",
+        "T2"
+      ],
+      "vulnerable_fraction": 0.1512,
+      "water_storage_hours": 6.0,
+      "x": 2250.0,
+      "y": 5100.0
+    },
+    {
+      "feeder": "F7",
+      "hand_m": 6.908,
+      "id": "Z3",
+      "node": 137,
+      "population": 2376,
+      "provenance": "inferred",
+      "substation": "S3",
+      "tank": "K2",
+      "towers": [
+        "T1",
+        "T2"
+      ],
+      "vulnerable_fraction": 0.0767,
+      "water_storage_hours": 6.0,
+      "x": 3750.0,
+      "y": 5100.0
+    },
+    {
+      "feeder": "F7",
+      "hand_m": 6.448,
+      "id": "Z4",
+      "node": 140,
+      "population": 7411,
+      "provenance": "inferred",
+      "substation": "S3",
+      "tank": "K2",
+      "towers": [
+        "T1",
+        "T2"
+      ],
+      "vulnerable_fraction": 0.2046,
+      "water_storage_hours": 6.0,
+      "x": 5250.0,
+      "y": 5100.0
+    },
+    {
+      "feeder": "F2",
+      "hand_m": 4.281,
+      "id": "Z5",
+      "node": 92,
+      "population": 2556,
+      "provenance": "inferred",
+      "substation": "S1",
+      "tank": "K1",
+      "towers": [
+        "T3",
+        "T4"
+      ],
+      "vulnerable_fraction": 0.1985,
+      "water_storage_hours": 6.0,
+      "x": 750.0,
+      "y": 3468.49
+    },
+    {
+      "feeder": "F3",
+      "hand_m": 3.656,
+      "id": "Z6",
+      "node": 95,
+      "population": 2687,
+      "provenance": "inferred",
+      "substation": "S1",
+      "tank": "K1",
+      "towers": [
+        "T3",
+        "T4"
+      ],
+      "vulnerable_fraction": 0.1877,
+      "water_storage_hours": 6.0,
+      "x": 2250.0,
+      "y": 3653.21
+    },
+    {
+      "feeder": "F8",
+      "hand_m": 2.298,
+      "id": "Z7",
+      "node": 111,
+      "population": 6776,
+      "provenance": "inferred",
+      "substation": "S3",
+      "tank": "K2",
+      "towers": [
+        "T3",
+        "T4"
+      ],
+      "vulnerable_fraction": 0.076,
+      "water_storage_hours": 6.0,
+      "x": 3750.0,
+      "y": 3874.37
+    },
+    {
+      "feeder": "F9",
+      "hand_m": 2.263,
+      "id": "Z8",
+      "node": 114,
+      "population": 7108,
+      "provenance": "inferred",
+      "substation": "S3",
+      "tank": "K2",
+      "towers": [
+        "T3",
+        "T4"
+      ],
+      "vulnerable_fraction": 0.0927,
+      "water_storage_hours": 6.0,
+      "x": 5250.0,
+      "y": 4089.65
+    },
+    {
+      "feeder": "F4",
+      "hand_m": 1.539,
+      "id": "Z9",
+      "node": 66,
+      "population": 2765,
+      "provenance": "inferred",
+      "substation": "S2",
+      "tank": "K3",
+      "towers": [
+        "T5",
+        "T6"
+      ],
+      "vulnerable_fraction": 0.179,
+      "water_storage_hours": 6.0,
+      "x": 750.0,
+      "y": 2348.49
+    },
+    {
+      "feeder": "F4",
+      "hand_m": 1.282,
+      "id": "Z10",
+      "node": 69,
+      "population": 4362,
+      "provenance": "inferred",
+      "substation": "S2",
+      "tank": "K3",
+      "towers": [
+        "T5",
+        "T6"
+      ],
+      "vulnerable_fraction": 0.0637,
+      "water_storage_hours": 6.0,
+      "x": 2250.0,
+      "y": 2533.21
+    },
+    {
+      "feeder": "F5",
+      "hand_m": 1.62,
+      "id": "Z11",
+      "node": 85,
+      "population": 5997,
+      "provenance": "inferred",
+      "substation": "S2",
+      "tank": "K3",
+      "towers": [
+        "T5",
+        "T6"
+      ],
+      "vulnerable_fraction": 0.2167,
+      "water_storage_hours": 6.0,
+      "x": 3750.0,
+      "y": 2754.37
+    },
+    {
+      "feeder": "F5",
+      "hand_m": 1.761,
+      "id": "Z12",
+      "node": 88,
+      "population": 6896,
+      "provenance": "inferred",
+      "substation": "S2",
+      "tank": "K3",
+      "towers": [
+        "T5",
+        "T6"
+      ],
+      "vulnerable_fraction": 0.1203,
+      "water_storage_hours": 6.0,
+      "x": 5250.0,
+      "y": 2969.65
+    },
+    {
+      "feeder": "F6",
+      "hand_m": 7.149,
+      "id": "Z13",
+      "node": 27,
+      "population": 3800,
+      "provenance": "inferred",
+      "substation": "S2",
+      "tank": "K4",
+      "towers": [
+        "T7",
+        "T8"
+      ],
+      "vulnerable_fraction": 0.1751,
+      "water_storage_hours": 6.0,
+      "x": 750.0,
+      "y": 800.0
+    },
+    {
+      "feeder": "F6",
+      "hand_m": 8.073,
+      "id": "Z14",
+      "node": 30,
+      "population": 4655,
+      "provenance": "inferred",
+      "substation": "S2",
+      "tank": "K4",
+      "towers": [
+        "T7",
+        "T8"
+      ],
+      "vulnerable_fraction": 0.202,
+      "water_storage_hours": 6.0,
+      "x": 2250.0,
+      "y": 800.0
+    },
+    {
+      "feeder": "F6",
+      "hand_m": 8.903,
+      "id": "Z15",
+      "node": 33,
+      "population": 6048,
+      "provenance": "inferred",
+      "substation": "S2",
+      "tank": "K4",
+      "towers": [
+        "T7",
+        "T8"
+      ],
+      "vulnerable_fraction": 0.1231,
+      "water_storage_hours": 6.0,
+      "x": 3750.0,
+      "y": 800.0
+    },
+    {
+      "feeder": "F6",
+      "hand_m": 9.842,
+      "id": "Z16",
+      "node": 36,
+      "population": 5983,
+      "provenance": "inferred",
+      "substation": "S2",
+      "tank": "K4",
+      "towers": [
+        "T7",
+        "T8"
+      ],
+      "vulnerable_fraction": 0.1111,
+      "water_storage_hours": 6.0,
+      "x": 5250.0,
+      "y": 800.0
+    }
+  ]
+}

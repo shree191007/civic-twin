@@ -1,0 +1,108 @@
+* { box-sizing: border-box; }
+
+html, body, #root { height: 100%; margin: 0; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--sans);
+  font-size: 13px;
+  -webkit-font-smoothing: antialiased;
+  overflow: hidden;
+}
+
+/* Every number in the interface is monospaced with tabular figures. */
+.num, .mono {
+  font-family: var(--mono);
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum" 1;
+}
+
+h1, h2, h3, h4 { font-weight: 600; margin: 0; }
+h2 { font-size: 13px; letter-spacing: 0.02em; }
+h3 {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-dim);
+}
+
+button {
+  font: inherit;
+  color: var(--text);
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 4px 9px;
+  cursor: pointer;
+}
+button:hover:not(:disabled) { border-color: var(--text-dim); }
+button:disabled { opacity: 0.4; cursor: default; }
+button[aria-pressed="true"] { background: var(--border); border-color: var(--text-dim); }
+
+input[type="text"], input[type="number"], textarea, select {
+  font: inherit;
+  color: var(--text);
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 5px 7px;
+  width: 100%;
+}
+
+/* Visible focus for keyboard users everywhere. */
+:focus-visible { outline: 2px solid var(--f-full); outline-offset: 1px; }
+
+a { color: var(--water); }
+
+.panel {
+  background: var(--bg-panel);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.dim { color: var(--text-dim); }
+.row { display: flex; align-items: center; gap: 8px; }
+.col { display: flex; flex-direction: column; gap: 8px; }
+.spacer { flex: 1; }
+.scroll { overflow: auto; scrollbar-width: thin; }
+
+.sr-only {
+  position: absolute;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+table { border-collapse: collapse; width: 100%; font-size: 12px; }
+th {
+  text-align: left;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--text-dim);
+  font-weight: 600;
+  padding: 5px 8px;
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  background: var(--bg-panel);
+  cursor: pointer;
+  user-select: none;
+}
+td { padding: 4px 8px; border-bottom: 1px solid rgba(31, 42, 56, 0.5); }
+tbody tr:hover { background: var(--bg-elevated); }
+tbody tr[aria-selected="true"] { background: var(--border); }
+
+/* The console assumes a desk or a projector. Below this the fixed side panel
+   would leave the map a sliver, so the layout stacks instead of squeezing. */
+@media (max-width: 1100px) {
+  :root { --panel: 320px; }
+}
+
+@media (max-width: 860px) {
+  :root { --panel: 0px; }
+  .stack-narrow { grid-template-columns: 1fr !important; grid-template-rows: 1fr auto !important; }
+}

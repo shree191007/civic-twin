@@ -1,0 +1,19 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+# Generated analysis output, except the validation artefact, which is part of
+# the delivery — including any check that failed. Note the `results/*` form:
+# git will not descend into a directory excluded as `results/`, so the negation
+# below would never be reached.
+results/*
+!results/validation.json
+node_modules/
+web/dist/
+.DS_Store
+
+# Machine-local editor and agent configuration
+.claude/

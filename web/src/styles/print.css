@@ -1,0 +1,22 @@
+/* The one-page council brief. Screen chrome disappears entirely. */
+@media print {
+  @page { size: A4 portrait; margin: 14mm; }
+
+  body { background: #fff; color: #111; overflow: visible; }
+
+  .no-print, nav, .rail, .copilot-drawer, button { display: none !important; }
+
+  .brief {
+    display: block !important;
+    background: #fff;
+    color: #111;
+    font-size: 10pt;
+    line-height: 1.4;
+  }
+  .brief h1 { font-size: 16pt; margin-bottom: 2mm; }
+  .brief h2 { font-size: 11pt; margin: 4mm 0 1mm; }
+  .brief table { font-size: 9pt; }
+  .brief th, .brief td { border-bottom: 0.4pt solid #bbb; color: #111; background: #fff; }
+  .brief .dim { color: #555; }
+  .brief a { color: #111; text-decoration: none; }
+}
